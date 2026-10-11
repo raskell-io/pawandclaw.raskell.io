@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://paw-and-claw.raskell.io/sitemap.xml
+Sitemap: https://pawandclaw.raskell.io/sitemap.xml

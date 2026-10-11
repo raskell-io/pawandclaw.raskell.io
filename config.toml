@@ -1,7 +1,7 @@
 # Zola configuration for the Paw & Claw website
 # https://www.getzola.org/documentation/getting-started/configuration/
 
-base_url = "https://paw-and-claw.raskell.io"
+base_url = "https://pawandclaw.raskell.io"
 title = "Paw & Claw"
 description = "A turn-based tactics game of woodland armies. Play it free in your browser, or on your desktop."
 default_language = "en"

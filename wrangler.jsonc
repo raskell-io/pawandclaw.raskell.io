@@ -1,7 +1,7 @@
 // Cloudflare Worker serving the static site (public/), the game included at /play/
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "paw-and-claw-raskell-io",
+  "name": "pawandclaw-raskell-io",
   "compatibility_date": "2026-09-01",
   "assets": {
     "directory": "./public",
@@ -9,7 +9,7 @@
     "not_found_handling": "404-page"
   },
   "routes": [
-    { "pattern": "paw-and-claw.raskell.io", "custom_domain": true }
+    { "pattern": "pawandclaw.raskell.io", "custom_domain": true }
   ],
   "workers_dev": false,
   "observability": { "enabled": true }

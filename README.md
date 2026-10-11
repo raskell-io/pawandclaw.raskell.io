@@ -1,9 +1,9 @@
-# paw-and-claw.raskell.io
+# pawandclaw.raskell.io
 
 Website for [Paw & Claw](https://github.com/raskell-io/paw-and-claw), a turn-based tactics game
 of woodland armies. The site also hosts the playable web (WebAssembly) build at `/play/`.
 
-**Live:** https://paw-and-claw.raskell.io
+**Live:** https://pawandclaw.raskell.io
 
 ## Quick start
 
@@ -27,7 +27,7 @@ mise run preview      # site + game, served like Cloudflare does (wrangler dev)
 ## Structure
 
 ```
-paw-and-claw.raskell.io/
+pawandclaw.raskell.io/
 ├── config.toml           # Zola configuration
 ├── wrangler.jsonc        # Cloudflare Worker (static assets) + custom domain
 ├── content/              # Home, how to play, commanders, download
@@ -43,7 +43,7 @@ paw-and-claw.raskell.io/
 ## Hosting
 
 The site is a Cloudflare Worker with static assets (`wrangler.jsonc`), on the custom domain
-`paw-and-claw.raskell.io` in the raskell.io zone. `.github/workflows/deploy.yml` builds and
+`pawandclaw.raskell.io` in the raskell.io zone. `.github/workflows/deploy.yml` builds and
 deploys on every push to `main`. It needs two repository secrets:
 
 - `CLOUDFLARE_API_TOKEN`: a token with *Workers Scripts: Edit* (account) and
