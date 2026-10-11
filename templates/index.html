@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+{% import "macros.html" as m %}
+{% block body_class %}home{% endblock %}
+{% block content %}
+{%- set factions = load_data(path="data/factions.json") | get(key="factions") %}
+{%- set commanders = load_data(path="data/commanders.json") | get(key="commanders") %}
+{%- set showcase = ["scout", "recon", "ironclad", "siege", "skywing", "frigate"] %}
+
+<section class="hero">
+    <div class="wrap hero-grid">
+        <div class="hero-copy">
+            <p class="eyebrow">{{ config.extra.tagline }}</p>
+            <h1 class="title">Paw <span>&amp;</span> Claw</h1>
+            <p class="lead">{{ section.description }}</p>
+            <div class="actions">
+                <a class="btn btn-gold btn-large" href="{{ config.extra.play_url }}">Play in your browser</a>
+                <a class="btn btn-ghost btn-large" href="/download/">Download</a>
+            </div>
+            <p class="hint">Free. No install, no account. Works with mouse, keyboard, gamepad and touch.</p>
+        </div>
+        <figure class="hero-shot frame">
+            <img src="/img/setup.webp" alt="The skirmish setup screen: choose a faction, a commander and a battlefield" width="1600" height="900">
+        </figure>
+    </div>
+    <div class="parade" aria-hidden="true">
+        {%- for faction in factions %}
+        {{ m::unit(faction=faction.id, asset="scout") }}{{ m::unit(faction=faction.id, asset=showcase | nth(n=loop.index0)) }}
+        {%- endfor %}
+    </div>
+</section>
+
+<section class="band">
+    <div class="wrap prose-wide">
+        {{ section.content | safe }}
+    </div>
+</section>
+
+<section class="band band-dark">
+    <div class="wrap">
+        <h2 class="section-title">Five armies, one woodland</h2>
+        <p class="section-lead">Every army fields the same twenty units in its own colours. What sets them apart is who leads them.</p>
+        <div class="factions">
+            {%- for faction in factions %}
+            <article class="card faction" style="--faction: {{ faction.color }}">
+                <div class="faction-units">
+                    {{ m::unit(faction=faction.id, asset="scout", label=faction.name ~ " militia") }}
+                    {{ m::unit(faction=faction.id, asset="ironclad", label=faction.name ~ " charger") }}
+                </div>
+                <h3>{{ faction.name }}</h3>
+                <p>{{ faction.description }}</p>
+                <p class="animals">{{ faction.animals | join(sep=" · ") }}</p>
+            </article>
+            {%- endfor %}
+        </div>
+    </div>
+</section>
+
+<section class="band">
+    <div class="wrap split">
+        <figure class="frame">
+            <img src="/img/board.webp" alt="A battle board: an island of grass, roads, workshops and outposts surrounded by water" width="1600" height="900" loading="lazy">
+        </figure>
+        <div>
+            <h2 class="section-title">Classic tactics, woodland scale</h2>
+            <ul class="checks">
+                <li>Capture outposts and storehouses for funds, then build at workshops, docks and roosts.</li>
+                <li>Twenty units on land, in the air and on the water: militia, cavalry, catapults, hawk riders, rafts and more.</li>
+                <li>Terrain matters: thickets and boulders shelter, creeks slow, roads speed you along.</li>
+                <li>Fog of war, weather, supply and stamina, just as the old campaigns taught us.</li>
+                <li>A map editor to paint your own battlefield.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="band band-dark">
+    <div class="wrap">
+        <h2 class="section-title">{{ commanders | length }} commanders</h2>
+        <p class="section-lead">Each brings everyday strengths, a CO Power and a Super CO Power that can turn a battle in one move.</p>
+        <div class="portrait-row">
+            {%- for co in commanders %}
+            <a href="/commanders/#{{ co.id }}" title="{{ co.name }}">{{ m::portrait(id=co.id, name=co.name, size="sm") }}</a>
+            {%- endfor %}
+        </div>
+        <p class="center"><a class="btn btn-ghost" href="/commanders/">Meet the commanders</a></p>
+    </div>
+</section>
+
+<section class="band cta">
+    <div class="wrap center">
+        <h2 class="section-title">The woods are waiting</h2>
+        <p class="section-lead">Runs in any up-to-date browser with WebGL 2, on desktop, tablet and phone (held sideways).</p>
+        <div class="actions actions-center">
+            <a class="btn btn-gold btn-large" href="{{ config.extra.play_url }}">Play now</a>
+            <a class="btn btn-ghost btn-large" href="{{ config.extra.github }}">Source on GitHub</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

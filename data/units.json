@@ -1,0 +1,144 @@
+{
+  "units": [
+    {
+      "id": "scout",
+      "name": "Militia",
+      "asset": "scout",
+      "description": "Cheap foot soldiers who hold ground and capture buildings",
+      "cost": 1000
+    },
+    {
+      "id": "shocktrooper",
+      "name": "Halberdier",
+      "asset": "shocktrooper",
+      "description": "Slow heavy infantry whose polearms pierce armored beasts",
+      "cost": 3000
+    },
+    {
+      "id": "recon",
+      "name": "Outrider",
+      "asset": "recon",
+      "description": "Swift mounted scout with keen eyes",
+      "cost": 4000
+    },
+    {
+      "id": "ironclad",
+      "name": "Charger",
+      "asset": "ironclad",
+      "description": "Armored war-beast, the backbone of any army",
+      "cost": 7000
+    },
+    {
+      "id": "juggernaut",
+      "name": "Warbeast",
+      "asset": "juggernaut",
+      "description": "Heavily armored war-beast that tramples lighter foes",
+      "cost": 16000
+    },
+    {
+      "id": "behemoth",
+      "name": "Colossus",
+      "asset": "behemoth",
+      "description": "Towering living fortress, the mightiest beast on the field",
+      "cost": 22000
+    },
+    {
+      "id": "flak",
+      "name": "Hawkbane",
+      "asset": "flak",
+      "description": "Archers who shoot down flyers and shred infantry",
+      "cost": 8000
+    },
+    {
+      "id": "siege",
+      "name": "Catapult",
+      "asset": "siege",
+      "description": "Hurls stones over obstacles at short range",
+      "cost": 6000
+    },
+    {
+      "id": "barrage",
+      "name": "Trebuchet",
+      "asset": "barrage",
+      "description": "Massive siege engine that strikes from afar",
+      "cost": 15000
+    },
+    {
+      "id": "stinger",
+      "name": "Skylance",
+      "asset": "stinger",
+      "description": "Bolt-thrower that skewers flyers at long range",
+      "cost": 12000
+    },
+    {
+      "id": "carrier",
+      "name": "Caravan",
+      "asset": "carrier",
+      "description": "Covered wagon that ferries foot soldiers",
+      "cost": 5000
+    },
+    {
+      "id": "supplier",
+      "name": "Supply Cart",
+      "asset": "supplier",
+      "description": "Hauls provisions to restore stamina and arrows",
+      "cost": 5000
+    },
+    {
+      "id": "ferrier",
+      "name": "Skyferry",
+      "asset": "ferrier",
+      "description": "Great bird that carries foot soldiers through the air",
+      "cost": 5000
+    },
+    {
+      "id": "skywing",
+      "name": "Hawk Rider",
+      "asset": "skywing",
+      "description": "Mounted raptor that strikes ground troops from above",
+      "cost": 9000
+    },
+    {
+      "id": "raptor",
+      "name": "Sky Knight",
+      "asset": "raptor",
+      "description": "Elite flyer that rules the skies",
+      "cost": 20000
+    },
+    {
+      "id": "talon",
+      "name": "Bombardier",
+      "asset": "talon",
+      "description": "Drops fire pots on anything below",
+      "cost": 22000
+    },
+    {
+      "id": "barge",
+      "name": "Raft",
+      "asset": "barge",
+      "description": "Sturdy raft that carries troops across water",
+      "cost": 12000
+    },
+    {
+      "id": "frigate",
+      "name": "Galley",
+      "asset": "frigate",
+      "description": "Oared warship that hunts divers and flyers",
+      "cost": 18000
+    },
+    {
+      "id": "lurker",
+      "name": "Diver",
+      "asset": "lurker",
+      "description": "Underwater ambusher that strikes unseen",
+      "cost": 20000
+    },
+    {
+      "id": "dreadnought",
+      "name": "Flagship",
+      "asset": "dreadnought",
+      "description": "Mighty warship that bombards from afar",
+      "cost": 28000
+    }
+  ]
+}

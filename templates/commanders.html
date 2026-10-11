@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% import "macros.html" as m %}
+{% block content %}
+{%- set factions = load_data(path="data/factions.json") | get(key="factions") %}
+{%- set commanders = load_data(path="data/commanders.json") | get(key="commanders") %}
+<section class="page-head">
+    <div class="wrap">
+        <h1 class="title title-page">{{ page.title }}</h1>
+        <p class="lead">{{ page.description }}</p>
+        <div class="prose-wide intro">{{ page.content | safe }}</div>
+        <nav class="chips" aria-label="Armies">
+            {%- for faction in factions %}
+            <a class="chip" style="--faction: {{ faction.color }}" href="#{{ faction.id }}">{{ faction.name }}</a>
+            {%- endfor %}
+        </nav>
+    </div>
+</section>
+{%- for faction in factions %}
+<section class="band{% if loop.index is odd %} band-dark{% endif %}" id="{{ faction.id }}">
+    <div class="wrap">
+        <h2 class="section-title faction-title" style="--faction: {{ faction.color }}">{{ faction.name }}</h2>
+        <div class="commanders">
+            {%- for co in commanders | filter(attribute="faction", value=faction.id) %}
+            <article class="card commander" id="{{ co.id }}" style="--faction: {{ faction.color }}">
+                <header>
+                    {{ m::portrait(id=co.id, name=co.name, size="lg") }}
+                    <div>
+                        <h3>{{ co.name }}</h3>
+                        <p class="muted">{{ co.personality }}</p>
+                    </div>
+                </header>
+                <p>{{ co.description }}</p>
+                {%- for kind in ["power", "super_power"] %}
+                {%- set power = co[kind] %}
+                {%- if power %}
+                <div class="power">
+                    <p class="power-name"><span class="tag">{% if kind == "power" %}CO Power{% else %}Super{% endif %}</span> {{ power.name }} {{ m::stars(count=power.stars) }}</p>
+                    <p>{{ power.description }}</p>
+                </div>
+                {%- endif %}
+                {%- endfor %}
+            </article>
+            {%- endfor %}
+        </div>
+    </div>
+</section>
+{%- endfor %}
+{% endblock %}

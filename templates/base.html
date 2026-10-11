@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {%- block meta %}
+    {%- if page.title %}{% set page_title = page.title ~ " · " ~ config.title %}
+    {%- elif section.title and not section.path == "/" %}{% set page_title = section.title ~ " · " ~ config.title %}
+    {%- else %}{% set page_title = config.title ~ " · " ~ config.extra.tagline %}{% endif %}
+    {%- set page_description = page.description | default(value=section.description | default(value=config.description)) %}
+    {%- set page_url = page.permalink | default(value=section.permalink | default(value=config.base_url)) %}
+    <title>{{ page_title }}</title>
+    <meta name="description" content="{{ page_description }}">
+    <meta name="keywords" content="{{ config.extra.keywords }}">
+    <link rel="canonical" href="{{ page_url }}">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="{{ config.title }}">
+    <meta property="og:title" content="{{ page_title }}">
+    <meta property="og:description" content="{{ page_description }}">
+    <meta property="og:url" content="{{ page_url }}">
+    <meta property="og:image" content="{{ get_url(path='img/og-image.png') }}">
+    <meta name="twitter:card" content="summary_large_image">
+    {%- endblock meta %}
+    <meta name="theme-color" content="#1f2b21">
+    <link rel="icon" href="{{ get_url(path='favicon.ico') }}" sizes="32x32">
+    <link rel="icon" href="{{ get_url(path='favicon.png') }}" type="image/png">
+    <link rel="apple-touch-icon" href="{{ get_url(path='apple-touch-icon.png') }}">
+    <link rel="manifest" href="{{ get_url(path='site.webmanifest') }}">
+    <link rel="preload" href="{{ get_url(path='fonts/AlegreyaSC-Black.woff2') }}" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="{{ get_url(path='fonts/AlegreyaSans-Regular.woff2') }}" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="{{ get_url(path='style.css', cachebust=true) }}">
+</head>
+<body class="{% block body_class %}{% endblock %}">
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="site-header">
+        <div class="wrap header-row">
+            <a class="wordmark" href="{{ get_url(path='/') }}">Paw <span>&amp;</span> Claw</a>
+            <nav class="nav" aria-label="Main">
+                {%- for link in config.extra.nav_links %}
+                <a href="{{ link.url }}"{% if current_path and current_path == link.url %} aria-current="page"{% endif %}>{{ link.name }}</a>
+                {%- endfor %}
+                <a class="btn btn-gold btn-small" href="{{ config.extra.play_url }}">Play now</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap footer-row">
+            <div>
+                <p class="footer-mark">Paw &amp; Claw</p>
+                <p class="muted">A turn-based tactics game by <a href="https://raskell.io">raskell.io</a>. Free and open source under the MIT license.</p>
+            </div>
+            <nav class="footer-links" aria-label="Footer">
+                <a href="{{ config.extra.play_url }}">Play</a>
+                <a href="/how-to-play/">How to play</a>
+                <a href="/commanders/">Commanders</a>
+                <a href="/download/">Download</a>
+                <a href="{{ config.extra.github }}">GitHub</a>
+                <a href="{{ config.extra.codeberg }}">Codeberg</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>

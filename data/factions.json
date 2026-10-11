@@ -1,0 +1,69 @@
+{
+  "factions": [
+    {
+      "id": "western",
+      "name": "Western Frontier",
+      "description": "Cunning survivalists of the wild frontier. Strike and fade.",
+      "color": "#eb541f",
+      "animals": [
+        "Raccoon",
+        "Opossum",
+        "Coyote",
+        "Hawk",
+        "Armadillo"
+      ]
+    },
+    {
+      "id": "northern",
+      "name": "Northern Realm",
+      "description": "Stalwart defenders of the ancient forests. Unbreakable lines.",
+      "color": "#4c80e6",
+      "animals": [
+        "Badger",
+        "Hedgehog",
+        "Stoat",
+        "Owl",
+        "Fox"
+      ]
+    },
+    {
+      "id": "southern",
+      "name": "Southern Pride",
+      "description": "Mighty beasts of the savanna. Power and endurance.",
+      "color": "#4cb24c",
+      "animals": [
+        "Lion",
+        "Elephant",
+        "Rhino",
+        "Hyena",
+        "Cheetah"
+      ]
+    },
+    {
+      "id": "eastern",
+      "name": "Eastern Empire",
+      "description": "Disciplined armies of the rising sun. Strength in numbers.",
+      "color": "#f2cc26",
+      "animals": [
+        "Tanuki",
+        "Red Panda",
+        "Crane",
+        "Kitsune",
+        "Macaque"
+      ]
+    },
+    {
+      "id": "nether",
+      "name": "Nether Dominion",
+      "description": "Relentless burrowers from below. They emerge without warning.",
+      "color": "#4c385c",
+      "animals": [
+        "Mole",
+        "Anteater",
+        "Skunk",
+        "Shrew",
+        "Pangolin"
+      ]
+    }
+  ]
+}

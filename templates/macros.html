@@ -1,0 +1,12 @@
+{# A unit sprite sheet (two 32x32 frames side by side), drawn large and pixel-sharp #}
+{% macro unit(faction, asset, label="") %}
+<span class="sprite" role="img" aria-label="{{ label }}" style="background-image: url('/sprites/units/{{ faction }}/{{ asset }}.png')"></span>
+{% endmacro unit %}
+
+{% macro portrait(id, name, size="md") %}
+<img class="portrait portrait-{{ size }}" src="/sprites/portraits/{{ id }}.png" alt="{{ name }}" width="64" height="64" loading="lazy">
+{% endmacro portrait %}
+
+{% macro stars(count) %}
+<span class="stars" aria-label="{{ count }} stars">{% for i in range(end=count) %}<i></i>{% endfor %}</span>
+{% endmacro stars %}

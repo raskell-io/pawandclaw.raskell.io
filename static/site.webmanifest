@@ -1,0 +1,10 @@
+{
+  "name": "Paw & Claw",
+  "short_name": "Paw & Claw",
+  "start_url": "/play/",
+  "display": "fullscreen",
+  "orientation": "landscape",
+  "background_color": "#1f2b21",
+  "theme_color": "#1f2b21",
+  "icons": [{ "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" }]
+}

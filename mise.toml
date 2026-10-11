@@ -1,0 +1,35 @@
+# mise configuration for paw-and-claw.raskell.io
+# https://mise.jdx.dev
+
+[tools]
+zola = "0.21"
+
+[tasks.serve]
+description = "Start development server (the game itself is not served; use preview)"
+run = "zola serve --drafts"
+
+[tasks.build]
+description = "Build the website into public/"
+run = "zola build"
+
+[tasks.fetch-game]
+description = "Put the latest web build of the game into public/play/"
+run = "scripts/fetch-game.sh public/play"
+
+[tasks.sync-game]
+description = "Refresh data/ and static/sprites from a paw-and-claw checkout (default ../paw-and-claw)"
+run = "python3 scripts/sync-game.py"
+
+[tasks.preview]
+description = "Build the full site with the game and serve it like Cloudflare does"
+depends = ["build"]
+run = "scripts/fetch-game.sh public/play && npx --yes wrangler@4 dev"
+
+[tasks.deploy]
+description = "Build the full site with the game and deploy it to Cloudflare"
+depends = ["build"]
+run = "scripts/fetch-game.sh public/play && npx --yes wrangler@4 deploy"
+
+[tasks.clean]
+description = "Clean build artifacts"
+run = "rm -rf public"

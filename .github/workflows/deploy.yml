@@ -1,0 +1,41 @@
+# Build the site, add the latest web build of the game under /play/, deploy to Cloudflare
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+  # Sent by the game repo after a new web build (see README)
+  repository_dispatch:
+    types: [game-updated]
+
+concurrency:
+  group: deploy-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: jdx/mise-action@v2
+
+      - name: Build the site
+        run: mise run build
+
+      - name: Add the game
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: scripts/fetch-game.sh public/play
+
+      - name: Deploy to Cloudflare
+        if: github.ref == 'refs/heads/main'
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: deploy
