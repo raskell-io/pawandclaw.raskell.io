@@ -12,6 +12,7 @@
     <div class="hero-copy wrap">
         <h1 class="title">Paw <span>&amp;</span> Claw</h1>
         <p class="eyebrow">{{ config.extra.tagline }}</p>
+        <p class="hero-pitch">Turn-based strategy inspired by <em>Advance Wars</em></p>
     </div>
     <div class="hero-forest">
         <div class="fireflies" aria-hidden="true">{% for i in range(end=14) %}<i></i>{% endfor %}</div>
@@ -26,8 +27,46 @@
 </section>
 
 <section class="band">
-    <div class="wrap prose-wide">
-        {{ section.content | safe }}
+    <div class="wrap intro">
+        <div class="prose-wide">
+            {{ section.content | safe }}
+        </div>
+        {#- The seal from the game's opening, where the cartoon hand stamps it #}
+        <a class="seal" href="https://raskell.io">
+            <img src="/img/raskell-stamp.png" alt="The raskell.io seal" width="256" height="256" loading="lazy">
+            <span>produced by <b>raskell.io</b></span>
+        </a>
+    </div>
+    <div class="wrap">
+        <h2 class="section-title turns-title">How a turn plays</h2>
+        <p class="section-lead">You and your rival take turns, one day at a time. On yours, every unit gets one order.</p>
+        <ol class="turns">
+            <li class="card">
+                {{ m::unit(faction="western", asset="recon", label="Outrider") }}
+                <h3>Move</h3>
+                <p>Each unit moves once, as far as its legs, wheels or wings and the terrain allow.</p>
+            </li>
+            <li class="card">
+                {{ m::unit(faction="western", asset="siege", label="Catapult") }}
+                <h3>Attack</h3>
+                <p>Unit matchups, health and terrain cover decide the damage. Survivors strike back.</p>
+            </li>
+            <li class="card">
+                {{ m::unit(faction="western", asset="scout", label="Militia") }}
+                <h3>Capture</h3>
+                <p>Foot soldiers take outposts and workshops. Every property pays funds each day.</p>
+            </li>
+            <li class="card">
+                {{ m::unit(faction="western", asset="ironclad", label="Charger") }}
+                <h3>Build</h3>
+                <p>Spend those funds at workshops, docks and roosts for fresh units.</p>
+            </li>
+            <li class="card">
+                {{ m::unit(faction="southern", asset="scout", label="Enemy militia") }}
+                <h3>End turn</h3>
+                <p>Then the enemy commander moves. Take their headquarters, or rout their army, to win.</p>
+            </li>
+        </ol>
     </div>
 </section>
 
@@ -69,7 +108,26 @@
     </div>
 </section>
 
-<section class="band band-dark">
+<section class="band band-dark aw">
+    <div class="wrap aw-row">
+        <div>
+            <p class="eyebrow">Played Advance Wars?</p>
+            <h2 class="section-title">Then you already know how to play</h2>
+            <p>Paw &amp; Claw follows the rules of <em>Advance Wars 2</em> and <em>Dual Strike</em>, move for move.
+            The units, terrain and commanders wear fur and feathers, but the battles play the way you remember.</p>
+            <p><a class="btn btn-ghost" href="/how-to-play/">The rules of the woods</a></p>
+        </div>
+        <ul class="checks">
+            <li>The same damage formula, counterattacks and terrain stars.</li>
+            <li>20-point captures, daily income, repairs and resupply on your own properties.</li>
+            <li>Indirect units that can't move and fire; fliers and boats that burn stamina every day.</li>
+            <li>Commanders modelled on the AW2 and Dual Strike COs, each with a CO Power and a Super CO Power.</li>
+            <li>Fog of war, weather and the classic island maps.</li>
+        </ul>
+    </div>
+</section>
+
+<section class="band">
     <div class="wrap">
         <h2 class="section-title">From the field</h2>
         <p class="section-lead">Straight from the game, as it runs in your browser.</p>
@@ -84,7 +142,7 @@
     </div>
 </section>
 
-<section class="band">
+<section class="band band-dark">
     <div class="wrap">
         <h2 class="section-title">{{ commanders | length }} commanders</h2>
         <p class="section-lead">Each brings everyday strengths, a CO Power and a Super CO Power that can turn a battle in one move.</p>

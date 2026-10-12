@@ -3,7 +3,7 @@
 
 base_url = "https://pawandclaw.raskell.io"
 title = "Paw & Claw"
-description = "A turn-based tactics game of woodland armies. Play it free in your browser, or on your desktop."
+description = "A turn-based strategy game inspired by Advance Wars, fought by woodland armies. Play it free in your browser, or on your desktop."
 default_language = "en"
 
 compile_sass = true
@@ -27,6 +27,7 @@ github = "https://github.com/raskell-io/paw-and-claw"
 codeberg = "https://codeberg.org/raskell-io/paw-and-claw"
 releases = "https://github.com/raskell-io/paw-and-claw/releases"
 play_url = "/play/"
+pitch = "Turn-based strategy inspired by Advance Wars"
 keywords = "Paw & Claw, tactics game, turn-based strategy, Advance Wars, browser game, WebAssembly, Bevy, Rust, woodland"
 
 nav_links = [

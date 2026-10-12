@@ -6,7 +6,7 @@
     {%- block meta %}
     {%- if page.title %}{% set page_title = page.title ~ " · " ~ config.title %}
     {%- elif section.title and not section.path == "/" %}{% set page_title = section.title ~ " · " ~ config.title %}
-    {%- else %}{% set page_title = config.title ~ " · " ~ config.extra.tagline %}{% endif %}
+    {%- else %}{% set page_title = config.title ~ ": " ~ config.extra.pitch %}{% endif %}
     {%- set page_description = page.description | default(value=section.description | default(value=config.description)) %}
     {%- set page_url = page.permalink | default(value=section.permalink | default(value=config.base_url)) %}
     <title>{{ page_title }}</title>
@@ -50,9 +50,13 @@
 
     <footer class="site-footer">
         <div class="wrap footer-row">
-            <div>
-                <p class="footer-mark">Paw &amp; Claw</p>
-                <p class="muted">A turn-based tactics game by <a href="https://raskell.io">raskell.io</a>. Free and open source under the MIT license.</p>
+            <div class="footer-brand">
+                <a class="footer-seal" href="https://raskell.io" title="raskell.io"><img src="/img/raskell-stamp.png" alt="The raskell.io seal" width="64" height="64" loading="lazy"></a>
+                <div>
+                    <p class="footer-mark">Paw &amp; Claw</p>
+                    <p class="muted">A turn-based strategy game produced by <a href="https://raskell.io">raskell.io</a>. Free and open source under the MIT license.</p>
+                    <p class="muted small">Inspired by <em>Advance Wars</em>, a Nintendo series. Paw &amp; Claw is an independent game, not affiliated with or endorsed by Nintendo.</p>
+                </div>
             </div>
             <nav class="footer-links" aria-label="Footer">
                 <a href="{{ config.extra.play_url }}">Play</a>

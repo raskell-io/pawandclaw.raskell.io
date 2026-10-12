@@ -5,7 +5,8 @@
 
 The game's RON files are the source of truth. This pulls what the site shows
 (factions, commanders, units) into data/*.json for Zola's load_data, and copies
-portraits, full-body commander figures, unit sprites and fonts into static/. Re-run it after the game's
+portraits, full-body commander figures, unit sprites, the raskell.io stamp and fonts
+into static/. Re-run it after the game's
 roster or art changes, then commit the result.
 """
 import json
@@ -115,6 +116,8 @@ def main():
         print(f"data/{name}.json: {len(value)}")
     copy_tree(SPRITES / "portraits", SITE / "static" / "sprites" / "portraits")
     copy_tree(SPRITES / "figures", SITE / "static" / "sprites" / "figures")
+    # The raskell.io seal stamped in the game's opening
+    shutil.copy2(SPRITES / "brand" / "stamp_ink.png", SITE / "static" / "img" / "raskell-stamp.png")
     for faction in FACTION_ORDER:
         copy_tree(SPRITES / "units" / faction, SITE / "static" / "sprites" / "units" / faction)
     fonts()
