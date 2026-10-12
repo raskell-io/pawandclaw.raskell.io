@@ -77,6 +77,12 @@
     <div class="wrap">
         <h2 class="section-title">{{ commanders | length }} commanders</h2>
         <p class="section-lead">Each brings everyday strengths, a CO Power and a Super CO Power that can turn a battle in one move.</p>
+        <div class="lineup lineup-all">
+            {%- for co in commanders | filter(attribute="figure", value=true) %}
+            {%- set faction = factions | filter(attribute="id", value=co.faction) | first %}
+            <a href="/commanders/#{{ co.id }}" title="{{ co.name }}, {{ faction.name }}" style="--faction: {{ faction.color }}">{{ m::figure(id=co.id, name=co.name) }}</a>
+            {%- endfor %}
+        </div>
         <div class="portrait-row">
             {%- for co in commanders %}
             <a href="/commanders/#{{ co.id }}" title="{{ co.name }}">{{ m::portrait(id=co.id, name=co.name, size="sm") }}</a>

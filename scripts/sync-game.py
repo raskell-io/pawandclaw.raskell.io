@@ -5,7 +5,7 @@
 
 The game's RON files are the source of truth. This pulls what the site shows
 (factions, commanders, units) into data/*.json for Zola's load_data, and copies
-portraits, unit sprites and fonts into static/. Re-run it after the game's
+portraits, full-body commander figures, unit sprites and fonts into static/. Re-run it after the game's
 roster or art changes, then commit the result.
 """
 import json
@@ -65,6 +65,7 @@ def commanders():
             "faction": re.search(r"faction: (\w+)", body).group(1).lower(),
             "personality": re.search(r"personality: (\w+)", body).group(1),
             "description": field(body, "description"),
+            "figure": (SPRITES / "figures" / f"{key}.png").is_file(),
             "power": power(body, "power"),
             "super_power": power(body, "super_power"),
         })
@@ -113,6 +114,7 @@ def main():
         (data / f"{name}.json").write_text(json.dumps({name: value}, indent=2, ensure_ascii=False) + "\n")
         print(f"data/{name}.json: {len(value)}")
     copy_tree(SPRITES / "portraits", SITE / "static" / "sprites" / "portraits")
+    copy_tree(SPRITES / "figures", SITE / "static" / "sprites" / "figures")
     for faction in FACTION_ORDER:
         copy_tree(SPRITES / "units" / faction, SITE / "static" / "sprites" / "units" / faction)
     fonts()

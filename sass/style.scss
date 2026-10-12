@@ -216,6 +216,32 @@ a:hover { color: var(--parchment); }
     a:hover { transform: translateY(-3px) scale(1.06); }
 }
 
+// Full-body commanders standing on a strip of ground; hover steps one forward
+.figure { display: block; width: 160px; height: 288px; image-rendering: pixelated; }
+.lineup {
+    display: flex; justify-content: center; align-items: flex-end;
+    margin: 0 0 28px; padding: 12px 8px 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.28) 0 10px, transparent 10px);
+    a {
+        position: relative; flex: none; margin: 0 -18px; text-decoration: none;
+        filter: drop-shadow(0 4px 0 rgba(0, 0, 0, 0.35));
+        transition: transform 0.15s ease;
+    }
+    a:hover, a:focus-visible { transform: translateY(-8px); z-index: 1; }
+    span {
+        position: absolute; left: 50%; bottom: -6px; transform: translateX(-50%);
+        font-family: var(--display); font-weight: 900; color: var(--parchment);
+        text-shadow: 0 2px 0 rgba(0, 0, 0, 0.6); white-space: nowrap;
+    }
+}
+// The home page's group shot is too wide for small screens: it scrolls inside itself
+.lineup-all {
+    justify-content: safe center; overflow-x: auto; scrollbar-width: thin;
+    padding-left: 20px; padding-right: 20px;
+    a { margin: 0 -13px; border-bottom: 6px solid var(--faction); }
+    .figure { width: 120px; height: 216px; }
+}
+
 // ---------- Cards ----------
 
 .card {
@@ -327,5 +353,8 @@ a:hover { color: var(--parchment); }
     .btn-large { width: 100%; }
     .commanders { grid-template-columns: minmax(0, 1fr); }
     .sprite { width: 64px; height: 64px; background-size: 128px 64px; animation-name: idle-small; }
+    .lineup:not(.lineup-all) { flex-wrap: wrap; row-gap: 24px; }
+    .lineup:not(.lineup-all) a { margin: 0 -10px; }
+    .lineup .figure { width: 120px; height: 216px; }
 }
 @keyframes idle-small { to { background-position: -128px 0; } }

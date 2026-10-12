@@ -7,6 +7,11 @@
 <img class="portrait portrait-{{ size }}" src="/sprites/portraits/{{ id }}.png" alt="{{ name }}" width="64" height="64" loading="lazy">
 {% endmacro portrait %}
 
+{# Full-body commander art (80x144), drawn at a whole-number scale #}
+{% macro figure(id, name) %}
+<img class="figure" src="/sprites/figures/{{ id }}.png" alt="{{ name }}" width="160" height="288" loading="lazy">
+{% endmacro figure %}
+
 {% macro stars(count) %}
 <span class="stars" aria-label="{{ count }} stars">{% for i in range(end=count) %}<i></i>{% endfor %}</span>
 {% endmacro stars %}

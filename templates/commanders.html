@@ -19,6 +19,14 @@
 <section class="band{% if loop.index is odd %} band-dark{% endif %}" id="{{ faction.id }}">
     <div class="wrap">
         <h2 class="section-title faction-title" style="--faction: {{ faction.color }}">{{ faction.name }}</h2>
+        {%- set figures = commanders | filter(attribute="faction", value=faction.id) | filter(attribute="figure", value=true) %}
+        {%- if figures | length > 0 %}
+        <div class="lineup">
+            {%- for co in figures %}
+            <a href="#{{ co.id }}" title="{{ co.name }}">{{ m::figure(id=co.id, name=co.name) }}<span>{{ co.name }}</span></a>
+            {%- endfor %}
+        </div>
+        {%- endif %}
         <div class="commanders">
             {%- for co in commanders | filter(attribute="faction", value=faction.id) %}
             <article class="card commander" id="{{ co.id }}" style="--faction: {{ faction.color }}">

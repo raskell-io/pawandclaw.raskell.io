@@ -6,6 +6,7 @@
       "faction": "western",
       "personality": "Methodical",
       "description": "A raccoon tinkerer who can patch up anything with twine and pluck. No strengths, no weaknesses.",
+      "figure": true,
       "power": {
         "name": "Patch Job",
         "description": "All units recover 2 HP.",
@@ -23,6 +24,7 @@
       "faction": "western",
       "personality": "Aggressive",
       "description": "A hawk who swoops straight in. Direct combat units are strong; indirect ones weak and short-ranged.",
+      "figure": true,
       "power": {
         "name": "Dive",
         "description": "Direct combat units gain +10% attack and +1 movement.",
@@ -40,6 +42,7 @@
       "faction": "western",
       "personality": "Reckless",
       "description": "A raccoon scout who lives off the land. Foot soldiers fight and capture well, transports move further; other direct units are weaker.",
+      "figure": true,
       "power": {
         "name": "Quick March",
         "description": "Foot soldiers gain +1 movement and +10% attack.",
@@ -57,6 +60,7 @@
       "faction": "western",
       "personality": "Aggressive",
       "description": "An opossum captain blessed with uncanny luck. Her attacks can deal surprising damage.",
+      "figure": true,
       "power": {
         "name": "Four-Leaf",
         "description": "Luck rises sharply: attacks can deal far more damage.",
@@ -74,6 +78,7 @@
       "faction": "western",
       "personality": "Methodical",
       "description": "An old armadillo trader who knows every supplier in the woods. Units cost 10% less.",
+      "figure": true,
       "power": {
         "name": "Haggle",
         "description": "Units cost half price.",
@@ -91,6 +96,7 @@
       "faction": "western",
       "personality": "Aggressive",
       "description": "A young coyote who loves open country. Units fight better on grass.",
+      "figure": true,
       "power": {
         "name": "Stampede",
         "description": "Units on grass gain +10% attack; ground siege engines gain +1 range.",
@@ -108,6 +114,7 @@
       "faction": "western",
       "personality": "Cautious",
       "description": "A hawk medic who keeps her troops in the fight. Units repair 1 extra HP on properties.",
+      "figure": true,
       "power": {
         "name": "Second Wind",
         "description": "Luck rises: attacks can deal more damage.",
@@ -125,6 +132,7 @@
       "faction": "northern",
       "personality": "Methodical",
       "description": "A hedgehog veteran of a hundred winters. Snow doesn't slow her troops.",
+      "figure": true,
       "power": {
         "name": "Hoarfrost",
         "description": "Snow falls until her next turn.",
@@ -142,6 +150,7 @@
       "faction": "northern",
       "personality": "Cautious",
       "description": "A badger marksman. Indirect units hit harder and reach further; direct combat units are weaker.",
+      "figure": true,
       "power": {
         "name": "Long Shot",
         "description": "Indirect units gain +1 range and +20% attack.",
@@ -159,6 +168,7 @@
       "faction": "northern",
       "personality": "Methodical",
       "description": "A young fox heir with deep pockets. Units cost 20% less but have 10% less firepower.",
+      "figure": true,
       "power": {
         "name": "Family Fortune",
         "description": "Funds grow by half.",
@@ -176,6 +186,7 @@
       "faction": "northern",
       "personality": "Cautious",
       "description": "A stoat heiress with a knack for business. Each property earns 100 extra funds.",
+      "figure": true,
       "power": {
         "name": "Run on the Bank",
         "description": "The enemy's power meter drains by 10% for every 5000 funds she holds.",
@@ -193,6 +204,7 @@
       "faction": "southern",
       "personality": "Aggressive",
       "description": "A cheetah who commands the skies. Fliers are strong and use less stamina; boats are weak.",
+      "figure": false,
       "power": {
         "name": "Updraft",
         "description": "Fliers gain +5% attack and +10% defense.",
@@ -210,6 +222,7 @@
       "faction": "southern",
       "personality": "Methodical",
       "description": "An elephant admiral. Boats move further and defend better, rain doesn't bother him; fliers are weak.",
+      "figure": false,
       "power": {
         "name": "Trumpet Wave",
         "description": "All enemy units lose 1 HP and half their stamina.",
@@ -227,6 +240,7 @@
       "faction": "southern",
       "personality": "Aggressive",
       "description": "A rhino who trusts in armour. Vehicles hit harder; everything else is weaker.",
+      "figure": false,
       "power": {
         "name": "Charge Up",
         "description": "Vehicles gain +10% attack and +1 movement; all units are resupplied.",
@@ -244,6 +258,7 @@
       "faction": "southern",
       "personality": "Cautious",
       "description": "A noble lion knight. Units shrug off indirect fire.",
+      "figure": false,
       "power": {
         "name": "Shield Wall",
         "description": "Even more defense against indirect fire.",
@@ -261,6 +276,7 @@
       "faction": "eastern",
       "personality": "Aggressive",
       "description": "A red panda empress whose elite troops are strong in attack and defense, but cost 20% more.",
+      "figure": false,
       "power": {
         "name": "Rallying Cry",
         "description": "Units gain +20% attack.",
@@ -278,6 +294,7 @@
       "faction": "eastern",
       "personality": "Methodical",
       "description": "A trickster who hides his army's strength. Enemies can't see his units' HP; +1 vision, but poorer luck.",
+      "figure": false,
       "power": {
         "name": "Second Sight",
         "description": "Units gain +1 vision and see into thickets and lily pads.",
@@ -295,6 +312,7 @@
       "faction": "eastern",
       "personality": "Aggressive",
       "description": "An old crane master of the air. Copters and foot soldiers are strong, transports move further; vehicles and boats are weak.",
+      "figure": false,
       "power": {
         "name": "Call the Flock",
         "description": "Militia with 9 HP appear on every empty storehouse.",
@@ -312,6 +330,7 @@
       "faction": "eastern",
       "personality": "Reckless",
       "description": "A macaque brawler. Massive firepower, flimsy defense.",
+      "figure": false,
       "power": {
         "name": "Knuckle Up",
         "description": "Units gain +20% attack.",
@@ -329,6 +348,7 @@
       "faction": "nether",
       "personality": "Reckless",
       "description": "A hulking skunk who fights wild. Damage swings with luck, good and bad.",
+      "figure": false,
       "power": {
         "name": "Brute Swing",
         "description": "Luck swings wider: more damage, and more misses.",
@@ -346,6 +366,7 @@
       "faction": "nether",
       "personality": "Cautious",
       "description": "A mole tactician who uses every fold of the ground. Units gain attack for each terrain star they stand on.",
+      "figure": false,
       "power": {
         "name": "Undermine",
         "description": "All terrain costs 1 to move through.",
@@ -363,6 +384,7 @@
       "faction": "nether",
       "personality": "Aggressive",
       "description": "A shrew who slips through any gap. A stronger power meter makes up for no other gifts.",
+      "figure": false,
       "power": {
         "name": "Slither",
         "description": "All units gain +1 movement.",
@@ -380,6 +402,7 @@
       "faction": "nether",
       "personality": "Methodical",
       "description": "A pangolin general who wears his foes down. Units have 10% more firepower.",
+      "figure": false,
       "power": {
         "name": "Blight",
         "description": "All enemy units lose 1 HP; all his units recover 1 HP.",
@@ -397,6 +420,7 @@
       "faction": "nether",
       "personality": "Methodical",
       "description": "The anteater matriarch who rules the deep. Strong in attack and defense, and her army crosses any ground at cost 1.",
+      "figure": false,
       "power": {
         "name": "Cave-In",
         "description": "The ground collapses on the enemy's densest group: 4 HP damage around it.",
@@ -414,6 +438,7 @@
       "faction": "nether",
       "personality": "Reckless",
       "description": "An aardvark sapper in riveted iron armour. Erratic: damage swings with luck.",
+      "figure": false,
       "power": {
         "name": "Overwind",
         "description": "Luck swings wider still.",
@@ -431,6 +456,7 @@
       "faction": "nether",
       "personality": "Aggressive",
       "description": "A mole marshal who drives troops down every trail. Units fight better on trails.",
+      "figure": false,
       "power": {
         "name": "Forced March",
         "description": "Units gain +1 movement; units on trails +10% attack.",
@@ -448,6 +474,7 @@
       "faction": "nether",
       "personality": "Aggressive",
       "description": "A naked mole rat socialite who rules the burrow-towns. Units on properties fight much harder.",
+      "figure": false,
       "power": {
         "name": "Rot",
         "description": "Enemy units on properties lose 3 HP; units on properties gain +40% attack.",
@@ -465,6 +492,7 @@
       "faction": "nether",
       "personality": "Cautious",
       "description": "An ancient bat who sleeps beneath the roots. Units are stronger in attack and defense. No CO Power.",
+      "figure": false,
       "power": null,
       "super_power": {
         "name": "Root Shock",
