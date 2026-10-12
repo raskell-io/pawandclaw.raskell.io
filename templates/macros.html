@@ -12,6 +12,14 @@
 <img class="figure" src="/sprites/figures/{{ id }}.png" alt="{{ name }}" width="160" height="288" loading="lazy">
 {% endmacro figure %}
 
+{# An in-game screenshot from static/img/shots (1600x952, plus an -800 copy), linking to the full size #}
+{% macro shot(name, alt, caption="") %}
+<figure class="shot">
+    <a class="frame" href="/img/shots/{{ name }}.webp"><img src="/img/shots/{{ name }}-800.webp" srcset="/img/shots/{{ name }}-800.webp 800w, /img/shots/{{ name }}.webp 1600w" sizes="(min-width: 980px) 380px, (min-width: 640px) 50vw, 100vw" alt="{{ alt }}" width="1600" height="952" loading="lazy"></a>
+    {%- if caption %}<figcaption>{{ caption }}</figcaption>{% endif %}
+</figure>
+{% endmacro shot %}
+
 {% macro stars(count) %}
 <span class="stars" aria-label="{{ count }} stars">{% for i in range(end=count) %}<i></i>{% endfor %}</span>
 {% endmacro stars %}

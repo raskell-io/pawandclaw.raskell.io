@@ -4,28 +4,24 @@
 {% block content %}
 {%- set factions = load_data(path="data/factions.json") | get(key="factions") %}
 {%- set commanders = load_data(path="data/commanders.json") | get(key="commanders") %}
-{%- set showcase = ["scout", "recon", "ironclad", "siege", "skywing", "frigate"] %}
 
 <section class="hero">
-    <div class="wrap hero-grid">
-        <div class="hero-copy">
-            <p class="eyebrow">{{ config.extra.tagline }}</p>
-            <h1 class="title">Paw <span>&amp;</span> Claw</h1>
-            <p class="lead">{{ section.description }}</p>
-            <div class="actions">
+    {#- The game's title screen: a live skirmish on Spann Island under a dark sky band, pines in front #}
+    <img class="hero-scene" src="/img/hero.webp" srcset="/img/hero-1200.webp 1200w, /img/hero.webp 2400w" sizes="(orientation: portrait) 170vh, 100vw"
+        alt="The title screen's diorama: Western Frontier and Northern Realm armies clash on Spann Island" width="2400" height="1456" fetchpriority="high">
+    <div class="hero-copy wrap">
+        <h1 class="title">Paw <span>&amp;</span> Claw</h1>
+        <p class="eyebrow">{{ config.extra.tagline }}</p>
+    </div>
+    <div class="hero-forest">
+        <div class="fireflies" aria-hidden="true">{% for i in range(end=14) %}<i></i>{% endfor %}</div>
+        <div class="wrap hero-actions">
+            <div class="actions actions-center">
                 <a class="btn btn-gold btn-large" href="{{ config.extra.play_url }}">Play in your browser</a>
                 <a class="btn btn-ghost btn-large" href="/download/">Download</a>
             </div>
             <p class="hint">Free. No install, no account. Works with mouse, keyboard, gamepad and touch.</p>
         </div>
-        <figure class="hero-shot frame">
-            <img src="/img/setup.webp" alt="The skirmish setup screen: choose a faction, a commander and a battlefield" width="1600" height="900">
-        </figure>
-    </div>
-    <div class="parade" aria-hidden="true">
-        {%- for faction in factions %}
-        {{ m::unit(faction=faction.id, asset="scout") }}{{ m::unit(faction=faction.id, asset=showcase | nth(n=loop.index0)) }}
-        {%- endfor %}
     </div>
 </section>
 
@@ -58,7 +54,7 @@
 <section class="band">
     <div class="wrap split">
         <figure class="frame">
-            <img src="/img/board.webp" alt="A battle board: an island of grass, roads, workshops and outposts surrounded by water" width="1600" height="900" loading="lazy">
+            <img src="/img/shots/battle.webp" srcset="/img/shots/battle-800.webp 800w, /img/shots/battle.webp 1600w" sizes="(min-width: 860px) 600px, 100vw" alt="Day 6 on Spann Island: Lionheart's Southern Pride militia hold the east shore and capture an outpost" width="1600" height="952" loading="lazy">
         </figure>
         <div>
             <h2 class="section-title">Classic tactics, woodland scale</h2>
@@ -74,6 +70,21 @@
 </section>
 
 <section class="band band-dark">
+    <div class="wrap">
+        <h2 class="section-title">From the field</h2>
+        <p class="section-lead">Straight from the game, as it runs in your browser.</p>
+        <div class="gallery">
+            {{ m::shot(name="super-power", alt="Bandit's Super CO Power, Midnight Raid, sweeps across the board", caption="Midnight Raid! A Super CO Power can turn a battle in one move.") }}
+            {{ m::shot(name="muster", alt="The Muster Troops menu at a workshop: militia, halberdier, outrider, caravan and supply cart", caption="Muster troops at workshops, docks and roosts.") }}
+            {{ m::shot(name="commander", alt="Bandit's commander card: abilities, CO Power and Super CO Power", caption="Every commander's strengths and powers, one button away.") }}
+            {{ m::shot(name="intro-faceoff", alt="The opening intro: Bandit of the Western Frontier faces Grimjaw of the Northern Realm", caption="The opening: Bandit against Grimjaw.") }}
+            {{ m::shot(name="intro-parade", alt="The opening intro: the Western Frontier's commanders rush across a slanted band", caption="Each army's commanders rush in, in time with the intro song.") }}
+            {{ m::shot(name="diorama", alt="A close view of the title screen's skirmish, a unit struck mid-battle", caption="Behind the title screen, a skirmish never stops.") }}
+        </div>
+    </div>
+</section>
+
+<section class="band">
     <div class="wrap">
         <h2 class="section-title">{{ commanders | length }} commanders</h2>
         <p class="section-lead">Each brings everyday strengths, a CO Power and a Super CO Power that can turn a battle in one move.</p>
