@@ -20,7 +20,7 @@ mise run preview      # site + game, served like Cloudflare Pages does
 | `mise run serve` | Dev server with live reload (no game) |
 | `mise run build` | Build the site into `public/` |
 | `mise run fetch-game` | Put the latest web build of the game into `public/play/` |
-| `mise run sync-game` | Refresh `data/` and `static/sprites/` from a `../paw-and-claw` checkout |
+| `mise run sync-game` | Rebuild the wiki from a `../paw-and-claw` checkout: `data/`, the generated pages in `content/{units,commanders,maps}/`, sprites, terrain icons and map previews (needs cargo for the map export) |
 | `mise run preview` | Build, add the game, run `wrangler pages dev` |
 
 ## Structure
@@ -34,10 +34,18 @@ pawandclaw.raskell.io/
 ├── scripts/
 │   ├── cf-pages-build.sh # Cloudflare Pages build command
 │   ├── fetch-game.sh     # Latest web build of the game -> public/play/
-│   └── sync-game.py      # Game data, portraits, unit sprites, fonts -> data/, static/
+│   └── sync-game.py      # Game data and maps -> data/, wiki page stubs, sprites, map previews
 ├── static/               # Screenshots, sprites, fonts, icons, _headers
 └── templates/            # Zola templates
 ```
+
+## The wiki
+
+Units, commanders, maps, terrain and the damage chart come straight from the game: its RON
+files in `assets/data/` and its built-in maps, which the game writes out with
+`PAW_EXPORT_MAPS=DIR cargo run`. `scripts/sync-game.py` turns them into `data/*.json` and one
+generated page per unit, commander and map (don't edit those; re-run the script). The
+hand-written articles are `content/rules.md`, `how-to-play.md` and the section intros.
 
 ## Hosting
 
