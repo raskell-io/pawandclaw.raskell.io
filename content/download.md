@@ -1,6 +1,7 @@
 +++
 title = "Download"
 description = "Play in the browser, or run Paw & Claw on Windows, macOS and Linux."
+template = "wiki-page.html"
 +++
 
 ## Play in your browser

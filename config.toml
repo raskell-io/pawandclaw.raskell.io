@@ -31,7 +31,9 @@ pitch = "Turn-based strategy inspired by Advance Wars"
 keywords = "Paw & Claw, tactics game, turn-based strategy, Advance Wars, browser game, WebAssembly, Bevy, Rust, woodland"
 
 nav_links = [
-    { name = "How to play", url = "/how-to-play/" },
+    { name = "Wiki", url = "/wiki/" },
+    { name = "Rules", url = "/rules/" },
     { name = "Commanders", url = "/commanders/" },
+    { name = "Units", url = "/units/" },
     { name = "Download", url = "/download/" },
 ]

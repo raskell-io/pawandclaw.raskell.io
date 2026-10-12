@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% import "wiki-macros.html" as w %}
+{#- The wiki's frame: a heading band with breadcrumbs, the contents sidebar, the article -#}
+{% block body_class %}wiki{% endblock %}
+{% block content %}
+<section class="page-head wiki-head">
+    <div class="wrap">
+        {% block crumbs %}{% endblock %}
+        <div class="wiki-title">
+            {% block title_art %}{% endblock %}
+            <div>
+                <h1 class="title title-page">{% block heading %}{% endblock %}</h1>
+                {% block lead %}{% endblock %}
+            </div>
+        </div>
+    </div>
+</section>
+<div class="wrap wiki-layout">
+    {{ w::sidebar(path=current_path) }}
+    <div class="wiki-main">
+        {% block wiki %}{% endblock %}
+        {% block pager %}{% endblock %}
+    </div>
+</div>
+{% endblock %}

@@ -1,6 +1,7 @@
 +++
 title = "How to play"
 description = "Controls and the rules of the woods, in a few minutes."
+template = "wiki-page.html"
 +++
 
 ## Your first battle
@@ -31,7 +32,7 @@ With a unit selected, hovering a reachable tile draws the route there; click to 
 
 ## The rules of the woods
 
-Paw & Claw follows the rules of *Advance Wars 2* and *Dual Strike*. If you know those, you
+The full rules, with every number, are in [Rules of war](/rules/). Paw & Claw follows *Advance Wars 2* and *Dual Strike*. If you know those, you
 know this. The short version:
 
 - **Funds.** Every property you own pays income at the start of your turn. Spend it at

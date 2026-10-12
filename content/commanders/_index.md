@@ -2,6 +2,7 @@
 title = "Commanders"
 description = "Every army is led by a commander with everyday strengths, a CO Power and a Super CO Power."
 template = "commanders.html"
+sort_by = "weight"
 +++
 
 Armies are cosmetic: units cost and fight the same in every colour. **Commanders** are where

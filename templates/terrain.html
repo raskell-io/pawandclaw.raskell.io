@@ -1,0 +1,56 @@
+{% extends "wiki.html" %}
+{% import "wiki-macros.html" as w %}
+{%- block crumbs %}{{ w::crumbs(section="Terrain") }}{% endblock %}
+{%- block heading %}{{ page.title }}{% endblock %}
+{%- block lead %}<p class="lead">{{ page.description }}</p>{% endblock %}
+
+{% block wiki %}
+{%- set terrain = load_data(path="data/terrain.json") | get(key="terrain") %}
+{%- set units = load_data(path="data/units.json") | get(key="units") %}
+<article class="card article">
+    {{ page.content | safe }}
+
+    <h2 id="tiles">Tiles</h2>
+    <div class="terrain-list">
+        {%- for t in terrain %}
+        <section class="terrain-entry" id="{{ t.id }}">
+            <img src="/sprites/terrain/{{ t.id }}.png" alt="" width="64" height="64">
+            <div>
+                <h3>{{ t.name }} {{ w::defense_stars(count=t.defense) }}</h3>
+                <p>{{ t.description }}.</p>
+                <p class="facts">
+                    <span>{{ t.defense }} defense star{% if t.defense != 1 %}s{% endif %}</span>
+                    {%- if t.capturable %}<span>Capture {{ t.capture_points }} points</span><span>{{ t.income | num_format }} funds a day</span>{% endif %}
+                    {%- if t.builds %}<span>Builds {{ t.builds | join(sep=", ") | lower }}</span>{% endif %}
+                    {%- if t.resupplies %}<span>Repairs and resupplies {{ t.resupplies | join(sep=", ") | lower }}</span>{% endif %}
+                    {%- if t.hides %}<span>Hides units in fog</span>{% endif %}
+                    {%- if t.id == "base" %}<span>Lose it and you lose</span>{% endif %}
+                </p>
+            </div>
+        </section>
+        {%- endfor %}
+    </div>
+
+    <h2 id="movement">Movement costs</h2>
+    <p>Movement points to enter each tile, by movement class. A dash means the class can't go there.</p>
+    {%- set first = terrain | first %}
+    <div class="table-scroll">
+    <table class="wtable matrix">
+        <thead>
+            <tr><th>Terrain</th>{% for m in first.moves %}<th class="num">{{ m.name }}</th>{% endfor %}</tr>
+        </thead>
+        <tbody>
+            {%- for t in terrain %}
+            <tr><td>{{ w::terrain_link(id=t.id, name=t.name) }}</td>{% for m in t.moves %}<td class="num{% if m.cost >= 99 %} off{% endif %}">{% if m.cost >= 99 %}—{% else %}{{ m.cost }}{% endif %}</td>{% endfor %}</tr>
+            {%- endfor %}
+        </tbody>
+    </table>
+    </div>
+    <h3>Who moves how</h3>
+    <ul class="class-list">
+        {%- for m in first.moves %}
+        <li><b>{{ m.name }}:</b> {% for u in units | filter(attribute="move_type", value=m.type) %}{{ w::unit_link(id=u.id, name=u.name, asset=u.asset) }}{% endfor %}</li>
+        {%- endfor %}
+    </ul>
+</article>
+{% endblock %}

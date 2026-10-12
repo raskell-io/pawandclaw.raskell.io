@@ -149,15 +149,31 @@
         <div class="lineup lineup-all">
             {%- for co in commanders | filter(attribute="figure", value=true) %}
             {%- set faction = factions | filter(attribute="id", value=co.faction) | first %}
-            <a href="/commanders/#{{ co.id }}" title="{{ co.name }}, {{ faction.name }}" style="--faction: {{ faction.color }}">{{ m::figure(id=co.id, name=co.name) }}</a>
+            <a href="/commanders/{{ co.id | replace(from="_", to="-") }}/" title="{{ co.name }}, {{ faction.name }}" style="--faction: {{ faction.color }}">{{ m::figure(id=co.id, name=co.name) }}</a>
             {%- endfor %}
         </div>
         <div class="portrait-row">
             {%- for co in commanders %}
-            <a href="/commanders/#{{ co.id }}" title="{{ co.name }}">{{ m::portrait(id=co.id, name=co.name, size="sm") }}</a>
+            <a href="/commanders/{{ co.id | replace(from="_", to="-") }}/" title="{{ co.name }}">{{ m::portrait(id=co.id, name=co.name, size="sm") }}</a>
             {%- endfor %}
         </div>
         <p class="center"><a class="btn btn-ghost" href="/commanders/">Meet the commanders</a></p>
+    </div>
+</section>
+
+<section class="band">
+    <div class="wrap">
+        <h2 class="section-title">The wiki</h2>
+        <p class="section-lead">Every number in the game, laid out: the full rules, each commander's powers, unit stats and matchups, terrain and every map.</p>
+        <div class="portal portal-home">
+            <a class="card portal-card" href="/rules/"><h3>Rules of war</h3><p>Turns, damage formula, capturing, supply, fog, weather and powers.</p></a>
+            <a class="card portal-card" href="/units/"><h3>Units</h3><p>Twenty units with stats, matchups and movement.</p></a>
+            <a class="card portal-card" href="/commanders/"><h3>Commanders</h3><p>All {{ commanders | length }}, ability by ability.</p></a>
+            <a class="card portal-card" href="/damage/"><h3>Damage chart</h3><p>Every unit against every other.</p></a>
+            <a class="card portal-card" href="/terrain/"><h3>Terrain</h3><p>Defense stars and movement costs.</p></a>
+            <a class="card portal-card" href="/maps/"><h3>Maps</h3><p>War Room classics and woodland maps.</p></a>
+        </div>
+        <p class="center"><a class="btn btn-ghost" href="/wiki/">Open the wiki</a></p>
     </div>
 </section>
 

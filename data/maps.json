@@ -1,0 +1,2166 @@
+{
+  "maps": [
+    {
+      "id": "spann-island",
+      "key": "SpannIsland",
+      "name": "Spann Island",
+      "description": "The classic War Room skirmish: a small island where every road leads to a fight.",
+      "width": 16,
+      "height": 12,
+      "war_room": true,
+      "armies": [
+        {
+          "id": "western",
+          "name": "First army",
+          "color": "#eb541f"
+        },
+        {
+          "id": "northern",
+          "name": "Second army",
+          "color": "#4c80e6"
+        }
+      ],
+      "starting_income": [
+        7000,
+        5000
+      ],
+      "units": 0,
+      "properties": [
+        {
+          "id": "base",
+          "name": "Base",
+          "total": 2,
+          "neutral": 0,
+          "owned": [
+            1,
+            1
+          ]
+        },
+        {
+          "id": "workshop",
+          "name": "Workshop",
+          "total": 9,
+          "neutral": 0,
+          "owned": [
+            5,
+            4
+          ]
+        },
+        {
+          "id": "storehouse",
+          "name": "Storehouse",
+          "total": 10,
+          "neutral": 9,
+          "owned": [
+            1,
+            0
+          ]
+        }
+      ],
+      "property_count": 21,
+      "terrain": [
+        {
+          "id": "pond",
+          "name": "Pond",
+          "count": 105
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "count": 29
+        },
+        {
+          "id": "log",
+          "name": "Trail",
+          "count": 23
+        },
+        {
+          "id": "storehouse",
+          "name": "Storehouse",
+          "count": 10
+        },
+        {
+          "id": "workshop",
+          "name": "Workshop",
+          "count": 9
+        },
+        {
+          "id": "thicket",
+          "name": "Thicket",
+          "count": 8
+        },
+        {
+          "id": "boulder",
+          "name": "Boulder",
+          "count": 4
+        },
+        {
+          "id": "base",
+          "name": "Base",
+          "count": 2
+        },
+        {
+          "id": "creek",
+          "name": "Creek",
+          "count": 1
+        },
+        {
+          "id": "lily_pads",
+          "name": "Lily Pads",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "sole-harbor",
+      "key": "SoleHarbor",
+      "name": "Sole Harbor",
+      "description": "A narrow land bridge links the mainland to a crowded peninsula, with docks on both coasts.",
+      "width": 22,
+      "height": 15,
+      "war_room": true,
+      "armies": [
+        {
+          "id": "western",
+          "name": "First army",
+          "color": "#eb541f"
+        },
+        {
+          "id": "northern",
+          "name": "Second army",
+          "color": "#4c80e6"
+        }
+      ],
+      "starting_income": [
+        8000,
+        6000
+      ],
+      "units": 0,
+      "properties": [
+        {
+          "id": "base",
+          "name": "Base",
+          "total": 2,
+          "neutral": 0,
+          "owned": [
+            1,
+            1
+          ]
+        },
+        {
+          "id": "workshop",
+          "name": "Workshop",
+          "total": 10,
+          "neutral": 5,
+          "owned": [
+            3,
+            2
+          ]
+        },
+        {
+          "id": "dock",
+          "name": "Dock",
+          "total": 3,
+          "neutral": 1,
+          "owned": [
+            1,
+            1
+          ]
+        },
+        {
+          "id": "storehouse",
+          "name": "Storehouse",
+          "total": 21,
+          "neutral": 16,
+          "owned": [
+            3,
+            2
+          ]
+        }
+      ],
+      "property_count": 36,
+      "terrain": [
+        {
+          "id": "pond",
+          "name": "Pond",
+          "count": 139
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "count": 43
+        },
+        {
+          "id": "log",
+          "name": "Trail",
+          "count": 36
+        },
+        {
+          "id": "thicket",
+          "name": "Thicket",
+          "count": 26
+        },
+        {
+          "id": "boulder",
+          "name": "Boulder",
+          "count": 21
+        },
+        {
+          "id": "storehouse",
+          "name": "Storehouse",
+          "count": 21
+        },
+        {
+          "id": "lily_pads",
+          "name": "Lily Pads",
+          "count": 16
+        },
+        {
+          "id": "shore",
+          "name": "Shore",
+          "count": 13
+        },
+        {
+          "id": "workshop",
+          "name": "Workshop",
+          "count": 10
+        },
+        {
+          "id": "dock",
+          "name": "Dock",
+          "count": 3
+        },
+        {
+          "id": "base",
+          "name": "Base",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "id": "pivot-isle",
+      "key": "PivotIsle",
+      "name": "Pivot Isle",
+      "description": "Bridges pivot around a mountain island; docks and roosts reward a sea and air game.",
+      "width": 21,
+      "height": 14,
+      "war_room": true,
+      "armies": [
+        {
+          "id": "western",
+          "name": "First army",
+          "color": "#eb541f"
+        },
+        {
+          "id": "northern",
+          "name": "Second army",
+          "color": "#4c80e6"
+        }
+      ],
+      "starting_income": [
+        6000,
+        5000
+      ],
+      "units": 0,
+      "properties": [
+        {
+          "id": "base",
+          "name": "Base",
+          "total": 2,
+          "neutral": 0,
+          "owned": [
+            1,
+            1
+          ]
+        },
+        {
+          "id": "workshop",
+          "name": "Workshop",
+          "total": 8,
+          "neutral": 2,
+          "owned": [
+            4,
+            2
+          ]
+        },
+        {
+          "id": "dock",
+          "name": "Dock",
+          "total": 3,
+          "neutral": 3,
+          "owned": [
+            0,
+            0
+          ]
+        },
+        {
+          "id": "roost",
+          "name": "Roost",
+          "total": 5,
+          "neutral": 4,
+          "owned": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "storehouse",
+          "name": "Storehouse",
+          "total": 14,
+          "neutral": 12,
+          "owned": [
+            1,
+            1
+          ]
+        }
+      ],
+      "property_count": 32,
+      "terrain": [
+        {
+          "id": "pond",
+          "name": "Pond",
+          "count": 130
+        },
+        {
+          "id": "log",
+          "name": "Trail",
+          "count": 53
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "count": 26
+        },
+        {
+          "id": "shore",
+          "name": "Shore",
+          "count": 20
+        },
+        {
+          "id": "thicket",
+          "name": "Thicket",
+          "count": 19
+        },
+        {
+          "id": "storehouse",
+          "name": "Storehouse",
+          "count": 14
+        },
+        {
+          "id": "lily_pads",
+          "name": "Lily Pads",
+          "count": 9
+        },
+        {
+          "id": "workshop",
+          "name": "Workshop",
+          "count": 8
+        },
+        {
+          "id": "roost",
+          "name": "Roost",
+          "count": 5
+        },
+        {
+          "id": "boulder",
+          "name": "Boulder",
+          "count": 5
+        },
+        {
+          "id": "dock",
+          "name": "Dock",
+          "count": 3
+        },
+        {
+          "id": "base",
+          "name": "Base",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "id": "ridge-island",
+      "key": "RidgeIsland",
+      "name": "Ridge Island",
+      "description": "An all-land island fight across a ridge of boulders and thickets.",
+      "width": 19,
+      "height": 16,
+      "war_room": true,
+      "armies": [
+        {
+          "id": "western",
+          "name": "First army",
+          "color": "#eb541f"
+        },
+        {
+          "id": "northern",
+          "name": "Second army",
+          "color": "#4c80e6"
+        }
+      ],
+      "starting_income": [
+        7000,
+        11000
+      ],
+      "units": 0,
+      "properties": [
+        {
+          "id": "base",
+          "name": "Base",
+          "total": 2,
+          "neutral": 0,
+          "owned": [
+            1,
+            1
+          ]
+        },
+        {
+          "id": "workshop",
+          "name": "Workshop",
+          "total": 8,
+          "neutral": 2,
+          "owned": [
+            3,
+            3
+          ]
+        },
+        {
+          "id": "storehouse",
+          "name": "Storehouse",
+          "total": 15,
+          "neutral": 5,
+          "owned": [
+            3,
+            7
+          ]
+        }
+      ],
+      "property_count": 25,
+      "terrain": [
+        {
+          "id": "pond",
+          "name": "Pond",
+          "count": 122
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "count": 64
+        },
+        {
+          "id": "thicket",
+          "name": "Thicket",
+          "count": 45
+        },
+        {
+          "id": "boulder",
+          "name": "Boulder",
+          "count": 24
+        },
+        {
+          "id": "log",
+          "name": "Trail",
+          "count": 24
+        },
+        {
+          "id": "storehouse",
+          "name": "Storehouse",
+          "count": 15
+        },
+        {
+          "id": "workshop",
+          "name": "Workshop",
+          "count": 8
+        },
+        {
+          "id": "base",
+          "name": "Base",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "id": "twin-isle",
+      "key": "TwinIsle",
+      "name": "Twin Isle",
+      "description": "Two long islands joined by a narrow neck of storehouses; races around the ridges.",
+      "width": 22,
+      "height": 16,
+      "war_room": true,
+      "armies": [
+        {
+          "id": "western",
+          "name": "First army",
+          "color": "#eb541f"
+        },
+        {
+          "id": "northern",
+          "name": "Second army",
+          "color": "#4c80e6"
+        }
+      ],
+      "starting_income": [
+        4000,
+        11000
+      ],
+      "units": 0,
+      "properties": [
+        {
+          "id": "base",
+          "name": "Base",
+          "total": 2,
+          "neutral": 0,
+          "owned": [
+            1,
+            1
+          ]
+        },
+        {
+          "id": "workshop",
+          "name": "Workshop",
+          "total": 8,
+          "neutral": 4,
+          "owned": [
+            2,
+            2
+          ]
+        },
+        {
+          "id": "storehouse",
+          "name": "Storehouse",
+          "total": 27,
+          "neutral": 18,
+          "owned": [
+            1,
+            8
+          ]
+        }
+      ],
+      "property_count": 37,
+      "terrain": [
+        {
+          "id": "pond",
+          "name": "Pond",
+          "count": 124
+        },
+        {
+          "id": "log",
+          "name": "Trail",
+          "count": 70
+        },
+        {
+          "id": "thicket",
+          "name": "Thicket",
+          "count": 48
+        },
+        {
+          "id": "boulder",
+          "name": "Boulder",
+          "count": 42
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "count": 31
+        },
+        {
+          "id": "storehouse",
+          "name": "Storehouse",
+          "count": 27
+        },
+        {
+          "id": "workshop",
+          "name": "Workshop",
+          "count": 8
+        },
+        {
+          "id": "base",
+          "name": "Base",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "id": "moji-island",
+      "key": "MojiIsland",
+      "name": "Moji Island",
+      "description": "A bull's-eye island: one army on the rim, the other at the heart of the bay.",
+      "width": 26,
+      "height": 22,
+      "war_room": true,
+      "armies": [
+        {
+          "id": "western",
+          "name": "First army",
+          "color": "#eb541f"
+        },
+        {
+          "id": "northern",
+          "name": "Second army",
+          "color": "#4c80e6"
+        }
+      ],
+      "starting_income": [
+        9000,
+        6000
+      ],
+      "units": 0,
+      "properties": [
+        {
+          "id": "base",
+          "name": "Base",
+          "total": 2,
+          "neutral": 0,
+          "owned": [
+            1,
+            1
+          ]
+        },
+        {
+          "id": "workshop",
+          "name": "Workshop",
+          "total": 8,
+          "neutral": 2,
+          "owned": [
+            3,
+            3
+          ]
+        },
+        {
+          "id": "storehouse",
+          "name": "Storehouse",
+          "total": 24,
+          "neutral": 17,
+          "owned": [
+            5,
+            2
+          ]
+        }
+      ],
+      "property_count": 34,
+      "terrain": [
+        {
+          "id": "pond",
+          "name": "Pond",
+          "count": 275
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "count": 134
+        },
+        {
+          "id": "thicket",
+          "name": "Thicket",
+          "count": 74
+        },
+        {
+          "id": "log",
+          "name": "Trail",
+          "count": 40
+        },
+        {
+          "id": "storehouse",
+          "name": "Storehouse",
+          "count": 24
+        },
+        {
+          "id": "boulder",
+          "name": "Boulder",
+          "count": 15
+        },
+        {
+          "id": "workshop",
+          "name": "Workshop",
+          "count": 8
+        },
+        {
+          "id": "base",
+          "name": "Base",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "id": "duo-falls",
+      "key": "DuoFalls",
+      "name": "Duo Falls",
+      "description": "Two waterfalls cut a long island into thirds; each creek has one bridge.",
+      "width": 33,
+      "height": 13,
+      "war_room": true,
+      "armies": [
+        {
+          "id": "western",
+          "name": "First army",
+          "color": "#eb541f"
+        },
+        {
+          "id": "northern",
+          "name": "Second army",
+          "color": "#4c80e6"
+        }
+      ],
+      "starting_income": [
+        13000,
+        9000
+      ],
+      "units": 0,
+      "properties": [
+        {
+          "id": "base",
+          "name": "Base",
+          "total": 2,
+          "neutral": 0,
+          "owned": [
+            1,
+            1
+          ]
+        },
+        {
+          "id": "workshop",
+          "name": "Workshop",
+          "total": 7,
+          "neutral": 1,
+          "owned": [
+            3,
+            3
+          ]
+        },
+        {
+          "id": "roost",
+          "name": "Roost",
+          "total": 5,
+          "neutral": 2,
+          "owned": [
+            2,
+            1
+          ]
+        },
+        {
+          "id": "storehouse",
+          "name": "Storehouse",
+          "total": 25,
+          "neutral": 14,
+          "owned": [
+            7,
+            4
+          ]
+        }
+      ],
+      "property_count": 39,
+      "terrain": [
+        {
+          "id": "pond",
+          "name": "Pond",
+          "count": 187
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "count": 90
+        },
+        {
+          "id": "thicket",
+          "name": "Thicket",
+          "count": 57
+        },
+        {
+          "id": "log",
+          "name": "Trail",
+          "count": 46
+        },
+        {
+          "id": "storehouse",
+          "name": "Storehouse",
+          "count": 25
+        },
+        {
+          "id": "creek",
+          "name": "Creek",
+          "count": 7
+        },
+        {
+          "id": "workshop",
+          "name": "Workshop",
+          "count": 7
+        },
+        {
+          "id": "roost",
+          "name": "Roost",
+          "count": 5
+        },
+        {
+          "id": "boulder",
+          "name": "Boulder",
+          "count": 3
+        },
+        {
+          "id": "base",
+          "name": "Base",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "id": "toil-ferry",
+      "key": "ToilFerry",
+      "name": "Toil Ferry",
+      "description": "A wide channel dotted with islands; whoever rules the water rules the ferry.",
+      "width": 26,
+      "height": 16,
+      "war_room": true,
+      "armies": [
+        {
+          "id": "western",
+          "name": "First army",
+          "color": "#eb541f"
+        },
+        {
+          "id": "northern",
+          "name": "Second army",
+          "color": "#4c80e6"
+        }
+      ],
+      "starting_income": [
+        10000,
+        12000
+      ],
+      "units": 0,
+      "properties": [
+        {
+          "id": "base",
+          "name": "Base",
+          "total": 2,
+          "neutral": 0,
+          "owned": [
+            1,
+            1
+          ]
+        },
+        {
+          "id": "workshop",
+          "name": "Workshop",
+          "total": 9,
+          "neutral": 3,
+          "owned": [
+            3,
+            3
+          ]
+        },
+        {
+          "id": "dock",
+          "name": "Dock",
+          "total": 6,
+          "neutral": 4,
+          "owned": [
+            1,
+            1
+          ]
+        },
+        {
+          "id": "roost",
+          "name": "Roost",
+          "total": 8,
+          "neutral": 5,
+          "owned": [
+            1,
+            2
+          ]
+        },
+        {
+          "id": "storehouse",
+          "name": "Storehouse",
+          "total": 15,
+          "neutral": 6,
+          "owned": [
+            4,
+            5
+          ]
+        }
+      ],
+      "property_count": 40,
+      "terrain": [
+        {
+          "id": "pond",
+          "name": "Pond",
+          "count": 180
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "count": 50
+        },
+        {
+          "id": "shore",
+          "name": "Shore",
+          "count": 42
+        },
+        {
+          "id": "thicket",
+          "name": "Thicket",
+          "count": 40
+        },
+        {
+          "id": "log",
+          "name": "Trail",
+          "count": 29
+        },
+        {
+          "id": "boulder",
+          "name": "Boulder",
+          "count": 27
+        },
+        {
+          "id": "storehouse",
+          "name": "Storehouse",
+          "count": 15
+        },
+        {
+          "id": "workshop",
+          "name": "Workshop",
+          "count": 9
+        },
+        {
+          "id": "roost",
+          "name": "Roost",
+          "count": 8
+        },
+        {
+          "id": "lily_pads",
+          "name": "Lily Pads",
+          "count": 8
+        },
+        {
+          "id": "dock",
+          "name": "Dock",
+          "count": 6
+        },
+        {
+          "id": "base",
+          "name": "Base",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "id": "point-stormy",
+      "key": "PointStormy",
+      "name": "Point Stormy",
+      "description": "A headland against a crowded mainland across a stormy bay, linked by one long trail.",
+      "width": 25,
+      "height": 22,
+      "war_room": true,
+      "armies": [
+        {
+          "id": "western",
+          "name": "First army",
+          "color": "#eb541f"
+        },
+        {
+          "id": "northern",
+          "name": "Second army",
+          "color": "#4c80e6"
+        }
+      ],
+      "starting_income": [
+        9000,
+        10000
+      ],
+      "units": 0,
+      "properties": [
+        {
+          "id": "base",
+          "name": "Base",
+          "total": 2,
+          "neutral": 0,
+          "owned": [
+            1,
+            1
+          ]
+        },
+        {
+          "id": "workshop",
+          "name": "Workshop",
+          "total": 11,
+          "neutral": 2,
+          "owned": [
+            4,
+            5
+          ]
+        },
+        {
+          "id": "dock",
+          "name": "Dock",
+          "total": 4,
+          "neutral": 2,
+          "owned": [
+            0,
+            2
+          ]
+        },
+        {
+          "id": "roost",
+          "name": "Roost",
+          "total": 5,
+          "neutral": 3,
+          "owned": [
+            0,
+            2
+          ]
+        },
+        {
+          "id": "storehouse",
+          "name": "Storehouse",
+          "total": 24,
+          "neutral": 20,
+          "owned": [
+            4,
+            0
+          ]
+        }
+      ],
+      "property_count": 46,
+      "terrain": [
+        {
+          "id": "pond",
+          "name": "Pond",
+          "count": 212
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "count": 116
+        },
+        {
+          "id": "thicket",
+          "name": "Thicket",
+          "count": 76
+        },
+        {
+          "id": "log",
+          "name": "Trail",
+          "count": 56
+        },
+        {
+          "id": "shore",
+          "name": "Shore",
+          "count": 28
+        },
+        {
+          "id": "storehouse",
+          "name": "Storehouse",
+          "count": 24
+        },
+        {
+          "id": "workshop",
+          "name": "Workshop",
+          "count": 11
+        },
+        {
+          "id": "boulder",
+          "name": "Boulder",
+          "count": 10
+        },
+        {
+          "id": "lily_pads",
+          "name": "Lily Pads",
+          "count": 6
+        },
+        {
+          "id": "roost",
+          "name": "Roost",
+          "count": 5
+        },
+        {
+          "id": "dock",
+          "name": "Dock",
+          "count": 4
+        },
+        {
+          "id": "base",
+          "name": "Base",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "id": "woodland",
+      "key": "Woodland",
+      "name": "Woodland Clearing",
+      "description": "A balanced map with varied terrain. Good for learning the game.",
+      "width": 12,
+      "height": 8,
+      "war_room": false,
+      "armies": [
+        {
+          "id": "western",
+          "name": "First army",
+          "color": "#eb541f"
+        },
+        {
+          "id": "northern",
+          "name": "Second army",
+          "color": "#4c80e6"
+        }
+      ],
+      "starting_income": [
+        2000,
+        2000
+      ],
+      "units": 6,
+      "properties": [
+        {
+          "id": "base",
+          "name": "Base",
+          "total": 2,
+          "neutral": 0,
+          "owned": [
+            1,
+            1
+          ]
+        },
+        {
+          "id": "workshop",
+          "name": "Workshop",
+          "total": 2,
+          "neutral": 0,
+          "owned": [
+            1,
+            1
+          ]
+        },
+        {
+          "id": "outpost",
+          "name": "Outpost",
+          "total": 2,
+          "neutral": 2,
+          "owned": [
+            0,
+            0
+          ]
+        },
+        {
+          "id": "storehouse",
+          "name": "Storehouse",
+          "total": 1,
+          "neutral": 1,
+          "owned": [
+            0,
+            0
+          ]
+        }
+      ],
+      "property_count": 7,
+      "terrain": [
+        {
+          "id": "grass",
+          "name": "Grass",
+          "count": 69
+        },
+        {
+          "id": "shore",
+          "name": "Shore",
+          "count": 4
+        },
+        {
+          "id": "thicket",
+          "name": "Thicket",
+          "count": 3
+        },
+        {
+          "id": "log",
+          "name": "Trail",
+          "count": 3
+        },
+        {
+          "id": "creek",
+          "name": "Creek",
+          "count": 3
+        },
+        {
+          "id": "workshop",
+          "name": "Workshop",
+          "count": 2
+        },
+        {
+          "id": "base",
+          "name": "Base",
+          "count": 2
+        },
+        {
+          "id": "outpost",
+          "name": "Outpost",
+          "count": 2
+        },
+        {
+          "id": "boulder",
+          "name": "Boulder",
+          "count": 2
+        },
+        {
+          "id": "brambles",
+          "name": "Brambles",
+          "count": 2
+        },
+        {
+          "id": "storehouse",
+          "name": "Storehouse",
+          "count": 1
+        },
+        {
+          "id": "hollow",
+          "name": "Hollow",
+          "count": 1
+        },
+        {
+          "id": "tall_grass",
+          "name": "Tall Grass",
+          "count": 1
+        },
+        {
+          "id": "pond",
+          "name": "Pond",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "river-crossing",
+      "key": "RiverCrossing",
+      "name": "River Crossing",
+      "description": "A river divides the battlefield. Control the bridges to win!",
+      "width": 14,
+      "height": 10,
+      "war_room": false,
+      "armies": [
+        {
+          "id": "western",
+          "name": "First army",
+          "color": "#eb541f"
+        },
+        {
+          "id": "northern",
+          "name": "Second army",
+          "color": "#4c80e6"
+        }
+      ],
+      "starting_income": [
+        2000,
+        2000
+      ],
+      "units": 8,
+      "properties": [
+        {
+          "id": "base",
+          "name": "Base",
+          "total": 2,
+          "neutral": 0,
+          "owned": [
+            1,
+            1
+          ]
+        },
+        {
+          "id": "workshop",
+          "name": "Workshop",
+          "total": 2,
+          "neutral": 0,
+          "owned": [
+            1,
+            1
+          ]
+        },
+        {
+          "id": "outpost",
+          "name": "Outpost",
+          "total": 4,
+          "neutral": 4,
+          "owned": [
+            0,
+            0
+          ]
+        },
+        {
+          "id": "storehouse",
+          "name": "Storehouse",
+          "total": 2,
+          "neutral": 2,
+          "owned": [
+            0,
+            0
+          ]
+        }
+      ],
+      "property_count": 10,
+      "terrain": [
+        {
+          "id": "grass",
+          "name": "Grass",
+          "count": 82
+        },
+        {
+          "id": "shore",
+          "name": "Shore",
+          "count": 20
+        },
+        {
+          "id": "pond",
+          "name": "Pond",
+          "count": 16
+        },
+        {
+          "id": "outpost",
+          "name": "Outpost",
+          "count": 4
+        },
+        {
+          "id": "log",
+          "name": "Trail",
+          "count": 4
+        },
+        {
+          "id": "thicket",
+          "name": "Thicket",
+          "count": 4
+        },
+        {
+          "id": "workshop",
+          "name": "Workshop",
+          "count": 2
+        },
+        {
+          "id": "base",
+          "name": "Base",
+          "count": 2
+        },
+        {
+          "id": "storehouse",
+          "name": "Storehouse",
+          "count": 2
+        },
+        {
+          "id": "boulder",
+          "name": "Boulder",
+          "count": 2
+        },
+        {
+          "id": "hollow",
+          "name": "Hollow",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "id": "twin-bases",
+      "key": "TwinBases",
+      "name": "Twin Bases",
+      "description": "High production map with two bases per side. Prepare for intense battles!",
+      "width": 16,
+      "height": 10,
+      "war_room": false,
+      "armies": [
+        {
+          "id": "western",
+          "name": "First army",
+          "color": "#eb541f"
+        },
+        {
+          "id": "northern",
+          "name": "Second army",
+          "color": "#4c80e6"
+        }
+      ],
+      "starting_income": [
+        3000,
+        3000
+      ],
+      "units": 10,
+      "properties": [
+        {
+          "id": "base",
+          "name": "Base",
+          "total": 4,
+          "neutral": 0,
+          "owned": [
+            2,
+            2
+          ]
+        },
+        {
+          "id": "workshop",
+          "name": "Workshop",
+          "total": 2,
+          "neutral": 0,
+          "owned": [
+            1,
+            1
+          ]
+        },
+        {
+          "id": "outpost",
+          "name": "Outpost",
+          "total": 2,
+          "neutral": 2,
+          "owned": [
+            0,
+            0
+          ]
+        },
+        {
+          "id": "storehouse",
+          "name": "Storehouse",
+          "total": 4,
+          "neutral": 4,
+          "owned": [
+            0,
+            0
+          ]
+        }
+      ],
+      "property_count": 12,
+      "terrain": [
+        {
+          "id": "grass",
+          "name": "Grass",
+          "count": 126
+        },
+        {
+          "id": "tall_grass",
+          "name": "Tall Grass",
+          "count": 8
+        },
+        {
+          "id": "storehouse",
+          "name": "Storehouse",
+          "count": 4
+        },
+        {
+          "id": "shore",
+          "name": "Shore",
+          "count": 4
+        },
+        {
+          "id": "base",
+          "name": "Base",
+          "count": 4
+        },
+        {
+          "id": "thicket",
+          "name": "Thicket",
+          "count": 4
+        },
+        {
+          "id": "boulder",
+          "name": "Boulder",
+          "count": 4
+        },
+        {
+          "id": "workshop",
+          "name": "Workshop",
+          "count": 2
+        },
+        {
+          "id": "pond",
+          "name": "Pond",
+          "count": 2
+        },
+        {
+          "id": "outpost",
+          "name": "Outpost",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "id": "fortress",
+      "key": "Fortress",
+      "name": "The Fortress",
+      "description": "Asymmetric assault map. Eastern attacks the Northern fortress!",
+      "width": 14,
+      "height": 12,
+      "war_room": false,
+      "armies": [
+        {
+          "id": "western",
+          "name": "First army",
+          "color": "#eb541f"
+        },
+        {
+          "id": "northern",
+          "name": "Second army",
+          "color": "#4c80e6"
+        }
+      ],
+      "starting_income": [
+        3000,
+        4000
+      ],
+      "units": 12,
+      "properties": [
+        {
+          "id": "base",
+          "name": "Base",
+          "total": 3,
+          "neutral": 0,
+          "owned": [
+            2,
+            1
+          ]
+        },
+        {
+          "id": "workshop",
+          "name": "Workshop",
+          "total": 2,
+          "neutral": 0,
+          "owned": [
+            1,
+            1
+          ]
+        },
+        {
+          "id": "outpost",
+          "name": "Outpost",
+          "total": 2,
+          "neutral": 1,
+          "owned": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "storehouse",
+          "name": "Storehouse",
+          "total": 1,
+          "neutral": 0,
+          "owned": [
+            0,
+            1
+          ]
+        }
+      ],
+      "property_count": 8,
+      "terrain": [
+        {
+          "id": "grass",
+          "name": "Grass",
+          "count": 136
+        },
+        {
+          "id": "brambles",
+          "name": "Brambles",
+          "count": 6
+        },
+        {
+          "id": "creek",
+          "name": "Creek",
+          "count": 5
+        },
+        {
+          "id": "tall_grass",
+          "name": "Tall Grass",
+          "count": 3
+        },
+        {
+          "id": "base",
+          "name": "Base",
+          "count": 3
+        },
+        {
+          "id": "thicket",
+          "name": "Thicket",
+          "count": 2
+        },
+        {
+          "id": "outpost",
+          "name": "Outpost",
+          "count": 2
+        },
+        {
+          "id": "workshop",
+          "name": "Workshop",
+          "count": 2
+        },
+        {
+          "id": "boulder",
+          "name": "Boulder",
+          "count": 2
+        },
+        {
+          "id": "shore",
+          "name": "Shore",
+          "count": 2
+        },
+        {
+          "id": "log",
+          "name": "Trail",
+          "count": 2
+        },
+        {
+          "id": "hollow",
+          "name": "Hollow",
+          "count": 2
+        },
+        {
+          "id": "storehouse",
+          "name": "Storehouse",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "island-chain",
+      "key": "IslandChain",
+      "name": "Island Chain",
+      "description": "Islands linked by shallow water, each army with a dock and a roost. Build boats and fliers!",
+      "width": 16,
+      "height": 12,
+      "war_room": false,
+      "armies": [
+        {
+          "id": "western",
+          "name": "First army",
+          "color": "#eb541f"
+        },
+        {
+          "id": "northern",
+          "name": "Second army",
+          "color": "#4c80e6"
+        }
+      ],
+      "starting_income": [
+        4000,
+        4000
+      ],
+      "units": 8,
+      "properties": [
+        {
+          "id": "base",
+          "name": "Base",
+          "total": 2,
+          "neutral": 0,
+          "owned": [
+            1,
+            1
+          ]
+        },
+        {
+          "id": "workshop",
+          "name": "Workshop",
+          "total": 2,
+          "neutral": 0,
+          "owned": [
+            1,
+            1
+          ]
+        },
+        {
+          "id": "dock",
+          "name": "Dock",
+          "total": 2,
+          "neutral": 0,
+          "owned": [
+            1,
+            1
+          ]
+        },
+        {
+          "id": "roost",
+          "name": "Roost",
+          "total": 2,
+          "neutral": 0,
+          "owned": [
+            1,
+            1
+          ]
+        },
+        {
+          "id": "outpost",
+          "name": "Outpost",
+          "total": 1,
+          "neutral": 1,
+          "owned": [
+            0,
+            0
+          ]
+        },
+        {
+          "id": "storehouse",
+          "name": "Storehouse",
+          "total": 1,
+          "neutral": 1,
+          "owned": [
+            0,
+            0
+          ]
+        }
+      ],
+      "property_count": 10,
+      "terrain": [
+        {
+          "id": "pond",
+          "name": "Pond",
+          "count": 110
+        },
+        {
+          "id": "shore",
+          "name": "Shore",
+          "count": 33
+        },
+        {
+          "id": "grass",
+          "name": "Grass",
+          "count": 31
+        },
+        {
+          "id": "creek",
+          "name": "Creek",
+          "count": 4
+        },
+        {
+          "id": "workshop",
+          "name": "Workshop",
+          "count": 2
+        },
+        {
+          "id": "base",
+          "name": "Base",
+          "count": 2
+        },
+        {
+          "id": "thicket",
+          "name": "Thicket",
+          "count": 2
+        },
+        {
+          "id": "dock",
+          "name": "Dock",
+          "count": 2
+        },
+        {
+          "id": "roost",
+          "name": "Roost",
+          "count": 2
+        },
+        {
+          "id": "tall_grass",
+          "name": "Tall Grass",
+          "count": 1
+        },
+        {
+          "id": "outpost",
+          "name": "Outpost",
+          "count": 1
+        },
+        {
+          "id": "hollow",
+          "name": "Hollow",
+          "count": 1
+        },
+        {
+          "id": "storehouse",
+          "name": "Storehouse",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "mountain-pass",
+      "key": "MountainPass",
+      "name": "Mountain Pass",
+      "description": "Rocky mountain terrain with narrow passes. Control the chokepoints!",
+      "width": 14,
+      "height": 10,
+      "war_room": false,
+      "armies": [
+        {
+          "id": "western",
+          "name": "First army",
+          "color": "#eb541f"
+        },
+        {
+          "id": "northern",
+          "name": "Second army",
+          "color": "#4c80e6"
+        }
+      ],
+      "starting_income": [
+        3000,
+        3000
+      ],
+      "units": 12,
+      "properties": [
+        {
+          "id": "base",
+          "name": "Base",
+          "total": 4,
+          "neutral": 0,
+          "owned": [
+            2,
+            2
+          ]
+        },
+        {
+          "id": "workshop",
+          "name": "Workshop",
+          "total": 2,
+          "neutral": 0,
+          "owned": [
+            1,
+            1
+          ]
+        },
+        {
+          "id": "outpost",
+          "name": "Outpost",
+          "total": 2,
+          "neutral": 2,
+          "owned": [
+            0,
+            0
+          ]
+        },
+        {
+          "id": "storehouse",
+          "name": "Storehouse",
+          "total": 2,
+          "neutral": 2,
+          "owned": [
+            0,
+            0
+          ]
+        }
+      ],
+      "property_count": 10,
+      "terrain": [
+        {
+          "id": "grass",
+          "name": "Grass",
+          "count": 74
+        },
+        {
+          "id": "boulder",
+          "name": "Boulder",
+          "count": 38
+        },
+        {
+          "id": "brambles",
+          "name": "Brambles",
+          "count": 4
+        },
+        {
+          "id": "tall_grass",
+          "name": "Tall Grass",
+          "count": 4
+        },
+        {
+          "id": "base",
+          "name": "Base",
+          "count": 4
+        },
+        {
+          "id": "creek",
+          "name": "Creek",
+          "count": 4
+        },
+        {
+          "id": "storehouse",
+          "name": "Storehouse",
+          "count": 2
+        },
+        {
+          "id": "thicket",
+          "name": "Thicket",
+          "count": 2
+        },
+        {
+          "id": "workshop",
+          "name": "Workshop",
+          "count": 2
+        },
+        {
+          "id": "outpost",
+          "name": "Outpost",
+          "count": 2
+        },
+        {
+          "id": "hollow",
+          "name": "Hollow",
+          "count": 2
+        },
+        {
+          "id": "shore",
+          "name": "Shore",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "id": "marsh-lands",
+      "key": "MarshLands",
+      "name": "Marsh Lands",
+      "description": "Treacherous marshland slows vehicles. Infantry has the advantage here!",
+      "width": 14,
+      "height": 10,
+      "war_room": false,
+      "armies": [
+        {
+          "id": "western",
+          "name": "First army",
+          "color": "#eb541f"
+        },
+        {
+          "id": "northern",
+          "name": "Second army",
+          "color": "#4c80e6"
+        }
+      ],
+      "starting_income": [
+        3000,
+        3000
+      ],
+      "units": 12,
+      "properties": [
+        {
+          "id": "base",
+          "name": "Base",
+          "total": 4,
+          "neutral": 0,
+          "owned": [
+            2,
+            2
+          ]
+        },
+        {
+          "id": "workshop",
+          "name": "Workshop",
+          "total": 2,
+          "neutral": 0,
+          "owned": [
+            1,
+            1
+          ]
+        },
+        {
+          "id": "outpost",
+          "name": "Outpost",
+          "total": 2,
+          "neutral": 2,
+          "owned": [
+            0,
+            0
+          ]
+        },
+        {
+          "id": "storehouse",
+          "name": "Storehouse",
+          "total": 2,
+          "neutral": 2,
+          "owned": [
+            0,
+            0
+          ]
+        }
+      ],
+      "property_count": 10,
+      "terrain": [
+        {
+          "id": "grass",
+          "name": "Grass",
+          "count": 66
+        },
+        {
+          "id": "tall_grass",
+          "name": "Tall Grass",
+          "count": 22
+        },
+        {
+          "id": "shore",
+          "name": "Shore",
+          "count": 20
+        },
+        {
+          "id": "pond",
+          "name": "Pond",
+          "count": 7
+        },
+        {
+          "id": "creek",
+          "name": "Creek",
+          "count": 6
+        },
+        {
+          "id": "thicket",
+          "name": "Thicket",
+          "count": 4
+        },
+        {
+          "id": "base",
+          "name": "Base",
+          "count": 4
+        },
+        {
+          "id": "hollow",
+          "name": "Hollow",
+          "count": 3
+        },
+        {
+          "id": "storehouse",
+          "name": "Storehouse",
+          "count": 2
+        },
+        {
+          "id": "outpost",
+          "name": "Outpost",
+          "count": 2
+        },
+        {
+          "id": "workshop",
+          "name": "Workshop",
+          "count": 2
+        },
+        {
+          "id": "log",
+          "name": "Trail",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "id": "ancient-ruins",
+      "key": "AncientRuins",
+      "name": "Ancient Ruins",
+      "description": "Crumbling ancient structures offer cover. Urban-style combat with lots of defensive positions!",
+      "width": 16,
+      "height": 12,
+      "war_room": false,
+      "armies": [
+        {
+          "id": "western",
+          "name": "First army",
+          "color": "#eb541f"
+        },
+        {
+          "id": "northern",
+          "name": "Second army",
+          "color": "#4c80e6"
+        }
+      ],
+      "starting_income": [
+        3000,
+        3000
+      ],
+      "units": 12,
+      "properties": [
+        {
+          "id": "base",
+          "name": "Base",
+          "total": 4,
+          "neutral": 0,
+          "owned": [
+            2,
+            2
+          ]
+        },
+        {
+          "id": "workshop",
+          "name": "Workshop",
+          "total": 2,
+          "neutral": 0,
+          "owned": [
+            1,
+            1
+          ]
+        },
+        {
+          "id": "outpost",
+          "name": "Outpost",
+          "total": 2,
+          "neutral": 2,
+          "owned": [
+            0,
+            0
+          ]
+        },
+        {
+          "id": "storehouse",
+          "name": "Storehouse",
+          "total": 2,
+          "neutral": 2,
+          "owned": [
+            0,
+            0
+          ]
+        }
+      ],
+      "property_count": 10,
+      "terrain": [
+        {
+          "id": "grass",
+          "name": "Grass",
+          "count": 131
+        },
+        {
+          "id": "brambles",
+          "name": "Brambles",
+          "count": 26
+        },
+        {
+          "id": "hollow",
+          "name": "Hollow",
+          "count": 6
+        },
+        {
+          "id": "tall_grass",
+          "name": "Tall Grass",
+          "count": 4
+        },
+        {
+          "id": "base",
+          "name": "Base",
+          "count": 4
+        },
+        {
+          "id": "log",
+          "name": "Trail",
+          "count": 4
+        },
+        {
+          "id": "thicket",
+          "name": "Thicket",
+          "count": 4
+        },
+        {
+          "id": "boulder",
+          "name": "Boulder",
+          "count": 3
+        },
+        {
+          "id": "workshop",
+          "name": "Workshop",
+          "count": 2
+        },
+        {
+          "id": "storehouse",
+          "name": "Storehouse",
+          "count": 2
+        },
+        {
+          "id": "pond",
+          "name": "Pond",
+          "count": 2
+        },
+        {
+          "id": "shore",
+          "name": "Shore",
+          "count": 2
+        },
+        {
+          "id": "outpost",
+          "name": "Outpost",
+          "count": 2
+        }
+      ]
+    }
+  ]
+}

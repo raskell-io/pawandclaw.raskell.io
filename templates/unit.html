@@ -1,0 +1,121 @@
+{% extends "wiki.html" %}
+{% import "wiki-macros.html" as w %}
+{%- block crumbs %}{{ w::crumbs(section="Units", url="/units/", page=page.title) }}{% endblock %}
+{%- block heading %}{{ page.title }}{% endblock %}
+{%- block title_art %}
+{%- set u = load_data(path="data/units.json") | get(key="units") | filter(attribute="id", value=page.extra.id) | first %}
+<span class="sprite sprite-head" role="img" aria-label="{{ u.name }}" style="background-image: url('/sprites/units/western/{{ u.asset }}.png')"></span>
+{%- endblock %}
+{%- block lead %}
+{%- set u = load_data(path="data/units.json") | get(key="units") | filter(attribute="id", value=page.extra.id) | first %}
+<p class="lead">{{ u.description }}.</p>
+{%- endblock %}
+
+{% block wiki %}
+{%- set units = load_data(path="data/units.json") | get(key="units") %}
+{%- set terrain = load_data(path="data/terrain.json") | get(key="terrain") %}
+{%- set factions = load_data(path="data/factions.json") | get(key="factions") %}
+{%- set u = units | filter(attribute="id", value=page.extra.id) | first %}
+<article class="card article">
+    <aside class="infobox">
+        <p class="infobox-title">{{ u.name }}</p>
+        <div class="infobox-art">
+            {%- for f in factions %}
+            <span class="sprite" role="img" aria-label="{{ f.name }} {{ u.name }}" title="{{ f.name }}" style="background-image: url('/sprites/units/{{ f.id }}/{{ u.asset }}.png')"></span>
+            {%- endfor %}
+        </div>
+        <table>
+            <tr><th>Classic counterpart</th><td>{{ u.aw }} <small>(Advance Wars)</small></td></tr>
+            <tr><th>Class</th><td>{{ u.class_name }}</td></tr>
+            <tr><th>Cost</th><td>{{ u.cost | num_format }} funds</td></tr>
+            <tr><th>Movement</th><td>{{ u.movement }}</td></tr>
+            <tr><th>Vision</th><td>{{ u.vision }}</td></tr>
+            <tr><th>Attack range</th><td>{% if u.attacks %}{{ u.range_text }}{% if u.indirect %} <small>(indirect)</small>{% else %} <small>(direct)</small>{% endif %}{% else %}Can't attack{% endif %}</td></tr>
+            <tr><th>Ammo</th><td>{% if u.ammo > 0 %}{{ u.ammo }}{% else %}—{% endif %}</td></tr>
+            <tr><th>Stamina</th><td>{{ u.stamina }}{% if u.daily_stamina > 0 %} <small>(−{{ u.daily_stamina }} a day)</small>{% endif %}</td></tr>
+            <tr><th>Captures</th><td>{% if u.can_capture %}Yes{% else %}No{% endif %}</td></tr>
+            {%- if u.capacity > 0 %}
+            <tr><th>Carries</th><td>{{ u.capacity }} × {{ u.carries | join(sep=" or ") | lower }}</td></tr>
+            {%- endif %}
+            <tr><th>Built at</th><td>{% for id in u.built_at %}{% set t = terrain | filter(attribute="id", value=id) | first %}{{ w::terrain_link(id=t.id, name=t.name) }}{% endfor %}</td></tr>
+            <tr><th>Resupplied at</th><td>{% for id in u.resupplied_at %}{% set t = terrain | filter(attribute="id", value=id) | first %}{{ w::terrain_link(id=t.id, name=t.name) }}{% endfor %}</td></tr>
+        </table>
+    </aside>
+
+    <h2 id="overview">Overview</h2>
+    <p>The {{ u.name }} is a {{ u.class_name | lower }} unit
+    {%- if u.attacks %} that {% if u.indirect %}fires from {{ u.range[0] }} to {{ u.range[1] }} tiles away, so it can't move and fire in the same turn and nothing it hits can strike back{% else %}fights at close range, against units on neighbouring tiles{% endif %}{% else %} that doesn't fight{% endif %}.
+    It plays the role of the <em>{{ u.aw }}</em> in Advance Wars, with the same stats.
+    {%- if u.can_capture %} Like every foot soldier, it can capture properties.{% endif %}
+    {%- if u.capacity > 0 %} It carries {{ u.capacity }} {{ u.carries | join(sep=" or ") | lower }} unit{% if u.capacity > 1 %}s{% endif %}.{% endif %}
+    {%- if u.daily_stamina > 0 %} It burns {{ u.daily_stamina }} stamina every day, even standing still, and is lost when it runs out.{% endif %}</p>
+
+    {%- if u.primary or u.secondary %}
+    <h2 id="attacks">Attacks</h2>
+    <p>Base damage against full-health targets on open ground, before commanders, luck and terrain.
+    {%- if u.primary and u.ammo > 0 %} The primary weapon uses ammo ({{ u.ammo }} shots){% if u.secondary %}; the secondary never runs out{% endif %}.{% endif %}</p>
+    <div class="matchups">
+        {%- for weapon in ["primary", "secondary"] %}
+        {%- if u[weapon] %}
+        <div>
+            {%- if u.primary and u.secondary %}<h3>{% if weapon == "primary" %}Primary weapon{% else %}Secondary weapon{% endif %}</h3>{% endif %}
+            <ul class="bars">
+                {%- for t in u[weapon] %}
+                <li>{{ w::unit_link(id=t.id, name=t.name, asset=t.asset, faction="northern") }}<span class="bar" style="--v: {{ t.damage }}"><b>{{ t.damage }}%</b></span></li>
+                {%- endfor %}
+            </ul>
+        </div>
+        {%- endif %}
+        {%- endfor %}
+    </div>
+    {%- endif %}
+
+    <h2 id="defense">Threats</h2>
+    {%- if u.taken %}
+    <p>What hits the {{ u.name }} hardest, in base damage (the stronger of the attacker's weapons).</p>
+    <ul class="bars">
+        {%- for t in u.taken %}
+        <li>{{ w::unit_link(id=t.id, name=t.name, asset=t.asset, faction="northern") }}<span class="bar bar-threat" style="--v: {{ t.damage }}"><b>{{ t.damage }}%</b></span></li>
+        {%- endfor %}
+    </ul>
+    {%- else %}
+    <p>Nothing can attack it.</p>
+    {%- endif %}
+
+    <h2 id="movement">Movement</h2>
+    <p>Movement points each terrain costs a {{ u.class_name | lower }} unit ({{ u.movement }} a turn{% if u.domain == "air" %}; fliers also ignore terrain cover{% endif %}).</p>
+    <ul class="move-grid">
+        {%- for m in u.moves %}
+        <li class="{% if m.cost >= 99 %}blocked{% endif %}"><img src="/sprites/terrain/{{ m.id }}.png" alt="" width="32" height="32"><span>{{ m.name }}</span><b>{% if m.cost >= 99 %}—{% else %}{{ m.cost }}{% endif %}</b></li>
+        {%- endfor %}
+    </ul>
+
+    {%- if u.carried_by %}
+    <h2 id="transport">Transport</h2>
+    <p>Can ride in: {% for id in u.carried_by %}{% set t = units | filter(attribute="id", value=id) | first %}{{ w::unit_link(id=t.id, name=t.name, asset=t.asset) }}{% endfor %}</p>
+    {%- endif %}
+
+    <h2 id="commanders">Commanders</h2>
+    {%- if u.commanders %}
+    <p>Commanders whose abilities or powers change the {{ u.name }}. Every power also gives all units +10% attack and defense, which isn't listed.</p>
+    <table class="wtable">
+        <thead><tr><th>Commander</th><th>Effect</th></tr></thead>
+        <tbody>
+            {%- for c in u.commanders %}
+            <tr><td>{{ w::co_link(id=c.id, name=c.name) }}</td><td>{{ c.notes | join(sep=", ") }}</td></tr>
+            {%- endfor %}
+        </tbody>
+    </table>
+    {%- else %}
+    <p>No commander changes it beyond the +10% attack and defense every power gives.</p>
+    {%- endif %}
+</article>
+{% endblock %}
+
+{% block pager %}
+<nav class="pager" aria-label="More units">
+    {%- if page.lower %}<a href="{{ page.lower.permalink }}">‹ {{ page.lower.title }}</a>{% else %}<span></span>{% endif %}
+    <a href="/units/">All units</a>
+    {%- if page.higher %}<a href="{{ page.higher.permalink }}">{{ page.higher.title }} ›</a>{% else %}<span></span>{% endif %}
+</nav>
+{% endblock %}

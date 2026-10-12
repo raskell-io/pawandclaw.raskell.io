@@ -1,56 +1,47 @@
-{% extends "base.html" %}
+{% extends "wiki.html" %}
+{% import "wiki-macros.html" as w %}
 {% import "macros.html" as m %}
-{% block content %}
+{%- block crumbs %}{{ w::crumbs(section="Commanders") }}{% endblock %}
+{%- block heading %}{{ section.title }}{% endblock %}
+{%- block lead %}<p class="lead">{{ section.description }}</p>{% endblock %}
+
+{% block wiki %}
 {%- set factions = load_data(path="data/factions.json") | get(key="factions") %}
 {%- set commanders = load_data(path="data/commanders.json") | get(key="commanders") %}
-<section class="page-head">
-    <div class="wrap">
-        <h1 class="title title-page">{{ page.title }}</h1>
-        <p class="lead">{{ page.description }}</p>
-        <div class="prose-wide intro">{{ page.content | safe }}</div>
-        <nav class="chips" aria-label="Armies">
-            {%- for faction in factions %}
-            <a class="chip" style="--faction: {{ faction.color }}" href="#{{ faction.id }}">{{ faction.name }}</a>
-            {%- endfor %}
-        </nav>
+<article class="card article">
+    {{ section.content | safe }}
+    <nav class="chips chips-ink" aria-label="Armies">
+        {%- for faction in factions %}
+        <a class="chip" style="--faction: {{ faction.color }}" href="#{{ faction.id }}">{{ faction.name }}</a>
+        {%- endfor %}
+    </nav>
+    {%- for faction in factions %}
+    {%- set army = commanders | filter(attribute="faction", value=faction.id) %}
+    <h2 id="{{ faction.id }}" class="army-heading" style="--faction: {{ faction.color }}">{{ faction.name }}</h2>
+    {%- set figures = army | filter(attribute="figure", value=true) %}
+    {%- if figures | length > 0 %}
+    <div class="lineup lineup-card">
+        {%- for co in figures %}
+        <a href="/commanders/{{ co.id | replace(from="_", to="-") }}/" title="{{ co.name }}">{{ m::figure(id=co.id, name=co.name) }}<span>{{ co.name }}</span></a>
+        {%- endfor %}
     </div>
-</section>
-{%- for faction in factions %}
-<section class="band{% if loop.index is odd %} band-dark{% endif %}" id="{{ faction.id }}">
-    <div class="wrap">
-        <h2 class="section-title faction-title" style="--faction: {{ faction.color }}">{{ faction.name }}</h2>
-        {%- set figures = commanders | filter(attribute="faction", value=faction.id) | filter(attribute="figure", value=true) %}
-        {%- if figures | length > 0 %}
-        <div class="lineup">
-            {%- for co in figures %}
-            <a href="#{{ co.id }}" title="{{ co.name }}">{{ m::figure(id=co.id, name=co.name) }}<span>{{ co.name }}</span></a>
+    {%- endif %}
+    <div class="table-scroll">
+    <table class="wtable co-table">
+        <thead><tr><th>Commander</th><th>Plays like</th><th>Always on</th><th>CO Power</th><th>Super CO Power</th></tr></thead>
+        <tbody>
+            {%- for co in army %}
+            <tr>
+                <td>{{ w::co_link(id=co.id, name=co.name) }}<br><small>{{ co.personality }}</small></td>
+                <td>{{ co.based_on }}</td>
+                <td>{% if co.abilities %}{{ co.abilities | join(sep="; ") }}{% else %}No strengths, no weaknesses{% endif %}</td>
+                <td>{% if co.power %}<b>{{ co.power.name }}</b> {{ w::stars(count=co.power.stars) }}<br>{{ co.power.description }}{% else %}—{% endif %}</td>
+                <td><b>{{ co.super_power.name }}</b> {{ w::stars(count=co.super_power.stars) }}<br>{{ co.super_power.description }}</td>
+            </tr>
             {%- endfor %}
-        </div>
-        {%- endif %}
-        <div class="commanders">
-            {%- for co in commanders | filter(attribute="faction", value=faction.id) %}
-            <article class="card commander" id="{{ co.id }}" style="--faction: {{ faction.color }}">
-                <header>
-                    {{ m::portrait(id=co.id, name=co.name, size="lg") }}
-                    <div>
-                        <h3>{{ co.name }}</h3>
-                        <p class="muted">{{ co.personality }}</p>
-                    </div>
-                </header>
-                <p>{{ co.description }}</p>
-                {%- for kind in ["power", "super_power"] %}
-                {%- set power = co[kind] %}
-                {%- if power %}
-                <div class="power">
-                    <p class="power-name"><span class="tag">{% if kind == "power" %}CO Power{% else %}Super{% endif %}</span> {{ power.name }} {{ m::stars(count=power.stars) }}</p>
-                    <p>{{ power.description }}</p>
-                </div>
-                {%- endif %}
-                {%- endfor %}
-            </article>
-            {%- endfor %}
-        </div>
+        </tbody>
+    </table>
     </div>
-</section>
-{%- endfor %}
+    {%- endfor %}
+</article>
 {% endblock %}

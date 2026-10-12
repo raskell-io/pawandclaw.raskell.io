@@ -1,0 +1,1380 @@
+{
+  "damage": {
+    "units": [
+      {
+        "id": "scout",
+        "name": "Militia",
+        "asset": "scout"
+      },
+      {
+        "id": "shocktrooper",
+        "name": "Halberdier",
+        "asset": "shocktrooper"
+      },
+      {
+        "id": "recon",
+        "name": "Outrider",
+        "asset": "recon"
+      },
+      {
+        "id": "ironclad",
+        "name": "Charger",
+        "asset": "ironclad"
+      },
+      {
+        "id": "juggernaut",
+        "name": "Warbeast",
+        "asset": "juggernaut"
+      },
+      {
+        "id": "behemoth",
+        "name": "Colossus",
+        "asset": "behemoth"
+      },
+      {
+        "id": "flak",
+        "name": "Hawkbane",
+        "asset": "flak"
+      },
+      {
+        "id": "siege",
+        "name": "Catapult",
+        "asset": "siege"
+      },
+      {
+        "id": "barrage",
+        "name": "Trebuchet",
+        "asset": "barrage"
+      },
+      {
+        "id": "stinger",
+        "name": "Skylance",
+        "asset": "stinger"
+      },
+      {
+        "id": "carrier",
+        "name": "Caravan",
+        "asset": "carrier"
+      },
+      {
+        "id": "supplier",
+        "name": "Supply Cart",
+        "asset": "supplier"
+      },
+      {
+        "id": "ferrier",
+        "name": "Skyferry",
+        "asset": "ferrier"
+      },
+      {
+        "id": "skywing",
+        "name": "Hawk Rider",
+        "asset": "skywing"
+      },
+      {
+        "id": "raptor",
+        "name": "Sky Knight",
+        "asset": "raptor"
+      },
+      {
+        "id": "talon",
+        "name": "Bombardier",
+        "asset": "talon"
+      },
+      {
+        "id": "barge",
+        "name": "Raft",
+        "asset": "barge"
+      },
+      {
+        "id": "frigate",
+        "name": "Galley",
+        "asset": "frigate"
+      },
+      {
+        "id": "lurker",
+        "name": "Diver",
+        "asset": "lurker"
+      },
+      {
+        "id": "dreadnought",
+        "name": "Flagship",
+        "asset": "dreadnought"
+      }
+    ],
+    "rows": [
+      {
+        "id": "scout",
+        "name": "Militia",
+        "asset": "scout",
+        "cells": [
+          {
+            "p": 55,
+            "s": null,
+            "best": 55
+          },
+          {
+            "p": 45,
+            "s": null,
+            "best": 45
+          },
+          {
+            "p": 12,
+            "s": null,
+            "best": 12
+          },
+          {
+            "p": 5,
+            "s": null,
+            "best": 5
+          },
+          {
+            "p": 1,
+            "s": null,
+            "best": 1
+          },
+          {
+            "p": 1,
+            "s": null,
+            "best": 1
+          },
+          {
+            "p": 5,
+            "s": null,
+            "best": 5
+          },
+          {
+            "p": 15,
+            "s": null,
+            "best": 15
+          },
+          {
+            "p": 25,
+            "s": null,
+            "best": 25
+          },
+          {
+            "p": 26,
+            "s": null,
+            "best": 26
+          },
+          {
+            "p": 14,
+            "s": null,
+            "best": 14
+          },
+          {
+            "p": 14,
+            "s": null,
+            "best": 14
+          },
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "id": "shocktrooper",
+        "name": "Halberdier",
+        "asset": "shocktrooper",
+        "cells": [
+          {
+            "p": null,
+            "s": 65,
+            "best": 65
+          },
+          {
+            "p": null,
+            "s": 55,
+            "best": 55
+          },
+          {
+            "p": 85,
+            "s": null,
+            "best": 85
+          },
+          {
+            "p": 55,
+            "s": null,
+            "best": 55
+          },
+          {
+            "p": 15,
+            "s": null,
+            "best": 15
+          },
+          {
+            "p": 15,
+            "s": null,
+            "best": 15
+          },
+          {
+            "p": 65,
+            "s": null,
+            "best": 65
+          },
+          {
+            "p": 70,
+            "s": null,
+            "best": 70
+          },
+          {
+            "p": 85,
+            "s": null,
+            "best": 85
+          },
+          {
+            "p": 85,
+            "s": null,
+            "best": 85
+          },
+          {
+            "p": 75,
+            "s": null,
+            "best": 75
+          },
+          {
+            "p": 75,
+            "s": null,
+            "best": 75
+          },
+          {
+            "p": null,
+            "s": 35,
+            "best": 35
+          },
+          {
+            "p": null,
+            "s": 9,
+            "best": 9
+          },
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "id": "recon",
+        "name": "Outrider",
+        "asset": "recon",
+        "cells": [
+          {
+            "p": 70,
+            "s": null,
+            "best": 70
+          },
+          {
+            "p": 65,
+            "s": null,
+            "best": 65
+          },
+          {
+            "p": 35,
+            "s": null,
+            "best": 35
+          },
+          {
+            "p": 6,
+            "s": null,
+            "best": 6
+          },
+          {
+            "p": 1,
+            "s": null,
+            "best": 1
+          },
+          {
+            "p": 1,
+            "s": null,
+            "best": 1
+          },
+          {
+            "p": 4,
+            "s": null,
+            "best": 4
+          },
+          {
+            "p": 45,
+            "s": null,
+            "best": 45
+          },
+          {
+            "p": 55,
+            "s": null,
+            "best": 55
+          },
+          {
+            "p": 28,
+            "s": null,
+            "best": 28
+          },
+          {
+            "p": 45,
+            "s": null,
+            "best": 45
+          },
+          {
+            "p": 45,
+            "s": null,
+            "best": 45
+          },
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "id": "ironclad",
+        "name": "Charger",
+        "asset": "ironclad",
+        "cells": [
+          {
+            "p": null,
+            "s": 75,
+            "best": 75
+          },
+          {
+            "p": null,
+            "s": 70,
+            "best": 70
+          },
+          {
+            "p": 85,
+            "s": null,
+            "best": 85
+          },
+          {
+            "p": 55,
+            "s": null,
+            "best": 55
+          },
+          {
+            "p": 15,
+            "s": null,
+            "best": 15
+          },
+          {
+            "p": 15,
+            "s": null,
+            "best": 15
+          },
+          {
+            "p": 65,
+            "s": null,
+            "best": 65
+          },
+          {
+            "p": 70,
+            "s": null,
+            "best": 70
+          },
+          {
+            "p": 80,
+            "s": null,
+            "best": 80
+          },
+          {
+            "p": 85,
+            "s": null,
+            "best": 85
+          },
+          {
+            "p": 75,
+            "s": null,
+            "best": 75
+          },
+          {
+            "p": 75,
+            "s": null,
+            "best": 75
+          },
+          {
+            "p": null,
+            "s": 40,
+            "best": 40
+          },
+          {
+            "p": null,
+            "s": 10,
+            "best": 10
+          },
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "id": "juggernaut",
+        "name": "Warbeast",
+        "asset": "juggernaut",
+        "cells": [
+          {
+            "p": null,
+            "s": 105,
+            "best": 105
+          },
+          {
+            "p": null,
+            "s": 95,
+            "best": 95
+          },
+          {
+            "p": 105,
+            "s": null,
+            "best": 105
+          },
+          {
+            "p": 55,
+            "s": null,
+            "best": 55
+          },
+          {
+            "p": 35,
+            "s": null,
+            "best": 35
+          },
+          {
+            "p": 45,
+            "s": null,
+            "best": 45
+          },
+          {
+            "p": 105,
+            "s": null,
+            "best": 105
+          },
+          {
+            "p": 105,
+            "s": null,
+            "best": 105
+          },
+          {
+            "p": 105,
+            "s": null,
+            "best": 105
+          },
+          {
+            "p": 105,
+            "s": null,
+            "best": 105
+          },
+          {
+            "p": 105,
+            "s": null,
+            "best": 105
+          },
+          {
+            "p": 105,
+            "s": null,
+            "best": 105
+          },
+          {
+            "p": null,
+            "s": 45,
+            "best": 45
+          },
+          {
+            "p": null,
+            "s": 12,
+            "best": 12
+          },
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "id": "behemoth",
+        "name": "Colossus",
+        "asset": "behemoth",
+        "cells": [
+          {
+            "p": null,
+            "s": 125,
+            "best": 125
+          },
+          {
+            "p": null,
+            "s": 115,
+            "best": 115
+          },
+          {
+            "p": 125,
+            "s": null,
+            "best": 125
+          },
+          {
+            "p": 105,
+            "s": null,
+            "best": 105
+          },
+          {
+            "p": 75,
+            "s": null,
+            "best": 75
+          },
+          {
+            "p": 55,
+            "s": null,
+            "best": 55
+          },
+          {
+            "p": 115,
+            "s": null,
+            "best": 115
+          },
+          {
+            "p": 115,
+            "s": null,
+            "best": 115
+          },
+          {
+            "p": 125,
+            "s": null,
+            "best": 125
+          },
+          {
+            "p": 125,
+            "s": null,
+            "best": 125
+          },
+          {
+            "p": 125,
+            "s": null,
+            "best": 125
+          },
+          {
+            "p": 125,
+            "s": null,
+            "best": 125
+          },
+          {
+            "p": null,
+            "s": 55,
+            "best": 55
+          },
+          {
+            "p": null,
+            "s": 22,
+            "best": 22
+          },
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "id": "flak",
+        "name": "Hawkbane",
+        "asset": "flak",
+        "cells": [
+          {
+            "p": 105,
+            "s": null,
+            "best": 105
+          },
+          {
+            "p": 105,
+            "s": null,
+            "best": 105
+          },
+          {
+            "p": 60,
+            "s": null,
+            "best": 60
+          },
+          {
+            "p": 25,
+            "s": null,
+            "best": 25
+          },
+          {
+            "p": 10,
+            "s": null,
+            "best": 10
+          },
+          {
+            "p": 5,
+            "s": null,
+            "best": 5
+          },
+          {
+            "p": 45,
+            "s": null,
+            "best": 45
+          },
+          {
+            "p": 50,
+            "s": null,
+            "best": 50
+          },
+          {
+            "p": 55,
+            "s": null,
+            "best": 55
+          },
+          {
+            "p": 55,
+            "s": null,
+            "best": 55
+          },
+          {
+            "p": 50,
+            "s": null,
+            "best": 50
+          },
+          {
+            "p": 50,
+            "s": null,
+            "best": 50
+          },
+          {
+            "p": 120,
+            "s": null,
+            "best": 120
+          },
+          {
+            "p": 120,
+            "s": null,
+            "best": 120
+          },
+          {
+            "p": 65,
+            "s": null,
+            "best": 65
+          },
+          {
+            "p": 75,
+            "s": null,
+            "best": 75
+          },
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "id": "siege",
+        "name": "Catapult",
+        "asset": "siege",
+        "cells": [
+          {
+            "p": 90,
+            "s": null,
+            "best": 90
+          },
+          {
+            "p": 85,
+            "s": null,
+            "best": 85
+          },
+          {
+            "p": 80,
+            "s": null,
+            "best": 80
+          },
+          {
+            "p": 70,
+            "s": null,
+            "best": 70
+          },
+          {
+            "p": 45,
+            "s": null,
+            "best": 45
+          },
+          {
+            "p": 40,
+            "s": null,
+            "best": 40
+          },
+          {
+            "p": 75,
+            "s": null,
+            "best": 75
+          },
+          {
+            "p": 75,
+            "s": null,
+            "best": 75
+          },
+          {
+            "p": 80,
+            "s": null,
+            "best": 80
+          },
+          {
+            "p": 80,
+            "s": null,
+            "best": 80
+          },
+          {
+            "p": 70,
+            "s": null,
+            "best": 70
+          },
+          {
+            "p": 70,
+            "s": null,
+            "best": 70
+          },
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "id": "barrage",
+        "name": "Trebuchet",
+        "asset": "barrage",
+        "cells": [
+          {
+            "p": 95,
+            "s": null,
+            "best": 95
+          },
+          {
+            "p": 90,
+            "s": null,
+            "best": 90
+          },
+          {
+            "p": 90,
+            "s": null,
+            "best": 90
+          },
+          {
+            "p": 80,
+            "s": null,
+            "best": 80
+          },
+          {
+            "p": 55,
+            "s": null,
+            "best": 55
+          },
+          {
+            "p": 50,
+            "s": null,
+            "best": 50
+          },
+          {
+            "p": 85,
+            "s": null,
+            "best": 85
+          },
+          {
+            "p": 80,
+            "s": null,
+            "best": 80
+          },
+          {
+            "p": 85,
+            "s": null,
+            "best": 85
+          },
+          {
+            "p": 85,
+            "s": null,
+            "best": 85
+          },
+          {
+            "p": 80,
+            "s": null,
+            "best": 80
+          },
+          {
+            "p": 80,
+            "s": null,
+            "best": 80
+          },
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "id": "stinger",
+        "name": "Skylance",
+        "asset": "stinger",
+        "cells": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          {
+            "p": 120,
+            "s": null,
+            "best": 120
+          },
+          {
+            "p": 120,
+            "s": null,
+            "best": 120
+          },
+          {
+            "p": 100,
+            "s": null,
+            "best": 100
+          },
+          {
+            "p": 100,
+            "s": null,
+            "best": 100
+          },
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "id": "carrier",
+        "name": "Caravan",
+        "asset": "carrier",
+        "cells": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "id": "supplier",
+        "name": "Supply Cart",
+        "asset": "supplier",
+        "cells": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "id": "ferrier",
+        "name": "Skyferry",
+        "asset": "ferrier",
+        "cells": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "id": "skywing",
+        "name": "Hawk Rider",
+        "asset": "skywing",
+        "cells": [
+          {
+            "p": null,
+            "s": 75,
+            "best": 75
+          },
+          {
+            "p": null,
+            "s": 75,
+            "best": 75
+          },
+          {
+            "p": 55,
+            "s": null,
+            "best": 55
+          },
+          {
+            "p": 55,
+            "s": null,
+            "best": 55
+          },
+          {
+            "p": 25,
+            "s": null,
+            "best": 25
+          },
+          {
+            "p": 20,
+            "s": null,
+            "best": 20
+          },
+          {
+            "p": 25,
+            "s": null,
+            "best": 25
+          },
+          {
+            "p": 65,
+            "s": null,
+            "best": 65
+          },
+          {
+            "p": 65,
+            "s": null,
+            "best": 65
+          },
+          {
+            "p": 55,
+            "s": null,
+            "best": 55
+          },
+          {
+            "p": 60,
+            "s": null,
+            "best": 60
+          },
+          {
+            "p": 60,
+            "s": null,
+            "best": 60
+          },
+          {
+            "p": null,
+            "s": 95,
+            "best": 95
+          },
+          {
+            "p": null,
+            "s": 65,
+            "best": 65
+          },
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "id": "raptor",
+        "name": "Sky Knight",
+        "asset": "raptor",
+        "cells": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          {
+            "p": 100,
+            "s": null,
+            "best": 100
+          },
+          {
+            "p": 100,
+            "s": null,
+            "best": 100
+          },
+          {
+            "p": 55,
+            "s": null,
+            "best": 55
+          },
+          {
+            "p": 100,
+            "s": null,
+            "best": 100
+          },
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "id": "talon",
+        "name": "Bombardier",
+        "asset": "talon",
+        "cells": [
+          {
+            "p": 110,
+            "s": null,
+            "best": 110
+          },
+          {
+            "p": 110,
+            "s": null,
+            "best": 110
+          },
+          {
+            "p": 105,
+            "s": null,
+            "best": 105
+          },
+          {
+            "p": 105,
+            "s": null,
+            "best": 105
+          },
+          {
+            "p": 95,
+            "s": null,
+            "best": 95
+          },
+          {
+            "p": 90,
+            "s": null,
+            "best": 90
+          },
+          {
+            "p": 95,
+            "s": null,
+            "best": 95
+          },
+          {
+            "p": 105,
+            "s": null,
+            "best": 105
+          },
+          {
+            "p": 105,
+            "s": null,
+            "best": 105
+          },
+          {
+            "p": 105,
+            "s": null,
+            "best": 105
+          },
+          {
+            "p": 105,
+            "s": null,
+            "best": 105
+          },
+          {
+            "p": 105,
+            "s": null,
+            "best": 105
+          },
+          null,
+          null,
+          null,
+          null,
+          {
+            "p": 95,
+            "s": null,
+            "best": 95
+          },
+          {
+            "p": 85,
+            "s": null,
+            "best": 85
+          },
+          {
+            "p": 95,
+            "s": null,
+            "best": 95
+          },
+          {
+            "p": 75,
+            "s": null,
+            "best": 75
+          }
+        ]
+      },
+      {
+        "id": "barge",
+        "name": "Raft",
+        "asset": "barge",
+        "cells": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "id": "frigate",
+        "name": "Galley",
+        "asset": "frigate",
+        "cells": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          {
+            "p": null,
+            "s": 115,
+            "best": 115
+          },
+          {
+            "p": null,
+            "s": 115,
+            "best": 115
+          },
+          {
+            "p": null,
+            "s": 55,
+            "best": 55
+          },
+          {
+            "p": null,
+            "s": 65,
+            "best": 65
+          },
+          null,
+          null,
+          {
+            "p": 90,
+            "s": null,
+            "best": 90
+          },
+          null
+        ]
+      },
+      {
+        "id": "lurker",
+        "name": "Diver",
+        "asset": "lurker",
+        "cells": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          {
+            "p": 95,
+            "s": null,
+            "best": 95
+          },
+          {
+            "p": 55,
+            "s": null,
+            "best": 55
+          },
+          {
+            "p": 55,
+            "s": null,
+            "best": 55
+          },
+          {
+            "p": 55,
+            "s": null,
+            "best": 55
+          }
+        ]
+      },
+      {
+        "id": "dreadnought",
+        "name": "Flagship",
+        "asset": "dreadnought",
+        "cells": [
+          {
+            "p": 95,
+            "s": null,
+            "best": 95
+          },
+          {
+            "p": 90,
+            "s": null,
+            "best": 90
+          },
+          {
+            "p": 90,
+            "s": null,
+            "best": 90
+          },
+          {
+            "p": 80,
+            "s": null,
+            "best": 80
+          },
+          {
+            "p": 55,
+            "s": null,
+            "best": 55
+          },
+          {
+            "p": 50,
+            "s": null,
+            "best": 50
+          },
+          {
+            "p": 85,
+            "s": null,
+            "best": 85
+          },
+          {
+            "p": 80,
+            "s": null,
+            "best": 80
+          },
+          {
+            "p": 85,
+            "s": null,
+            "best": 85
+          },
+          {
+            "p": 85,
+            "s": null,
+            "best": 85
+          },
+          {
+            "p": 80,
+            "s": null,
+            "best": 80
+          },
+          {
+            "p": 80,
+            "s": null,
+            "best": 80
+          },
+          null,
+          null,
+          null,
+          null,
+          {
+            "p": 95,
+            "s": null,
+            "best": 95
+          },
+          {
+            "p": 95,
+            "s": null,
+            "best": 95
+          },
+          {
+            "p": 95,
+            "s": null,
+            "best": 95
+          },
+          {
+            "p": 50,
+            "s": null,
+            "best": 50
+          }
+        ]
+      }
+    ]
+  }
+}

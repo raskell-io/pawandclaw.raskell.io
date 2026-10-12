@@ -1,0 +1,35 @@
+{% extends "wiki.html" %}
+{% import "wiki-macros.html" as w %}
+{% import "macros.html" as m %}
+{%- block crumbs %}{{ w::crumbs(section="Armies") }}{% endblock %}
+{%- block heading %}{{ page.title }}{% endblock %}
+{%- block lead %}<p class="lead">{{ page.description }}</p>{% endblock %}
+
+{% block wiki %}
+{%- set factions = load_data(path="data/factions.json") | get(key="factions") %}
+{%- set commanders = load_data(path="data/commanders.json") | get(key="commanders") %}
+{%- set units = load_data(path="data/units.json") | get(key="units") %}
+{%- set classic = ["Orange Star", "Blue Moon", "Green Earth", "Yellow Comet", "Black Hole"] %}
+<article class="card article">
+    {{ page.content | safe }}
+    {%- for f in factions %}
+    <section class="army" id="{{ f.id }}" style="--faction: {{ f.color }}">
+        <h2 class="army-heading">{{ f.name }}</h2>
+        <p class="army-meta"><span>Like <em>{{ classic | nth(n=loop.index0) }}</em></span><span>{{ f.animals | join(sep=" · ") }}</span></p>
+        <p>{{ f.description }}</p>
+        <h3>Commanders</h3>
+        <ul class="co-row">
+            {%- for co in commanders | filter(attribute="faction", value=f.id) %}
+            <li>{{ w::co_link(id=co.id, name=co.name) }}</li>
+            {%- endfor %}
+        </ul>
+        <h3>Troops</h3>
+        <div class="army-units">
+            {%- for u in units %}
+            <a href="/units/{{ u.id | replace(from="_", to="-") }}/" title="{{ u.name }}">{{ m::unit(faction=f.id, asset=u.asset, label=u.name) }}</a>
+            {%- endfor %}
+        </div>
+    </section>
+    {%- endfor %}
+</article>
+{% endblock %}

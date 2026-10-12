@@ -1,0 +1,113 @@
+{% extends "wiki.html" %}
+{% import "wiki-macros.html" as w %}
+{%- block crumbs %}{{ w::crumbs() }}{% endblock %}
+{%- block heading %}{{ page.title }}{% endblock %}
+{%- block lead %}<p class="lead">{{ page.description }}</p>{% endblock %}
+
+{% block wiki %}
+{%- set units = load_data(path="data/units.json") | get(key="units") %}
+{%- set commanders = load_data(path="data/commanders.json") | get(key="commanders") %}
+{%- set factions = load_data(path="data/factions.json") | get(key="factions") %}
+{%- set terrain = load_data(path="data/terrain.json") | get(key="terrain") %}
+{%- set maps = load_data(path="data/maps.json") | get(key="maps") %}
+<div class="wiki-search card">
+    <label for="wiki-q">Search the wiki</label>
+    <input id="wiki-q" type="search" placeholder="A unit, commander, map or rule…" autocomplete="off">
+    <ul class="search-results" id="wiki-results" hidden></ul>
+</div>
+
+<ul class="facts-row" aria-label="At a glance">
+    <li><b>{{ factions | length }}</b> armies</li>
+    <li><b>{{ commanders | length }}</b> commanders</li>
+    <li><b>{{ units | length }}</b> units</li>
+    <li><b>{{ terrain | length }}</b> terrain types</li>
+    <li><b>{{ maps | length }}</b> maps</li>
+</ul>
+
+<div class="portal">
+    <a class="card portal-card" href="/rules/">
+        <h2>Rules of war</h2>
+        <p>Turns, funds, movement, the damage formula, capturing, supply, fog, weather and powers.</p>
+    </a>
+    <a class="card portal-card" href="/how-to-play/">
+        <h2>How to play</h2>
+        <p>Your first battle and the controls for keyboard, mouse, gamepad and touch.</p>
+    </a>
+    <a class="card portal-card" href="/armies/">
+        <h2>Armies</h2>
+        <p class="portal-art">{% for f in factions %}<span class="mini-sprite" style="background-image: url('/sprites/units/{{ f.id }}/scout.png')"></span>{% endfor %}</p>
+        <p>The five armies, their creatures and who leads them.</p>
+    </a>
+    <a class="card portal-card" href="/commanders/">
+        <h2>Commanders</h2>
+        <p class="portal-art">{% for co in commanders | slice(end=7) %}<img class="mini-portrait" src="/sprites/portraits/{{ co.id }}.png" alt="" width="24" height="24">{% endfor %}</p>
+        <p>All {{ commanders | length }}, with every ability and power spelled out.</p>
+    </a>
+    <a class="card portal-card" href="/units/">
+        <h2>Units</h2>
+        <p class="portal-art">{% for u in units | slice(end=7) %}<span class="mini-sprite" style="background-image: url('/sprites/units/western/{{ u.asset }}.png')"></span>{% endfor %}</p>
+        <p>Stats, matchups, movement and which commanders change them.</p>
+    </a>
+    <a class="card portal-card" href="/terrain/">
+        <h2>Terrain</h2>
+        <p class="portal-art">{% for t in terrain | slice(end=7) %}<img class="mini-icon" src="/sprites/terrain/{{ t.id }}.png" alt="" width="20" height="20">{% endfor %}</p>
+        <p>Defense stars, movement costs, income and what each property builds.</p>
+    </a>
+    <a class="card portal-card" href="/damage/">
+        <h2>Damage chart</h2>
+        <p>Every unit against every other, in one table.</p>
+    </a>
+    <a class="card portal-card" href="/maps/">
+        <h2>Maps</h2>
+        <p>The War Room classics and the woodland maps, with previews and starting funds.</p>
+    </a>
+</div>
+
+<script type="application/json" id="wiki-index">[
+    {"t": "Rules of war", "u": "/rules/", "k": "Article"},
+    {"t": "How to play", "u": "/how-to-play/", "k": "Article"},
+    {"t": "Damage chart", "u": "/damage/", "k": "Article"},
+    {"t": "Download", "u": "/download/", "k": "Article"},
+    {%- for f in factions %}{"t": {{ f.name | json_encode() | safe }}, "u": "/armies/#{{ f.id }}", "k": "Army"},{% endfor %}
+    {%- for c in commanders %}{"t": {{ c.name | json_encode() | safe }}, "u": "/commanders/{{ c.id | replace(from="_", to="-") }}/", "k": "Commander · {{ c.faction_name }} · like {{ c.based_on }}"},{% endfor %}
+    {%- for u in units %}{"t": {{ u.name | json_encode() | safe }}, "u": "/units/{{ u.id | replace(from="_", to="-") }}/", "k": "Unit · {{ u.aw }}"},{% endfor %}
+    {%- for t in terrain %}{"t": {{ t.name | json_encode() | safe }}, "u": "/terrain/#{{ t.id }}", "k": "Terrain"},{% endfor %}
+    {%- for mp in maps %}{"t": {{ mp.name | json_encode() | safe }}, "u": "/maps/{{ mp.id }}/", "k": "Map"}{% if not loop.last %},{% endif %}{% endfor %}
+]</script>
+<script>
+(() => {
+    const entries = JSON.parse(document.getElementById("wiki-index").textContent);
+    const input = document.getElementById("wiki-q");
+    const list = document.getElementById("wiki-results");
+    const norm = (s) => s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
+    input.addEventListener("input", () => {
+        const q = norm(input.value.trim());
+        list.replaceChildren();
+        if (!q) { list.hidden = true; return; }
+        const hits = entries.filter((e) => norm(e.t + " " + e.k).includes(q)).slice(0, 12);
+        for (const e of hits) {
+            const li = document.createElement("li");
+            const a = document.createElement("a");
+            a.href = e.u;
+            a.textContent = e.t;
+            const kind = document.createElement("small");
+            kind.textContent = e.k;
+            a.append(kind);
+            li.append(a);
+            list.append(li);
+        }
+        if (!hits.length) {
+            const li = document.createElement("li");
+            li.className = "empty";
+            li.textContent = "Nothing found";
+            list.append(li);
+        }
+        list.hidden = false;
+    });
+    input.addEventListener("keydown", (ev) => {
+        const first = list.querySelector("a");
+        if (ev.key === "Enter" && first) location.href = first.href;
+    });
+})();
+</script>
+{% endblock %}

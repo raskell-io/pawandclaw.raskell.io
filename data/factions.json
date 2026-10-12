@@ -11,6 +11,15 @@
         "Coyote",
         "Hawk",
         "Armadillo"
+      ],
+      "commanders": [
+        "dusty",
+        "talon_co",
+        "bandit",
+        "clover",
+        "shell",
+        "ridge",
+        "hollis"
       ]
     },
     {
@@ -24,6 +33,12 @@
         "Stoat",
         "Owl",
         "Fox"
+      ],
+      "commanders": [
+        "frost",
+        "grimjaw",
+        "bjorn",
+        "sable"
       ]
     },
     {
@@ -37,6 +52,12 @@
         "Rhino",
         "Hyena",
         "Cheetah"
+      ],
+      "commanders": [
+        "prowler",
+        "tusker",
+        "rumble",
+        "lionheart"
       ]
     },
     {
@@ -50,6 +71,12 @@
         "Crane",
         "Kitsune",
         "Macaque"
+      ],
+      "commanders": [
+        "kira",
+        "tanuki",
+        "sensei",
+        "goro"
       ]
     },
     {
@@ -63,6 +90,17 @@
         "Skunk",
         "Shrew",
         "Pangolin"
+      ],
+      "commanders": [
+        "dredge",
+        "burrower",
+        "wriggle",
+        "carapace",
+        "hivemind",
+        "clank",
+        "cinder",
+        "velvet",
+        "vesper"
       ]
     }
   ]

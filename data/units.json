@@ -5,140 +5,7457 @@
       "name": "Militia",
       "asset": "scout",
       "description": "Cheap foot soldiers who hold ground and capture buildings",
-      "cost": 1000
+      "aw": "Infantry",
+      "class": "Foot",
+      "class_name": "Foot",
+      "move_type": "foot",
+      "domain": "land",
+      "cost": 1000,
+      "movement": 3,
+      "vision": 2,
+      "range": [
+        1,
+        1
+      ],
+      "range_text": "1",
+      "direct": true,
+      "indirect": false,
+      "attacks": true,
+      "ammo": 0,
+      "stamina": 99,
+      "daily_stamina": 0,
+      "can_capture": true,
+      "carries": [],
+      "carries_classes": [],
+      "capacity": 0,
+      "primary": [
+        {
+          "id": "scout",
+          "name": "Militia",
+          "asset": "scout",
+          "damage": 55
+        },
+        {
+          "id": "shocktrooper",
+          "name": "Halberdier",
+          "asset": "shocktrooper",
+          "damage": 45
+        },
+        {
+          "id": "stinger",
+          "name": "Skylance",
+          "asset": "stinger",
+          "damage": 26
+        },
+        {
+          "id": "barrage",
+          "name": "Trebuchet",
+          "asset": "barrage",
+          "damage": 25
+        },
+        {
+          "id": "siege",
+          "name": "Catapult",
+          "asset": "siege",
+          "damage": 15
+        },
+        {
+          "id": "carrier",
+          "name": "Caravan",
+          "asset": "carrier",
+          "damage": 14
+        },
+        {
+          "id": "supplier",
+          "name": "Supply Cart",
+          "asset": "supplier",
+          "damage": 14
+        },
+        {
+          "id": "recon",
+          "name": "Outrider",
+          "asset": "recon",
+          "damage": 12
+        },
+        {
+          "id": "ironclad",
+          "name": "Charger",
+          "asset": "ironclad",
+          "damage": 5
+        },
+        {
+          "id": "flak",
+          "name": "Hawkbane",
+          "asset": "flak",
+          "damage": 5
+        },
+        {
+          "id": "juggernaut",
+          "name": "Warbeast",
+          "asset": "juggernaut",
+          "damage": 1
+        },
+        {
+          "id": "behemoth",
+          "name": "Colossus",
+          "asset": "behemoth",
+          "damage": 1
+        }
+      ],
+      "secondary": [],
+      "taken": [
+        {
+          "id": "behemoth",
+          "name": "Colossus",
+          "asset": "behemoth",
+          "damage": 125
+        },
+        {
+          "id": "talon",
+          "name": "Bombardier",
+          "asset": "talon",
+          "damage": 110
+        },
+        {
+          "id": "juggernaut",
+          "name": "Warbeast",
+          "asset": "juggernaut",
+          "damage": 105
+        },
+        {
+          "id": "flak",
+          "name": "Hawkbane",
+          "asset": "flak",
+          "damage": 105
+        },
+        {
+          "id": "barrage",
+          "name": "Trebuchet",
+          "asset": "barrage",
+          "damage": 95
+        },
+        {
+          "id": "dreadnought",
+          "name": "Flagship",
+          "asset": "dreadnought",
+          "damage": 95
+        },
+        {
+          "id": "siege",
+          "name": "Catapult",
+          "asset": "siege",
+          "damage": 90
+        },
+        {
+          "id": "ironclad",
+          "name": "Charger",
+          "asset": "ironclad",
+          "damage": 75
+        },
+        {
+          "id": "skywing",
+          "name": "Hawk Rider",
+          "asset": "skywing",
+          "damage": 75
+        },
+        {
+          "id": "recon",
+          "name": "Outrider",
+          "asset": "recon",
+          "damage": 70
+        },
+        {
+          "id": "shocktrooper",
+          "name": "Halberdier",
+          "asset": "shocktrooper",
+          "damage": 65
+        },
+        {
+          "id": "scout",
+          "name": "Militia",
+          "asset": "scout",
+          "damage": 55
+        }
+      ],
+      "built_at": [
+        "workshop"
+      ],
+      "resupplied_at": [
+        "base",
+        "workshop",
+        "outpost",
+        "storehouse"
+      ],
+      "moves": [
+        {
+          "id": "grass",
+          "name": "Grass",
+          "cost": 1
+        },
+        {
+          "id": "tall_grass",
+          "name": "Tall Grass",
+          "cost": 1
+        },
+        {
+          "id": "thicket",
+          "name": "Thicket",
+          "cost": 1
+        },
+        {
+          "id": "brambles",
+          "name": "Brambles",
+          "cost": 2
+        },
+        {
+          "id": "log",
+          "name": "Trail",
+          "cost": 1
+        },
+        {
+          "id": "boulder",
+          "name": "Boulder",
+          "cost": 2
+        },
+        {
+          "id": "hollow",
+          "name": "Hollow",
+          "cost": 1
+        },
+        {
+          "id": "creek",
+          "name": "Creek",
+          "cost": 2
+        },
+        {
+          "id": "pond",
+          "name": "Pond",
+          "cost": 99
+        },
+        {
+          "id": "lily_pads",
+          "name": "Lily Pads",
+          "cost": 99
+        },
+        {
+          "id": "shore",
+          "name": "Shore",
+          "cost": 1
+        },
+        {
+          "id": "base",
+          "name": "Base",
+          "cost": 1
+        },
+        {
+          "id": "workshop",
+          "name": "Workshop",
+          "cost": 1
+        },
+        {
+          "id": "dock",
+          "name": "Dock",
+          "cost": 1
+        },
+        {
+          "id": "roost",
+          "name": "Roost",
+          "cost": 1
+        },
+        {
+          "id": "outpost",
+          "name": "Outpost",
+          "cost": 1
+        },
+        {
+          "id": "storehouse",
+          "name": "Storehouse",
+          "cost": 1
+        }
+      ],
+      "carried_by": [
+        "carrier",
+        "ferrier",
+        "barge"
+      ],
+      "commanders": [
+        {
+          "id": "dusty",
+          "name": "Dusty",
+          "notes": [
+            "+10% attack (Super CO Power)",
+            "+1 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "bandit",
+          "name": "Bandit",
+          "notes": [
+            "+20% attack",
+            "+10% attack (CO Power)",
+            "+1 movement (CO Power)",
+            "+30% attack (Super CO Power)",
+            "+2 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "bjorn",
+          "name": "Bjorn",
+          "notes": [
+            "−10% attack"
+          ]
+        },
+        {
+          "id": "rumble",
+          "name": "Rumble",
+          "notes": [
+            "−10% attack"
+          ]
+        },
+        {
+          "id": "kira",
+          "name": "Kira",
+          "notes": [
+            "+30% attack",
+            "+30% defense",
+            "+20% attack (CO Power)",
+            "+20% attack (Super CO Power)",
+            "+20% defense (Super CO Power)"
+          ]
+        },
+        {
+          "id": "tanuki",
+          "name": "Tanuki",
+          "notes": [
+            "+1 vision",
+            "+1 vision (CO Power)",
+            "+1 vision (Super CO Power)"
+          ]
+        },
+        {
+          "id": "sensei",
+          "name": "Sensei",
+          "notes": [
+            "+40% attack"
+          ]
+        },
+        {
+          "id": "goro",
+          "name": "Goro",
+          "notes": [
+            "+30% attack",
+            "−20% defense",
+            "+20% attack (CO Power)",
+            "+50% attack (Super CO Power)"
+          ]
+        },
+        {
+          "id": "wriggle",
+          "name": "Wriggle",
+          "notes": [
+            "+1 movement (CO Power)",
+            "+2 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "carapace",
+          "name": "Carapace",
+          "notes": [
+            "+10% attack"
+          ]
+        },
+        {
+          "id": "hivemind",
+          "name": "Hivemind",
+          "notes": [
+            "+20% attack",
+            "+20% defense"
+          ]
+        },
+        {
+          "id": "cinder",
+          "name": "Cinder",
+          "notes": [
+            "+1 movement (CO Power)",
+            "+2 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "vesper",
+          "name": "Vesper",
+          "notes": [
+            "+10% attack",
+            "+10% defense"
+          ]
+        }
+      ]
     },
     {
       "id": "shocktrooper",
       "name": "Halberdier",
       "asset": "shocktrooper",
       "description": "Slow heavy infantry whose polearms pierce armored beasts",
-      "cost": 3000
+      "aw": "Mech",
+      "class": "Mech",
+      "class_name": "Heavy foot",
+      "move_type": "mech",
+      "domain": "land",
+      "cost": 3000,
+      "movement": 2,
+      "vision": 2,
+      "range": [
+        1,
+        1
+      ],
+      "range_text": "1",
+      "direct": true,
+      "indirect": false,
+      "attacks": true,
+      "ammo": 3,
+      "stamina": 70,
+      "daily_stamina": 0,
+      "can_capture": true,
+      "carries": [],
+      "carries_classes": [],
+      "capacity": 0,
+      "primary": [
+        {
+          "id": "recon",
+          "name": "Outrider",
+          "asset": "recon",
+          "damage": 85
+        },
+        {
+          "id": "barrage",
+          "name": "Trebuchet",
+          "asset": "barrage",
+          "damage": 85
+        },
+        {
+          "id": "stinger",
+          "name": "Skylance",
+          "asset": "stinger",
+          "damage": 85
+        },
+        {
+          "id": "carrier",
+          "name": "Caravan",
+          "asset": "carrier",
+          "damage": 75
+        },
+        {
+          "id": "supplier",
+          "name": "Supply Cart",
+          "asset": "supplier",
+          "damage": 75
+        },
+        {
+          "id": "siege",
+          "name": "Catapult",
+          "asset": "siege",
+          "damage": 70
+        },
+        {
+          "id": "flak",
+          "name": "Hawkbane",
+          "asset": "flak",
+          "damage": 65
+        },
+        {
+          "id": "ironclad",
+          "name": "Charger",
+          "asset": "ironclad",
+          "damage": 55
+        },
+        {
+          "id": "juggernaut",
+          "name": "Warbeast",
+          "asset": "juggernaut",
+          "damage": 15
+        },
+        {
+          "id": "behemoth",
+          "name": "Colossus",
+          "asset": "behemoth",
+          "damage": 15
+        }
+      ],
+      "secondary": [
+        {
+          "id": "scout",
+          "name": "Militia",
+          "asset": "scout",
+          "damage": 65
+        },
+        {
+          "id": "shocktrooper",
+          "name": "Halberdier",
+          "asset": "shocktrooper",
+          "damage": 55
+        },
+        {
+          "id": "ferrier",
+          "name": "Skyferry",
+          "asset": "ferrier",
+          "damage": 35
+        },
+        {
+          "id": "skywing",
+          "name": "Hawk Rider",
+          "asset": "skywing",
+          "damage": 9
+        }
+      ],
+      "taken": [
+        {
+          "id": "behemoth",
+          "name": "Colossus",
+          "asset": "behemoth",
+          "damage": 115
+        },
+        {
+          "id": "talon",
+          "name": "Bombardier",
+          "asset": "talon",
+          "damage": 110
+        },
+        {
+          "id": "flak",
+          "name": "Hawkbane",
+          "asset": "flak",
+          "damage": 105
+        },
+        {
+          "id": "juggernaut",
+          "name": "Warbeast",
+          "asset": "juggernaut",
+          "damage": 95
+        },
+        {
+          "id": "barrage",
+          "name": "Trebuchet",
+          "asset": "barrage",
+          "damage": 90
+        },
+        {
+          "id": "dreadnought",
+          "name": "Flagship",
+          "asset": "dreadnought",
+          "damage": 90
+        },
+        {
+          "id": "siege",
+          "name": "Catapult",
+          "asset": "siege",
+          "damage": 85
+        },
+        {
+          "id": "skywing",
+          "name": "Hawk Rider",
+          "asset": "skywing",
+          "damage": 75
+        },
+        {
+          "id": "ironclad",
+          "name": "Charger",
+          "asset": "ironclad",
+          "damage": 70
+        },
+        {
+          "id": "recon",
+          "name": "Outrider",
+          "asset": "recon",
+          "damage": 65
+        },
+        {
+          "id": "shocktrooper",
+          "name": "Halberdier",
+          "asset": "shocktrooper",
+          "damage": 55
+        },
+        {
+          "id": "scout",
+          "name": "Militia",
+          "asset": "scout",
+          "damage": 45
+        }
+      ],
+      "built_at": [
+        "workshop"
+      ],
+      "resupplied_at": [
+        "base",
+        "workshop",
+        "outpost",
+        "storehouse"
+      ],
+      "moves": [
+        {
+          "id": "grass",
+          "name": "Grass",
+          "cost": 1
+        },
+        {
+          "id": "tall_grass",
+          "name": "Tall Grass",
+          "cost": 1
+        },
+        {
+          "id": "thicket",
+          "name": "Thicket",
+          "cost": 1
+        },
+        {
+          "id": "brambles",
+          "name": "Brambles",
+          "cost": 1
+        },
+        {
+          "id": "log",
+          "name": "Trail",
+          "cost": 1
+        },
+        {
+          "id": "boulder",
+          "name": "Boulder",
+          "cost": 1
+        },
+        {
+          "id": "hollow",
+          "name": "Hollow",
+          "cost": 1
+        },
+        {
+          "id": "creek",
+          "name": "Creek",
+          "cost": 1
+        },
+        {
+          "id": "pond",
+          "name": "Pond",
+          "cost": 99
+        },
+        {
+          "id": "lily_pads",
+          "name": "Lily Pads",
+          "cost": 99
+        },
+        {
+          "id": "shore",
+          "name": "Shore",
+          "cost": 1
+        },
+        {
+          "id": "base",
+          "name": "Base",
+          "cost": 1
+        },
+        {
+          "id": "workshop",
+          "name": "Workshop",
+          "cost": 1
+        },
+        {
+          "id": "dock",
+          "name": "Dock",
+          "cost": 1
+        },
+        {
+          "id": "roost",
+          "name": "Roost",
+          "cost": 1
+        },
+        {
+          "id": "outpost",
+          "name": "Outpost",
+          "cost": 1
+        },
+        {
+          "id": "storehouse",
+          "name": "Storehouse",
+          "cost": 1
+        }
+      ],
+      "carried_by": [
+        "carrier",
+        "ferrier",
+        "barge"
+      ],
+      "commanders": [
+        {
+          "id": "dusty",
+          "name": "Dusty",
+          "notes": [
+            "+10% attack (Super CO Power)",
+            "+1 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "bandit",
+          "name": "Bandit",
+          "notes": [
+            "+20% attack",
+            "+10% attack (CO Power)",
+            "+1 movement (CO Power)",
+            "+30% attack (Super CO Power)",
+            "+2 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "bjorn",
+          "name": "Bjorn",
+          "notes": [
+            "−10% attack"
+          ]
+        },
+        {
+          "id": "rumble",
+          "name": "Rumble",
+          "notes": [
+            "−10% attack"
+          ]
+        },
+        {
+          "id": "kira",
+          "name": "Kira",
+          "notes": [
+            "+30% attack",
+            "+30% defense",
+            "+20% attack (CO Power)",
+            "+20% attack (Super CO Power)",
+            "+20% defense (Super CO Power)"
+          ]
+        },
+        {
+          "id": "tanuki",
+          "name": "Tanuki",
+          "notes": [
+            "+1 vision",
+            "+1 vision (CO Power)",
+            "+1 vision (Super CO Power)"
+          ]
+        },
+        {
+          "id": "sensei",
+          "name": "Sensei",
+          "notes": [
+            "+40% attack"
+          ]
+        },
+        {
+          "id": "goro",
+          "name": "Goro",
+          "notes": [
+            "+30% attack",
+            "−20% defense",
+            "+20% attack (CO Power)",
+            "+50% attack (Super CO Power)"
+          ]
+        },
+        {
+          "id": "wriggle",
+          "name": "Wriggle",
+          "notes": [
+            "+1 movement (CO Power)",
+            "+2 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "carapace",
+          "name": "Carapace",
+          "notes": [
+            "+10% attack"
+          ]
+        },
+        {
+          "id": "hivemind",
+          "name": "Hivemind",
+          "notes": [
+            "+20% attack",
+            "+20% defense"
+          ]
+        },
+        {
+          "id": "cinder",
+          "name": "Cinder",
+          "notes": [
+            "+1 movement (CO Power)",
+            "+2 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "vesper",
+          "name": "Vesper",
+          "notes": [
+            "+10% attack",
+            "+10% defense"
+          ]
+        }
+      ]
     },
     {
       "id": "recon",
       "name": "Outrider",
       "asset": "recon",
       "description": "Swift mounted scout with keen eyes",
-      "cost": 4000
+      "aw": "Recon",
+      "class": "Wheels",
+      "class_name": "Wheels",
+      "move_type": "wheels",
+      "domain": "land",
+      "cost": 4000,
+      "movement": 8,
+      "vision": 5,
+      "range": [
+        1,
+        1
+      ],
+      "range_text": "1",
+      "direct": true,
+      "indirect": false,
+      "attacks": true,
+      "ammo": 0,
+      "stamina": 80,
+      "daily_stamina": 0,
+      "can_capture": false,
+      "carries": [],
+      "carries_classes": [],
+      "capacity": 0,
+      "primary": [
+        {
+          "id": "scout",
+          "name": "Militia",
+          "asset": "scout",
+          "damage": 70
+        },
+        {
+          "id": "shocktrooper",
+          "name": "Halberdier",
+          "asset": "shocktrooper",
+          "damage": 65
+        },
+        {
+          "id": "barrage",
+          "name": "Trebuchet",
+          "asset": "barrage",
+          "damage": 55
+        },
+        {
+          "id": "siege",
+          "name": "Catapult",
+          "asset": "siege",
+          "damage": 45
+        },
+        {
+          "id": "carrier",
+          "name": "Caravan",
+          "asset": "carrier",
+          "damage": 45
+        },
+        {
+          "id": "supplier",
+          "name": "Supply Cart",
+          "asset": "supplier",
+          "damage": 45
+        },
+        {
+          "id": "recon",
+          "name": "Outrider",
+          "asset": "recon",
+          "damage": 35
+        },
+        {
+          "id": "stinger",
+          "name": "Skylance",
+          "asset": "stinger",
+          "damage": 28
+        },
+        {
+          "id": "ironclad",
+          "name": "Charger",
+          "asset": "ironclad",
+          "damage": 6
+        },
+        {
+          "id": "flak",
+          "name": "Hawkbane",
+          "asset": "flak",
+          "damage": 4
+        },
+        {
+          "id": "juggernaut",
+          "name": "Warbeast",
+          "asset": "juggernaut",
+          "damage": 1
+        },
+        {
+          "id": "behemoth",
+          "name": "Colossus",
+          "asset": "behemoth",
+          "damage": 1
+        }
+      ],
+      "secondary": [],
+      "taken": [
+        {
+          "id": "behemoth",
+          "name": "Colossus",
+          "asset": "behemoth",
+          "damage": 125
+        },
+        {
+          "id": "juggernaut",
+          "name": "Warbeast",
+          "asset": "juggernaut",
+          "damage": 105
+        },
+        {
+          "id": "talon",
+          "name": "Bombardier",
+          "asset": "talon",
+          "damage": 105
+        },
+        {
+          "id": "barrage",
+          "name": "Trebuchet",
+          "asset": "barrage",
+          "damage": 90
+        },
+        {
+          "id": "dreadnought",
+          "name": "Flagship",
+          "asset": "dreadnought",
+          "damage": 90
+        },
+        {
+          "id": "shocktrooper",
+          "name": "Halberdier",
+          "asset": "shocktrooper",
+          "damage": 85
+        },
+        {
+          "id": "ironclad",
+          "name": "Charger",
+          "asset": "ironclad",
+          "damage": 85
+        },
+        {
+          "id": "siege",
+          "name": "Catapult",
+          "asset": "siege",
+          "damage": 80
+        },
+        {
+          "id": "flak",
+          "name": "Hawkbane",
+          "asset": "flak",
+          "damage": 60
+        },
+        {
+          "id": "skywing",
+          "name": "Hawk Rider",
+          "asset": "skywing",
+          "damage": 55
+        },
+        {
+          "id": "recon",
+          "name": "Outrider",
+          "asset": "recon",
+          "damage": 35
+        },
+        {
+          "id": "scout",
+          "name": "Militia",
+          "asset": "scout",
+          "damage": 12
+        }
+      ],
+      "built_at": [
+        "workshop"
+      ],
+      "resupplied_at": [
+        "base",
+        "workshop",
+        "outpost",
+        "storehouse"
+      ],
+      "moves": [
+        {
+          "id": "grass",
+          "name": "Grass",
+          "cost": 2
+        },
+        {
+          "id": "tall_grass",
+          "name": "Tall Grass",
+          "cost": 2
+        },
+        {
+          "id": "thicket",
+          "name": "Thicket",
+          "cost": 3
+        },
+        {
+          "id": "brambles",
+          "name": "Brambles",
+          "cost": 99
+        },
+        {
+          "id": "log",
+          "name": "Trail",
+          "cost": 1
+        },
+        {
+          "id": "boulder",
+          "name": "Boulder",
+          "cost": 99
+        },
+        {
+          "id": "hollow",
+          "name": "Hollow",
+          "cost": 1
+        },
+        {
+          "id": "creek",
+          "name": "Creek",
+          "cost": 99
+        },
+        {
+          "id": "pond",
+          "name": "Pond",
+          "cost": 99
+        },
+        {
+          "id": "lily_pads",
+          "name": "Lily Pads",
+          "cost": 99
+        },
+        {
+          "id": "shore",
+          "name": "Shore",
+          "cost": 1
+        },
+        {
+          "id": "base",
+          "name": "Base",
+          "cost": 1
+        },
+        {
+          "id": "workshop",
+          "name": "Workshop",
+          "cost": 1
+        },
+        {
+          "id": "dock",
+          "name": "Dock",
+          "cost": 1
+        },
+        {
+          "id": "roost",
+          "name": "Roost",
+          "cost": 1
+        },
+        {
+          "id": "outpost",
+          "name": "Outpost",
+          "cost": 1
+        },
+        {
+          "id": "storehouse",
+          "name": "Storehouse",
+          "cost": 1
+        }
+      ],
+      "carried_by": [
+        "barge"
+      ],
+      "commanders": [
+        {
+          "id": "dusty",
+          "name": "Dusty",
+          "notes": [
+            "+10% attack (Super CO Power)",
+            "+1 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "talon_co",
+          "name": "Talon",
+          "notes": [
+            "+20% attack",
+            "+10% attack (CO Power)",
+            "+1 movement (CO Power)",
+            "+30% attack (Super CO Power)",
+            "+2 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "bandit",
+          "name": "Bandit",
+          "notes": [
+            "−10% attack"
+          ]
+        },
+        {
+          "id": "ridge",
+          "name": "Ridge",
+          "notes": [
+            "+2 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "grimjaw",
+          "name": "Grimjaw",
+          "notes": [
+            "−20% attack"
+          ]
+        },
+        {
+          "id": "bjorn",
+          "name": "Bjorn",
+          "notes": [
+            "−10% attack"
+          ]
+        },
+        {
+          "id": "rumble",
+          "name": "Rumble",
+          "notes": [
+            "+10% attack",
+            "+10% attack (CO Power)",
+            "+1 movement (CO Power)",
+            "+30% attack (Super CO Power)",
+            "+2 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "kira",
+          "name": "Kira",
+          "notes": [
+            "+30% attack",
+            "+30% defense",
+            "+20% attack (CO Power)",
+            "+20% attack (Super CO Power)",
+            "+20% defense (Super CO Power)"
+          ]
+        },
+        {
+          "id": "tanuki",
+          "name": "Tanuki",
+          "notes": [
+            "+1 vision",
+            "+1 vision (CO Power)",
+            "+1 vision (Super CO Power)"
+          ]
+        },
+        {
+          "id": "sensei",
+          "name": "Sensei",
+          "notes": [
+            "−10% attack"
+          ]
+        },
+        {
+          "id": "goro",
+          "name": "Goro",
+          "notes": [
+            "+30% attack",
+            "−20% defense",
+            "+20% attack (CO Power)",
+            "+50% attack (Super CO Power)"
+          ]
+        },
+        {
+          "id": "wriggle",
+          "name": "Wriggle",
+          "notes": [
+            "+1 movement (CO Power)",
+            "+2 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "carapace",
+          "name": "Carapace",
+          "notes": [
+            "+10% attack"
+          ]
+        },
+        {
+          "id": "hivemind",
+          "name": "Hivemind",
+          "notes": [
+            "+20% attack",
+            "+20% defense"
+          ]
+        },
+        {
+          "id": "cinder",
+          "name": "Cinder",
+          "notes": [
+            "+1 movement (CO Power)",
+            "+2 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "vesper",
+          "name": "Vesper",
+          "notes": [
+            "+10% attack",
+            "+10% defense"
+          ]
+        }
+      ]
     },
     {
       "id": "ironclad",
       "name": "Charger",
       "asset": "ironclad",
       "description": "Armored war-beast, the backbone of any army",
-      "cost": 7000
+      "aw": "Tank",
+      "class": "Treads",
+      "class_name": "Treads",
+      "move_type": "treads",
+      "domain": "land",
+      "cost": 7000,
+      "movement": 6,
+      "vision": 3,
+      "range": [
+        1,
+        1
+      ],
+      "range_text": "1",
+      "direct": true,
+      "indirect": false,
+      "attacks": true,
+      "ammo": 9,
+      "stamina": 70,
+      "daily_stamina": 0,
+      "can_capture": false,
+      "carries": [],
+      "carries_classes": [],
+      "capacity": 0,
+      "primary": [
+        {
+          "id": "recon",
+          "name": "Outrider",
+          "asset": "recon",
+          "damage": 85
+        },
+        {
+          "id": "stinger",
+          "name": "Skylance",
+          "asset": "stinger",
+          "damage": 85
+        },
+        {
+          "id": "barrage",
+          "name": "Trebuchet",
+          "asset": "barrage",
+          "damage": 80
+        },
+        {
+          "id": "carrier",
+          "name": "Caravan",
+          "asset": "carrier",
+          "damage": 75
+        },
+        {
+          "id": "supplier",
+          "name": "Supply Cart",
+          "asset": "supplier",
+          "damage": 75
+        },
+        {
+          "id": "siege",
+          "name": "Catapult",
+          "asset": "siege",
+          "damage": 70
+        },
+        {
+          "id": "flak",
+          "name": "Hawkbane",
+          "asset": "flak",
+          "damage": 65
+        },
+        {
+          "id": "ironclad",
+          "name": "Charger",
+          "asset": "ironclad",
+          "damage": 55
+        },
+        {
+          "id": "juggernaut",
+          "name": "Warbeast",
+          "asset": "juggernaut",
+          "damage": 15
+        },
+        {
+          "id": "behemoth",
+          "name": "Colossus",
+          "asset": "behemoth",
+          "damage": 15
+        }
+      ],
+      "secondary": [
+        {
+          "id": "scout",
+          "name": "Militia",
+          "asset": "scout",
+          "damage": 75
+        },
+        {
+          "id": "shocktrooper",
+          "name": "Halberdier",
+          "asset": "shocktrooper",
+          "damage": 70
+        },
+        {
+          "id": "ferrier",
+          "name": "Skyferry",
+          "asset": "ferrier",
+          "damage": 40
+        },
+        {
+          "id": "skywing",
+          "name": "Hawk Rider",
+          "asset": "skywing",
+          "damage": 10
+        }
+      ],
+      "taken": [
+        {
+          "id": "behemoth",
+          "name": "Colossus",
+          "asset": "behemoth",
+          "damage": 105
+        },
+        {
+          "id": "talon",
+          "name": "Bombardier",
+          "asset": "talon",
+          "damage": 105
+        },
+        {
+          "id": "barrage",
+          "name": "Trebuchet",
+          "asset": "barrage",
+          "damage": 80
+        },
+        {
+          "id": "dreadnought",
+          "name": "Flagship",
+          "asset": "dreadnought",
+          "damage": 80
+        },
+        {
+          "id": "siege",
+          "name": "Catapult",
+          "asset": "siege",
+          "damage": 70
+        },
+        {
+          "id": "shocktrooper",
+          "name": "Halberdier",
+          "asset": "shocktrooper",
+          "damage": 55
+        },
+        {
+          "id": "ironclad",
+          "name": "Charger",
+          "asset": "ironclad",
+          "damage": 55
+        },
+        {
+          "id": "juggernaut",
+          "name": "Warbeast",
+          "asset": "juggernaut",
+          "damage": 55
+        },
+        {
+          "id": "skywing",
+          "name": "Hawk Rider",
+          "asset": "skywing",
+          "damage": 55
+        },
+        {
+          "id": "flak",
+          "name": "Hawkbane",
+          "asset": "flak",
+          "damage": 25
+        },
+        {
+          "id": "recon",
+          "name": "Outrider",
+          "asset": "recon",
+          "damage": 6
+        },
+        {
+          "id": "scout",
+          "name": "Militia",
+          "asset": "scout",
+          "damage": 5
+        }
+      ],
+      "built_at": [
+        "workshop"
+      ],
+      "resupplied_at": [
+        "base",
+        "workshop",
+        "outpost",
+        "storehouse"
+      ],
+      "moves": [
+        {
+          "id": "grass",
+          "name": "Grass",
+          "cost": 1
+        },
+        {
+          "id": "tall_grass",
+          "name": "Tall Grass",
+          "cost": 1
+        },
+        {
+          "id": "thicket",
+          "name": "Thicket",
+          "cost": 2
+        },
+        {
+          "id": "brambles",
+          "name": "Brambles",
+          "cost": 99
+        },
+        {
+          "id": "log",
+          "name": "Trail",
+          "cost": 1
+        },
+        {
+          "id": "boulder",
+          "name": "Boulder",
+          "cost": 99
+        },
+        {
+          "id": "hollow",
+          "name": "Hollow",
+          "cost": 1
+        },
+        {
+          "id": "creek",
+          "name": "Creek",
+          "cost": 99
+        },
+        {
+          "id": "pond",
+          "name": "Pond",
+          "cost": 99
+        },
+        {
+          "id": "lily_pads",
+          "name": "Lily Pads",
+          "cost": 99
+        },
+        {
+          "id": "shore",
+          "name": "Shore",
+          "cost": 1
+        },
+        {
+          "id": "base",
+          "name": "Base",
+          "cost": 1
+        },
+        {
+          "id": "workshop",
+          "name": "Workshop",
+          "cost": 1
+        },
+        {
+          "id": "dock",
+          "name": "Dock",
+          "cost": 1
+        },
+        {
+          "id": "roost",
+          "name": "Roost",
+          "cost": 1
+        },
+        {
+          "id": "outpost",
+          "name": "Outpost",
+          "cost": 1
+        },
+        {
+          "id": "storehouse",
+          "name": "Storehouse",
+          "cost": 1
+        }
+      ],
+      "carried_by": [
+        "barge"
+      ],
+      "commanders": [
+        {
+          "id": "dusty",
+          "name": "Dusty",
+          "notes": [
+            "+10% attack (Super CO Power)",
+            "+1 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "talon_co",
+          "name": "Talon",
+          "notes": [
+            "+20% attack",
+            "+10% attack (CO Power)",
+            "+1 movement (CO Power)",
+            "+30% attack (Super CO Power)",
+            "+2 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "bandit",
+          "name": "Bandit",
+          "notes": [
+            "−10% attack"
+          ]
+        },
+        {
+          "id": "ridge",
+          "name": "Ridge",
+          "notes": [
+            "+2 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "grimjaw",
+          "name": "Grimjaw",
+          "notes": [
+            "−20% attack"
+          ]
+        },
+        {
+          "id": "bjorn",
+          "name": "Bjorn",
+          "notes": [
+            "−10% attack"
+          ]
+        },
+        {
+          "id": "rumble",
+          "name": "Rumble",
+          "notes": [
+            "+10% attack",
+            "+10% attack (CO Power)",
+            "+1 movement (CO Power)",
+            "+30% attack (Super CO Power)",
+            "+2 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "kira",
+          "name": "Kira",
+          "notes": [
+            "+30% attack",
+            "+30% defense",
+            "+20% attack (CO Power)",
+            "+20% attack (Super CO Power)",
+            "+20% defense (Super CO Power)"
+          ]
+        },
+        {
+          "id": "tanuki",
+          "name": "Tanuki",
+          "notes": [
+            "+1 vision",
+            "+1 vision (CO Power)",
+            "+1 vision (Super CO Power)"
+          ]
+        },
+        {
+          "id": "sensei",
+          "name": "Sensei",
+          "notes": [
+            "−10% attack"
+          ]
+        },
+        {
+          "id": "goro",
+          "name": "Goro",
+          "notes": [
+            "+30% attack",
+            "−20% defense",
+            "+20% attack (CO Power)",
+            "+50% attack (Super CO Power)"
+          ]
+        },
+        {
+          "id": "wriggle",
+          "name": "Wriggle",
+          "notes": [
+            "+1 movement (CO Power)",
+            "+2 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "carapace",
+          "name": "Carapace",
+          "notes": [
+            "+10% attack"
+          ]
+        },
+        {
+          "id": "hivemind",
+          "name": "Hivemind",
+          "notes": [
+            "+20% attack",
+            "+20% defense"
+          ]
+        },
+        {
+          "id": "cinder",
+          "name": "Cinder",
+          "notes": [
+            "+1 movement (CO Power)",
+            "+2 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "vesper",
+          "name": "Vesper",
+          "notes": [
+            "+10% attack",
+            "+10% defense"
+          ]
+        }
+      ]
     },
     {
       "id": "juggernaut",
       "name": "Warbeast",
       "asset": "juggernaut",
       "description": "Heavily armored war-beast that tramples lighter foes",
-      "cost": 16000
+      "aw": "Md Tank",
+      "class": "Treads",
+      "class_name": "Treads",
+      "move_type": "treads",
+      "domain": "land",
+      "cost": 16000,
+      "movement": 5,
+      "vision": 2,
+      "range": [
+        1,
+        1
+      ],
+      "range_text": "1",
+      "direct": true,
+      "indirect": false,
+      "attacks": true,
+      "ammo": 8,
+      "stamina": 50,
+      "daily_stamina": 0,
+      "can_capture": false,
+      "carries": [],
+      "carries_classes": [],
+      "capacity": 0,
+      "primary": [
+        {
+          "id": "recon",
+          "name": "Outrider",
+          "asset": "recon",
+          "damage": 105
+        },
+        {
+          "id": "flak",
+          "name": "Hawkbane",
+          "asset": "flak",
+          "damage": 105
+        },
+        {
+          "id": "siege",
+          "name": "Catapult",
+          "asset": "siege",
+          "damage": 105
+        },
+        {
+          "id": "barrage",
+          "name": "Trebuchet",
+          "asset": "barrage",
+          "damage": 105
+        },
+        {
+          "id": "stinger",
+          "name": "Skylance",
+          "asset": "stinger",
+          "damage": 105
+        },
+        {
+          "id": "carrier",
+          "name": "Caravan",
+          "asset": "carrier",
+          "damage": 105
+        },
+        {
+          "id": "supplier",
+          "name": "Supply Cart",
+          "asset": "supplier",
+          "damage": 105
+        },
+        {
+          "id": "ironclad",
+          "name": "Charger",
+          "asset": "ironclad",
+          "damage": 55
+        },
+        {
+          "id": "behemoth",
+          "name": "Colossus",
+          "asset": "behemoth",
+          "damage": 45
+        },
+        {
+          "id": "juggernaut",
+          "name": "Warbeast",
+          "asset": "juggernaut",
+          "damage": 35
+        }
+      ],
+      "secondary": [
+        {
+          "id": "scout",
+          "name": "Militia",
+          "asset": "scout",
+          "damage": 105
+        },
+        {
+          "id": "shocktrooper",
+          "name": "Halberdier",
+          "asset": "shocktrooper",
+          "damage": 95
+        },
+        {
+          "id": "ferrier",
+          "name": "Skyferry",
+          "asset": "ferrier",
+          "damage": 45
+        },
+        {
+          "id": "skywing",
+          "name": "Hawk Rider",
+          "asset": "skywing",
+          "damage": 12
+        }
+      ],
+      "taken": [
+        {
+          "id": "talon",
+          "name": "Bombardier",
+          "asset": "talon",
+          "damage": 95
+        },
+        {
+          "id": "behemoth",
+          "name": "Colossus",
+          "asset": "behemoth",
+          "damage": 75
+        },
+        {
+          "id": "barrage",
+          "name": "Trebuchet",
+          "asset": "barrage",
+          "damage": 55
+        },
+        {
+          "id": "dreadnought",
+          "name": "Flagship",
+          "asset": "dreadnought",
+          "damage": 55
+        },
+        {
+          "id": "siege",
+          "name": "Catapult",
+          "asset": "siege",
+          "damage": 45
+        },
+        {
+          "id": "juggernaut",
+          "name": "Warbeast",
+          "asset": "juggernaut",
+          "damage": 35
+        },
+        {
+          "id": "skywing",
+          "name": "Hawk Rider",
+          "asset": "skywing",
+          "damage": 25
+        },
+        {
+          "id": "shocktrooper",
+          "name": "Halberdier",
+          "asset": "shocktrooper",
+          "damage": 15
+        },
+        {
+          "id": "ironclad",
+          "name": "Charger",
+          "asset": "ironclad",
+          "damage": 15
+        },
+        {
+          "id": "flak",
+          "name": "Hawkbane",
+          "asset": "flak",
+          "damage": 10
+        },
+        {
+          "id": "scout",
+          "name": "Militia",
+          "asset": "scout",
+          "damage": 1
+        },
+        {
+          "id": "recon",
+          "name": "Outrider",
+          "asset": "recon",
+          "damage": 1
+        }
+      ],
+      "built_at": [
+        "workshop"
+      ],
+      "resupplied_at": [
+        "base",
+        "workshop",
+        "outpost",
+        "storehouse"
+      ],
+      "moves": [
+        {
+          "id": "grass",
+          "name": "Grass",
+          "cost": 1
+        },
+        {
+          "id": "tall_grass",
+          "name": "Tall Grass",
+          "cost": 1
+        },
+        {
+          "id": "thicket",
+          "name": "Thicket",
+          "cost": 2
+        },
+        {
+          "id": "brambles",
+          "name": "Brambles",
+          "cost": 99
+        },
+        {
+          "id": "log",
+          "name": "Trail",
+          "cost": 1
+        },
+        {
+          "id": "boulder",
+          "name": "Boulder",
+          "cost": 99
+        },
+        {
+          "id": "hollow",
+          "name": "Hollow",
+          "cost": 1
+        },
+        {
+          "id": "creek",
+          "name": "Creek",
+          "cost": 99
+        },
+        {
+          "id": "pond",
+          "name": "Pond",
+          "cost": 99
+        },
+        {
+          "id": "lily_pads",
+          "name": "Lily Pads",
+          "cost": 99
+        },
+        {
+          "id": "shore",
+          "name": "Shore",
+          "cost": 1
+        },
+        {
+          "id": "base",
+          "name": "Base",
+          "cost": 1
+        },
+        {
+          "id": "workshop",
+          "name": "Workshop",
+          "cost": 1
+        },
+        {
+          "id": "dock",
+          "name": "Dock",
+          "cost": 1
+        },
+        {
+          "id": "roost",
+          "name": "Roost",
+          "cost": 1
+        },
+        {
+          "id": "outpost",
+          "name": "Outpost",
+          "cost": 1
+        },
+        {
+          "id": "storehouse",
+          "name": "Storehouse",
+          "cost": 1
+        }
+      ],
+      "carried_by": [
+        "barge"
+      ],
+      "commanders": [
+        {
+          "id": "dusty",
+          "name": "Dusty",
+          "notes": [
+            "+10% attack (Super CO Power)",
+            "+1 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "talon_co",
+          "name": "Talon",
+          "notes": [
+            "+20% attack",
+            "+10% attack (CO Power)",
+            "+1 movement (CO Power)",
+            "+30% attack (Super CO Power)",
+            "+2 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "bandit",
+          "name": "Bandit",
+          "notes": [
+            "−10% attack"
+          ]
+        },
+        {
+          "id": "ridge",
+          "name": "Ridge",
+          "notes": [
+            "+2 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "grimjaw",
+          "name": "Grimjaw",
+          "notes": [
+            "−20% attack"
+          ]
+        },
+        {
+          "id": "bjorn",
+          "name": "Bjorn",
+          "notes": [
+            "−10% attack"
+          ]
+        },
+        {
+          "id": "rumble",
+          "name": "Rumble",
+          "notes": [
+            "+10% attack",
+            "+10% attack (CO Power)",
+            "+1 movement (CO Power)",
+            "+30% attack (Super CO Power)",
+            "+2 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "kira",
+          "name": "Kira",
+          "notes": [
+            "+30% attack",
+            "+30% defense",
+            "+20% attack (CO Power)",
+            "+20% attack (Super CO Power)",
+            "+20% defense (Super CO Power)"
+          ]
+        },
+        {
+          "id": "tanuki",
+          "name": "Tanuki",
+          "notes": [
+            "+1 vision",
+            "+1 vision (CO Power)",
+            "+1 vision (Super CO Power)"
+          ]
+        },
+        {
+          "id": "sensei",
+          "name": "Sensei",
+          "notes": [
+            "−10% attack"
+          ]
+        },
+        {
+          "id": "goro",
+          "name": "Goro",
+          "notes": [
+            "+30% attack",
+            "−20% defense",
+            "+20% attack (CO Power)",
+            "+50% attack (Super CO Power)"
+          ]
+        },
+        {
+          "id": "wriggle",
+          "name": "Wriggle",
+          "notes": [
+            "+1 movement (CO Power)",
+            "+2 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "carapace",
+          "name": "Carapace",
+          "notes": [
+            "+10% attack"
+          ]
+        },
+        {
+          "id": "hivemind",
+          "name": "Hivemind",
+          "notes": [
+            "+20% attack",
+            "+20% defense"
+          ]
+        },
+        {
+          "id": "cinder",
+          "name": "Cinder",
+          "notes": [
+            "+1 movement (CO Power)",
+            "+2 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "vesper",
+          "name": "Vesper",
+          "notes": [
+            "+10% attack",
+            "+10% defense"
+          ]
+        }
+      ]
     },
     {
       "id": "behemoth",
       "name": "Colossus",
       "asset": "behemoth",
       "description": "Towering living fortress, the mightiest beast on the field",
-      "cost": 22000
+      "aw": "Neotank",
+      "class": "Treads",
+      "class_name": "Treads",
+      "move_type": "treads",
+      "domain": "land",
+      "cost": 22000,
+      "movement": 6,
+      "vision": 2,
+      "range": [
+        1,
+        1
+      ],
+      "range_text": "1",
+      "direct": true,
+      "indirect": false,
+      "attacks": true,
+      "ammo": 9,
+      "stamina": 99,
+      "daily_stamina": 0,
+      "can_capture": false,
+      "carries": [],
+      "carries_classes": [],
+      "capacity": 0,
+      "primary": [
+        {
+          "id": "recon",
+          "name": "Outrider",
+          "asset": "recon",
+          "damage": 125
+        },
+        {
+          "id": "barrage",
+          "name": "Trebuchet",
+          "asset": "barrage",
+          "damage": 125
+        },
+        {
+          "id": "stinger",
+          "name": "Skylance",
+          "asset": "stinger",
+          "damage": 125
+        },
+        {
+          "id": "carrier",
+          "name": "Caravan",
+          "asset": "carrier",
+          "damage": 125
+        },
+        {
+          "id": "supplier",
+          "name": "Supply Cart",
+          "asset": "supplier",
+          "damage": 125
+        },
+        {
+          "id": "flak",
+          "name": "Hawkbane",
+          "asset": "flak",
+          "damage": 115
+        },
+        {
+          "id": "siege",
+          "name": "Catapult",
+          "asset": "siege",
+          "damage": 115
+        },
+        {
+          "id": "ironclad",
+          "name": "Charger",
+          "asset": "ironclad",
+          "damage": 105
+        },
+        {
+          "id": "juggernaut",
+          "name": "Warbeast",
+          "asset": "juggernaut",
+          "damage": 75
+        },
+        {
+          "id": "behemoth",
+          "name": "Colossus",
+          "asset": "behemoth",
+          "damage": 55
+        }
+      ],
+      "secondary": [
+        {
+          "id": "scout",
+          "name": "Militia",
+          "asset": "scout",
+          "damage": 125
+        },
+        {
+          "id": "shocktrooper",
+          "name": "Halberdier",
+          "asset": "shocktrooper",
+          "damage": 115
+        },
+        {
+          "id": "ferrier",
+          "name": "Skyferry",
+          "asset": "ferrier",
+          "damage": 55
+        },
+        {
+          "id": "skywing",
+          "name": "Hawk Rider",
+          "asset": "skywing",
+          "damage": 22
+        }
+      ],
+      "taken": [
+        {
+          "id": "talon",
+          "name": "Bombardier",
+          "asset": "talon",
+          "damage": 90
+        },
+        {
+          "id": "behemoth",
+          "name": "Colossus",
+          "asset": "behemoth",
+          "damage": 55
+        },
+        {
+          "id": "barrage",
+          "name": "Trebuchet",
+          "asset": "barrage",
+          "damage": 50
+        },
+        {
+          "id": "dreadnought",
+          "name": "Flagship",
+          "asset": "dreadnought",
+          "damage": 50
+        },
+        {
+          "id": "juggernaut",
+          "name": "Warbeast",
+          "asset": "juggernaut",
+          "damage": 45
+        },
+        {
+          "id": "siege",
+          "name": "Catapult",
+          "asset": "siege",
+          "damage": 40
+        },
+        {
+          "id": "skywing",
+          "name": "Hawk Rider",
+          "asset": "skywing",
+          "damage": 20
+        },
+        {
+          "id": "shocktrooper",
+          "name": "Halberdier",
+          "asset": "shocktrooper",
+          "damage": 15
+        },
+        {
+          "id": "ironclad",
+          "name": "Charger",
+          "asset": "ironclad",
+          "damage": 15
+        },
+        {
+          "id": "flak",
+          "name": "Hawkbane",
+          "asset": "flak",
+          "damage": 5
+        },
+        {
+          "id": "scout",
+          "name": "Militia",
+          "asset": "scout",
+          "damage": 1
+        },
+        {
+          "id": "recon",
+          "name": "Outrider",
+          "asset": "recon",
+          "damage": 1
+        }
+      ],
+      "built_at": [
+        "workshop"
+      ],
+      "resupplied_at": [
+        "base",
+        "workshop",
+        "outpost",
+        "storehouse"
+      ],
+      "moves": [
+        {
+          "id": "grass",
+          "name": "Grass",
+          "cost": 1
+        },
+        {
+          "id": "tall_grass",
+          "name": "Tall Grass",
+          "cost": 1
+        },
+        {
+          "id": "thicket",
+          "name": "Thicket",
+          "cost": 2
+        },
+        {
+          "id": "brambles",
+          "name": "Brambles",
+          "cost": 99
+        },
+        {
+          "id": "log",
+          "name": "Trail",
+          "cost": 1
+        },
+        {
+          "id": "boulder",
+          "name": "Boulder",
+          "cost": 99
+        },
+        {
+          "id": "hollow",
+          "name": "Hollow",
+          "cost": 1
+        },
+        {
+          "id": "creek",
+          "name": "Creek",
+          "cost": 99
+        },
+        {
+          "id": "pond",
+          "name": "Pond",
+          "cost": 99
+        },
+        {
+          "id": "lily_pads",
+          "name": "Lily Pads",
+          "cost": 99
+        },
+        {
+          "id": "shore",
+          "name": "Shore",
+          "cost": 1
+        },
+        {
+          "id": "base",
+          "name": "Base",
+          "cost": 1
+        },
+        {
+          "id": "workshop",
+          "name": "Workshop",
+          "cost": 1
+        },
+        {
+          "id": "dock",
+          "name": "Dock",
+          "cost": 1
+        },
+        {
+          "id": "roost",
+          "name": "Roost",
+          "cost": 1
+        },
+        {
+          "id": "outpost",
+          "name": "Outpost",
+          "cost": 1
+        },
+        {
+          "id": "storehouse",
+          "name": "Storehouse",
+          "cost": 1
+        }
+      ],
+      "carried_by": [
+        "barge"
+      ],
+      "commanders": [
+        {
+          "id": "dusty",
+          "name": "Dusty",
+          "notes": [
+            "+10% attack (Super CO Power)",
+            "+1 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "talon_co",
+          "name": "Talon",
+          "notes": [
+            "+20% attack",
+            "+10% attack (CO Power)",
+            "+1 movement (CO Power)",
+            "+30% attack (Super CO Power)",
+            "+2 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "bandit",
+          "name": "Bandit",
+          "notes": [
+            "−10% attack"
+          ]
+        },
+        {
+          "id": "ridge",
+          "name": "Ridge",
+          "notes": [
+            "+2 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "grimjaw",
+          "name": "Grimjaw",
+          "notes": [
+            "−20% attack"
+          ]
+        },
+        {
+          "id": "bjorn",
+          "name": "Bjorn",
+          "notes": [
+            "−10% attack"
+          ]
+        },
+        {
+          "id": "rumble",
+          "name": "Rumble",
+          "notes": [
+            "+10% attack",
+            "+10% attack (CO Power)",
+            "+1 movement (CO Power)",
+            "+30% attack (Super CO Power)",
+            "+2 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "kira",
+          "name": "Kira",
+          "notes": [
+            "+30% attack",
+            "+30% defense",
+            "+20% attack (CO Power)",
+            "+20% attack (Super CO Power)",
+            "+20% defense (Super CO Power)"
+          ]
+        },
+        {
+          "id": "tanuki",
+          "name": "Tanuki",
+          "notes": [
+            "+1 vision",
+            "+1 vision (CO Power)",
+            "+1 vision (Super CO Power)"
+          ]
+        },
+        {
+          "id": "sensei",
+          "name": "Sensei",
+          "notes": [
+            "−10% attack"
+          ]
+        },
+        {
+          "id": "goro",
+          "name": "Goro",
+          "notes": [
+            "+30% attack",
+            "−20% defense",
+            "+20% attack (CO Power)",
+            "+50% attack (Super CO Power)"
+          ]
+        },
+        {
+          "id": "wriggle",
+          "name": "Wriggle",
+          "notes": [
+            "+1 movement (CO Power)",
+            "+2 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "carapace",
+          "name": "Carapace",
+          "notes": [
+            "+10% attack"
+          ]
+        },
+        {
+          "id": "hivemind",
+          "name": "Hivemind",
+          "notes": [
+            "+20% attack",
+            "+20% defense"
+          ]
+        },
+        {
+          "id": "cinder",
+          "name": "Cinder",
+          "notes": [
+            "+1 movement (CO Power)",
+            "+2 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "vesper",
+          "name": "Vesper",
+          "notes": [
+            "+10% attack",
+            "+10% defense"
+          ]
+        }
+      ]
     },
     {
       "id": "flak",
       "name": "Hawkbane",
       "asset": "flak",
       "description": "Archers who shoot down flyers and shred infantry",
-      "cost": 8000
+      "aw": "Anti-Air",
+      "class": "Treads",
+      "class_name": "Treads",
+      "move_type": "treads",
+      "domain": "land",
+      "cost": 8000,
+      "movement": 6,
+      "vision": 3,
+      "range": [
+        1,
+        1
+      ],
+      "range_text": "1",
+      "direct": true,
+      "indirect": false,
+      "attacks": true,
+      "ammo": 9,
+      "stamina": 60,
+      "daily_stamina": 0,
+      "can_capture": false,
+      "carries": [],
+      "carries_classes": [],
+      "capacity": 0,
+      "primary": [
+        {
+          "id": "skywing",
+          "name": "Hawk Rider",
+          "asset": "skywing",
+          "damage": 120
+        },
+        {
+          "id": "ferrier",
+          "name": "Skyferry",
+          "asset": "ferrier",
+          "damage": 120
+        },
+        {
+          "id": "scout",
+          "name": "Militia",
+          "asset": "scout",
+          "damage": 105
+        },
+        {
+          "id": "shocktrooper",
+          "name": "Halberdier",
+          "asset": "shocktrooper",
+          "damage": 105
+        },
+        {
+          "id": "talon",
+          "name": "Bombardier",
+          "asset": "talon",
+          "damage": 75
+        },
+        {
+          "id": "raptor",
+          "name": "Sky Knight",
+          "asset": "raptor",
+          "damage": 65
+        },
+        {
+          "id": "recon",
+          "name": "Outrider",
+          "asset": "recon",
+          "damage": 60
+        },
+        {
+          "id": "barrage",
+          "name": "Trebuchet",
+          "asset": "barrage",
+          "damage": 55
+        },
+        {
+          "id": "stinger",
+          "name": "Skylance",
+          "asset": "stinger",
+          "damage": 55
+        },
+        {
+          "id": "siege",
+          "name": "Catapult",
+          "asset": "siege",
+          "damage": 50
+        },
+        {
+          "id": "carrier",
+          "name": "Caravan",
+          "asset": "carrier",
+          "damage": 50
+        },
+        {
+          "id": "supplier",
+          "name": "Supply Cart",
+          "asset": "supplier",
+          "damage": 50
+        },
+        {
+          "id": "flak",
+          "name": "Hawkbane",
+          "asset": "flak",
+          "damage": 45
+        },
+        {
+          "id": "ironclad",
+          "name": "Charger",
+          "asset": "ironclad",
+          "damage": 25
+        },
+        {
+          "id": "juggernaut",
+          "name": "Warbeast",
+          "asset": "juggernaut",
+          "damage": 10
+        },
+        {
+          "id": "behemoth",
+          "name": "Colossus",
+          "asset": "behemoth",
+          "damage": 5
+        }
+      ],
+      "secondary": [],
+      "taken": [
+        {
+          "id": "behemoth",
+          "name": "Colossus",
+          "asset": "behemoth",
+          "damage": 115
+        },
+        {
+          "id": "juggernaut",
+          "name": "Warbeast",
+          "asset": "juggernaut",
+          "damage": 105
+        },
+        {
+          "id": "talon",
+          "name": "Bombardier",
+          "asset": "talon",
+          "damage": 95
+        },
+        {
+          "id": "barrage",
+          "name": "Trebuchet",
+          "asset": "barrage",
+          "damage": 85
+        },
+        {
+          "id": "dreadnought",
+          "name": "Flagship",
+          "asset": "dreadnought",
+          "damage": 85
+        },
+        {
+          "id": "siege",
+          "name": "Catapult",
+          "asset": "siege",
+          "damage": 75
+        },
+        {
+          "id": "shocktrooper",
+          "name": "Halberdier",
+          "asset": "shocktrooper",
+          "damage": 65
+        },
+        {
+          "id": "ironclad",
+          "name": "Charger",
+          "asset": "ironclad",
+          "damage": 65
+        },
+        {
+          "id": "flak",
+          "name": "Hawkbane",
+          "asset": "flak",
+          "damage": 45
+        },
+        {
+          "id": "skywing",
+          "name": "Hawk Rider",
+          "asset": "skywing",
+          "damage": 25
+        },
+        {
+          "id": "scout",
+          "name": "Militia",
+          "asset": "scout",
+          "damage": 5
+        },
+        {
+          "id": "recon",
+          "name": "Outrider",
+          "asset": "recon",
+          "damage": 4
+        }
+      ],
+      "built_at": [
+        "workshop"
+      ],
+      "resupplied_at": [
+        "base",
+        "workshop",
+        "outpost",
+        "storehouse"
+      ],
+      "moves": [
+        {
+          "id": "grass",
+          "name": "Grass",
+          "cost": 1
+        },
+        {
+          "id": "tall_grass",
+          "name": "Tall Grass",
+          "cost": 1
+        },
+        {
+          "id": "thicket",
+          "name": "Thicket",
+          "cost": 2
+        },
+        {
+          "id": "brambles",
+          "name": "Brambles",
+          "cost": 99
+        },
+        {
+          "id": "log",
+          "name": "Trail",
+          "cost": 1
+        },
+        {
+          "id": "boulder",
+          "name": "Boulder",
+          "cost": 99
+        },
+        {
+          "id": "hollow",
+          "name": "Hollow",
+          "cost": 1
+        },
+        {
+          "id": "creek",
+          "name": "Creek",
+          "cost": 99
+        },
+        {
+          "id": "pond",
+          "name": "Pond",
+          "cost": 99
+        },
+        {
+          "id": "lily_pads",
+          "name": "Lily Pads",
+          "cost": 99
+        },
+        {
+          "id": "shore",
+          "name": "Shore",
+          "cost": 1
+        },
+        {
+          "id": "base",
+          "name": "Base",
+          "cost": 1
+        },
+        {
+          "id": "workshop",
+          "name": "Workshop",
+          "cost": 1
+        },
+        {
+          "id": "dock",
+          "name": "Dock",
+          "cost": 1
+        },
+        {
+          "id": "roost",
+          "name": "Roost",
+          "cost": 1
+        },
+        {
+          "id": "outpost",
+          "name": "Outpost",
+          "cost": 1
+        },
+        {
+          "id": "storehouse",
+          "name": "Storehouse",
+          "cost": 1
+        }
+      ],
+      "carried_by": [
+        "barge"
+      ],
+      "commanders": [
+        {
+          "id": "dusty",
+          "name": "Dusty",
+          "notes": [
+            "+10% attack (Super CO Power)",
+            "+1 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "talon_co",
+          "name": "Talon",
+          "notes": [
+            "+20% attack",
+            "+10% attack (CO Power)",
+            "+1 movement (CO Power)",
+            "+30% attack (Super CO Power)",
+            "+2 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "bandit",
+          "name": "Bandit",
+          "notes": [
+            "−10% attack"
+          ]
+        },
+        {
+          "id": "ridge",
+          "name": "Ridge",
+          "notes": [
+            "+2 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "grimjaw",
+          "name": "Grimjaw",
+          "notes": [
+            "−20% attack"
+          ]
+        },
+        {
+          "id": "bjorn",
+          "name": "Bjorn",
+          "notes": [
+            "−10% attack"
+          ]
+        },
+        {
+          "id": "rumble",
+          "name": "Rumble",
+          "notes": [
+            "+10% attack",
+            "+10% attack (CO Power)",
+            "+1 movement (CO Power)",
+            "+30% attack (Super CO Power)",
+            "+2 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "kira",
+          "name": "Kira",
+          "notes": [
+            "+30% attack",
+            "+30% defense",
+            "+20% attack (CO Power)",
+            "+20% attack (Super CO Power)",
+            "+20% defense (Super CO Power)"
+          ]
+        },
+        {
+          "id": "tanuki",
+          "name": "Tanuki",
+          "notes": [
+            "+1 vision",
+            "+1 vision (CO Power)",
+            "+1 vision (Super CO Power)"
+          ]
+        },
+        {
+          "id": "sensei",
+          "name": "Sensei",
+          "notes": [
+            "−10% attack"
+          ]
+        },
+        {
+          "id": "goro",
+          "name": "Goro",
+          "notes": [
+            "+30% attack",
+            "−20% defense",
+            "+20% attack (CO Power)",
+            "+50% attack (Super CO Power)"
+          ]
+        },
+        {
+          "id": "wriggle",
+          "name": "Wriggle",
+          "notes": [
+            "+1 movement (CO Power)",
+            "+2 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "carapace",
+          "name": "Carapace",
+          "notes": [
+            "+10% attack"
+          ]
+        },
+        {
+          "id": "hivemind",
+          "name": "Hivemind",
+          "notes": [
+            "+20% attack",
+            "+20% defense"
+          ]
+        },
+        {
+          "id": "cinder",
+          "name": "Cinder",
+          "notes": [
+            "+1 movement (CO Power)",
+            "+2 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "vesper",
+          "name": "Vesper",
+          "notes": [
+            "+10% attack",
+            "+10% defense"
+          ]
+        }
+      ]
     },
     {
       "id": "siege",
       "name": "Catapult",
       "asset": "siege",
       "description": "Hurls stones over obstacles at short range",
-      "cost": 6000
+      "aw": "Artillery",
+      "class": "Treads",
+      "class_name": "Treads",
+      "move_type": "treads",
+      "domain": "land",
+      "cost": 6000,
+      "movement": 5,
+      "vision": 1,
+      "range": [
+        2,
+        3
+      ],
+      "range_text": "2–3",
+      "direct": false,
+      "indirect": true,
+      "attacks": true,
+      "ammo": 6,
+      "stamina": 50,
+      "daily_stamina": 0,
+      "can_capture": false,
+      "carries": [],
+      "carries_classes": [],
+      "capacity": 0,
+      "primary": [
+        {
+          "id": "scout",
+          "name": "Militia",
+          "asset": "scout",
+          "damage": 90
+        },
+        {
+          "id": "shocktrooper",
+          "name": "Halberdier",
+          "asset": "shocktrooper",
+          "damage": 85
+        },
+        {
+          "id": "recon",
+          "name": "Outrider",
+          "asset": "recon",
+          "damage": 80
+        },
+        {
+          "id": "barrage",
+          "name": "Trebuchet",
+          "asset": "barrage",
+          "damage": 80
+        },
+        {
+          "id": "stinger",
+          "name": "Skylance",
+          "asset": "stinger",
+          "damage": 80
+        },
+        {
+          "id": "flak",
+          "name": "Hawkbane",
+          "asset": "flak",
+          "damage": 75
+        },
+        {
+          "id": "siege",
+          "name": "Catapult",
+          "asset": "siege",
+          "damage": 75
+        },
+        {
+          "id": "ironclad",
+          "name": "Charger",
+          "asset": "ironclad",
+          "damage": 70
+        },
+        {
+          "id": "carrier",
+          "name": "Caravan",
+          "asset": "carrier",
+          "damage": 70
+        },
+        {
+          "id": "supplier",
+          "name": "Supply Cart",
+          "asset": "supplier",
+          "damage": 70
+        },
+        {
+          "id": "juggernaut",
+          "name": "Warbeast",
+          "asset": "juggernaut",
+          "damage": 45
+        },
+        {
+          "id": "behemoth",
+          "name": "Colossus",
+          "asset": "behemoth",
+          "damage": 40
+        }
+      ],
+      "secondary": [],
+      "taken": [
+        {
+          "id": "behemoth",
+          "name": "Colossus",
+          "asset": "behemoth",
+          "damage": 115
+        },
+        {
+          "id": "juggernaut",
+          "name": "Warbeast",
+          "asset": "juggernaut",
+          "damage": 105
+        },
+        {
+          "id": "talon",
+          "name": "Bombardier",
+          "asset": "talon",
+          "damage": 105
+        },
+        {
+          "id": "barrage",
+          "name": "Trebuchet",
+          "asset": "barrage",
+          "damage": 80
+        },
+        {
+          "id": "dreadnought",
+          "name": "Flagship",
+          "asset": "dreadnought",
+          "damage": 80
+        },
+        {
+          "id": "siege",
+          "name": "Catapult",
+          "asset": "siege",
+          "damage": 75
+        },
+        {
+          "id": "shocktrooper",
+          "name": "Halberdier",
+          "asset": "shocktrooper",
+          "damage": 70
+        },
+        {
+          "id": "ironclad",
+          "name": "Charger",
+          "asset": "ironclad",
+          "damage": 70
+        },
+        {
+          "id": "skywing",
+          "name": "Hawk Rider",
+          "asset": "skywing",
+          "damage": 65
+        },
+        {
+          "id": "flak",
+          "name": "Hawkbane",
+          "asset": "flak",
+          "damage": 50
+        },
+        {
+          "id": "recon",
+          "name": "Outrider",
+          "asset": "recon",
+          "damage": 45
+        },
+        {
+          "id": "scout",
+          "name": "Militia",
+          "asset": "scout",
+          "damage": 15
+        }
+      ],
+      "built_at": [
+        "workshop"
+      ],
+      "resupplied_at": [
+        "base",
+        "workshop",
+        "outpost",
+        "storehouse"
+      ],
+      "moves": [
+        {
+          "id": "grass",
+          "name": "Grass",
+          "cost": 1
+        },
+        {
+          "id": "tall_grass",
+          "name": "Tall Grass",
+          "cost": 1
+        },
+        {
+          "id": "thicket",
+          "name": "Thicket",
+          "cost": 2
+        },
+        {
+          "id": "brambles",
+          "name": "Brambles",
+          "cost": 99
+        },
+        {
+          "id": "log",
+          "name": "Trail",
+          "cost": 1
+        },
+        {
+          "id": "boulder",
+          "name": "Boulder",
+          "cost": 99
+        },
+        {
+          "id": "hollow",
+          "name": "Hollow",
+          "cost": 1
+        },
+        {
+          "id": "creek",
+          "name": "Creek",
+          "cost": 99
+        },
+        {
+          "id": "pond",
+          "name": "Pond",
+          "cost": 99
+        },
+        {
+          "id": "lily_pads",
+          "name": "Lily Pads",
+          "cost": 99
+        },
+        {
+          "id": "shore",
+          "name": "Shore",
+          "cost": 1
+        },
+        {
+          "id": "base",
+          "name": "Base",
+          "cost": 1
+        },
+        {
+          "id": "workshop",
+          "name": "Workshop",
+          "cost": 1
+        },
+        {
+          "id": "dock",
+          "name": "Dock",
+          "cost": 1
+        },
+        {
+          "id": "roost",
+          "name": "Roost",
+          "cost": 1
+        },
+        {
+          "id": "outpost",
+          "name": "Outpost",
+          "cost": 1
+        },
+        {
+          "id": "storehouse",
+          "name": "Storehouse",
+          "cost": 1
+        }
+      ],
+      "carried_by": [
+        "barge"
+      ],
+      "commanders": [
+        {
+          "id": "dusty",
+          "name": "Dusty",
+          "notes": [
+            "+10% attack (Super CO Power)",
+            "+1 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "talon_co",
+          "name": "Talon",
+          "notes": [
+            "−10% attack",
+            "−1 range"
+          ]
+        },
+        {
+          "id": "ridge",
+          "name": "Ridge",
+          "notes": [
+            "+1 range (CO Power)",
+            "+2 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "grimjaw",
+          "name": "Grimjaw",
+          "notes": [
+            "+20% attack",
+            "+1 range",
+            "+20% attack (CO Power)",
+            "+1 range (CO Power)",
+            "+20% attack (Super CO Power)",
+            "+2 range (Super CO Power)"
+          ]
+        },
+        {
+          "id": "bjorn",
+          "name": "Bjorn",
+          "notes": [
+            "−10% attack"
+          ]
+        },
+        {
+          "id": "rumble",
+          "name": "Rumble",
+          "notes": [
+            "+10% attack",
+            "+10% attack (CO Power)",
+            "+1 movement (CO Power)",
+            "+30% attack (Super CO Power)",
+            "+2 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "kira",
+          "name": "Kira",
+          "notes": [
+            "+30% attack",
+            "+30% defense",
+            "+20% attack (CO Power)",
+            "+20% attack (Super CO Power)",
+            "+20% defense (Super CO Power)"
+          ]
+        },
+        {
+          "id": "tanuki",
+          "name": "Tanuki",
+          "notes": [
+            "+1 vision",
+            "+1 vision (CO Power)",
+            "+1 vision (Super CO Power)"
+          ]
+        },
+        {
+          "id": "sensei",
+          "name": "Sensei",
+          "notes": [
+            "−10% attack"
+          ]
+        },
+        {
+          "id": "goro",
+          "name": "Goro",
+          "notes": [
+            "+30% attack",
+            "−20% defense",
+            "+20% attack (CO Power)",
+            "+50% attack (Super CO Power)"
+          ]
+        },
+        {
+          "id": "wriggle",
+          "name": "Wriggle",
+          "notes": [
+            "+1 movement (CO Power)",
+            "+2 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "carapace",
+          "name": "Carapace",
+          "notes": [
+            "+10% attack"
+          ]
+        },
+        {
+          "id": "hivemind",
+          "name": "Hivemind",
+          "notes": [
+            "+20% attack",
+            "+20% defense"
+          ]
+        },
+        {
+          "id": "cinder",
+          "name": "Cinder",
+          "notes": [
+            "+1 movement (CO Power)",
+            "+2 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "vesper",
+          "name": "Vesper",
+          "notes": [
+            "+10% attack",
+            "+10% defense"
+          ]
+        }
+      ]
     },
     {
       "id": "barrage",
       "name": "Trebuchet",
       "asset": "barrage",
       "description": "Massive siege engine that strikes from afar",
-      "cost": 15000
+      "aw": "Rockets",
+      "class": "Treads",
+      "class_name": "Treads",
+      "move_type": "treads",
+      "domain": "land",
+      "cost": 15000,
+      "movement": 5,
+      "vision": 1,
+      "range": [
+        3,
+        5
+      ],
+      "range_text": "3–5",
+      "direct": false,
+      "indirect": true,
+      "attacks": true,
+      "ammo": 6,
+      "stamina": 50,
+      "daily_stamina": 0,
+      "can_capture": false,
+      "carries": [],
+      "carries_classes": [],
+      "capacity": 0,
+      "primary": [
+        {
+          "id": "scout",
+          "name": "Militia",
+          "asset": "scout",
+          "damage": 95
+        },
+        {
+          "id": "shocktrooper",
+          "name": "Halberdier",
+          "asset": "shocktrooper",
+          "damage": 90
+        },
+        {
+          "id": "recon",
+          "name": "Outrider",
+          "asset": "recon",
+          "damage": 90
+        },
+        {
+          "id": "flak",
+          "name": "Hawkbane",
+          "asset": "flak",
+          "damage": 85
+        },
+        {
+          "id": "barrage",
+          "name": "Trebuchet",
+          "asset": "barrage",
+          "damage": 85
+        },
+        {
+          "id": "stinger",
+          "name": "Skylance",
+          "asset": "stinger",
+          "damage": 85
+        },
+        {
+          "id": "ironclad",
+          "name": "Charger",
+          "asset": "ironclad",
+          "damage": 80
+        },
+        {
+          "id": "siege",
+          "name": "Catapult",
+          "asset": "siege",
+          "damage": 80
+        },
+        {
+          "id": "carrier",
+          "name": "Caravan",
+          "asset": "carrier",
+          "damage": 80
+        },
+        {
+          "id": "supplier",
+          "name": "Supply Cart",
+          "asset": "supplier",
+          "damage": 80
+        },
+        {
+          "id": "juggernaut",
+          "name": "Warbeast",
+          "asset": "juggernaut",
+          "damage": 55
+        },
+        {
+          "id": "behemoth",
+          "name": "Colossus",
+          "asset": "behemoth",
+          "damage": 50
+        }
+      ],
+      "secondary": [],
+      "taken": [
+        {
+          "id": "behemoth",
+          "name": "Colossus",
+          "asset": "behemoth",
+          "damage": 125
+        },
+        {
+          "id": "juggernaut",
+          "name": "Warbeast",
+          "asset": "juggernaut",
+          "damage": 105
+        },
+        {
+          "id": "talon",
+          "name": "Bombardier",
+          "asset": "talon",
+          "damage": 105
+        },
+        {
+          "id": "shocktrooper",
+          "name": "Halberdier",
+          "asset": "shocktrooper",
+          "damage": 85
+        },
+        {
+          "id": "barrage",
+          "name": "Trebuchet",
+          "asset": "barrage",
+          "damage": 85
+        },
+        {
+          "id": "dreadnought",
+          "name": "Flagship",
+          "asset": "dreadnought",
+          "damage": 85
+        },
+        {
+          "id": "ironclad",
+          "name": "Charger",
+          "asset": "ironclad",
+          "damage": 80
+        },
+        {
+          "id": "siege",
+          "name": "Catapult",
+          "asset": "siege",
+          "damage": 80
+        },
+        {
+          "id": "skywing",
+          "name": "Hawk Rider",
+          "asset": "skywing",
+          "damage": 65
+        },
+        {
+          "id": "recon",
+          "name": "Outrider",
+          "asset": "recon",
+          "damage": 55
+        },
+        {
+          "id": "flak",
+          "name": "Hawkbane",
+          "asset": "flak",
+          "damage": 55
+        },
+        {
+          "id": "scout",
+          "name": "Militia",
+          "asset": "scout",
+          "damage": 25
+        }
+      ],
+      "built_at": [
+        "workshop"
+      ],
+      "resupplied_at": [
+        "base",
+        "workshop",
+        "outpost",
+        "storehouse"
+      ],
+      "moves": [
+        {
+          "id": "grass",
+          "name": "Grass",
+          "cost": 1
+        },
+        {
+          "id": "tall_grass",
+          "name": "Tall Grass",
+          "cost": 1
+        },
+        {
+          "id": "thicket",
+          "name": "Thicket",
+          "cost": 2
+        },
+        {
+          "id": "brambles",
+          "name": "Brambles",
+          "cost": 99
+        },
+        {
+          "id": "log",
+          "name": "Trail",
+          "cost": 1
+        },
+        {
+          "id": "boulder",
+          "name": "Boulder",
+          "cost": 99
+        },
+        {
+          "id": "hollow",
+          "name": "Hollow",
+          "cost": 1
+        },
+        {
+          "id": "creek",
+          "name": "Creek",
+          "cost": 99
+        },
+        {
+          "id": "pond",
+          "name": "Pond",
+          "cost": 99
+        },
+        {
+          "id": "lily_pads",
+          "name": "Lily Pads",
+          "cost": 99
+        },
+        {
+          "id": "shore",
+          "name": "Shore",
+          "cost": 1
+        },
+        {
+          "id": "base",
+          "name": "Base",
+          "cost": 1
+        },
+        {
+          "id": "workshop",
+          "name": "Workshop",
+          "cost": 1
+        },
+        {
+          "id": "dock",
+          "name": "Dock",
+          "cost": 1
+        },
+        {
+          "id": "roost",
+          "name": "Roost",
+          "cost": 1
+        },
+        {
+          "id": "outpost",
+          "name": "Outpost",
+          "cost": 1
+        },
+        {
+          "id": "storehouse",
+          "name": "Storehouse",
+          "cost": 1
+        }
+      ],
+      "carried_by": [
+        "barge"
+      ],
+      "commanders": [
+        {
+          "id": "dusty",
+          "name": "Dusty",
+          "notes": [
+            "+10% attack (Super CO Power)",
+            "+1 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "talon_co",
+          "name": "Talon",
+          "notes": [
+            "−10% attack",
+            "−1 range"
+          ]
+        },
+        {
+          "id": "ridge",
+          "name": "Ridge",
+          "notes": [
+            "+1 range (CO Power)",
+            "+2 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "grimjaw",
+          "name": "Grimjaw",
+          "notes": [
+            "+20% attack",
+            "+1 range",
+            "+20% attack (CO Power)",
+            "+1 range (CO Power)",
+            "+20% attack (Super CO Power)",
+            "+2 range (Super CO Power)"
+          ]
+        },
+        {
+          "id": "bjorn",
+          "name": "Bjorn",
+          "notes": [
+            "−10% attack"
+          ]
+        },
+        {
+          "id": "rumble",
+          "name": "Rumble",
+          "notes": [
+            "+10% attack",
+            "+10% attack (CO Power)",
+            "+1 movement (CO Power)",
+            "+30% attack (Super CO Power)",
+            "+2 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "kira",
+          "name": "Kira",
+          "notes": [
+            "+30% attack",
+            "+30% defense",
+            "+20% attack (CO Power)",
+            "+20% attack (Super CO Power)",
+            "+20% defense (Super CO Power)"
+          ]
+        },
+        {
+          "id": "tanuki",
+          "name": "Tanuki",
+          "notes": [
+            "+1 vision",
+            "+1 vision (CO Power)",
+            "+1 vision (Super CO Power)"
+          ]
+        },
+        {
+          "id": "sensei",
+          "name": "Sensei",
+          "notes": [
+            "−10% attack"
+          ]
+        },
+        {
+          "id": "goro",
+          "name": "Goro",
+          "notes": [
+            "+30% attack",
+            "−20% defense",
+            "+20% attack (CO Power)",
+            "+50% attack (Super CO Power)"
+          ]
+        },
+        {
+          "id": "wriggle",
+          "name": "Wriggle",
+          "notes": [
+            "+1 movement (CO Power)",
+            "+2 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "carapace",
+          "name": "Carapace",
+          "notes": [
+            "+10% attack"
+          ]
+        },
+        {
+          "id": "hivemind",
+          "name": "Hivemind",
+          "notes": [
+            "+20% attack",
+            "+20% defense"
+          ]
+        },
+        {
+          "id": "cinder",
+          "name": "Cinder",
+          "notes": [
+            "+1 movement (CO Power)",
+            "+2 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "vesper",
+          "name": "Vesper",
+          "notes": [
+            "+10% attack",
+            "+10% defense"
+          ]
+        }
+      ]
     },
     {
       "id": "stinger",
       "name": "Skylance",
       "asset": "stinger",
       "description": "Bolt-thrower that skewers flyers at long range",
-      "cost": 12000
+      "aw": "Missiles",
+      "class": "Wheels",
+      "class_name": "Wheels",
+      "move_type": "wheels",
+      "domain": "land",
+      "cost": 12000,
+      "movement": 4,
+      "vision": 5,
+      "range": [
+        3,
+        5
+      ],
+      "range_text": "3–5",
+      "direct": false,
+      "indirect": true,
+      "attacks": true,
+      "ammo": 6,
+      "stamina": 50,
+      "daily_stamina": 0,
+      "can_capture": false,
+      "carries": [],
+      "carries_classes": [],
+      "capacity": 0,
+      "primary": [
+        {
+          "id": "skywing",
+          "name": "Hawk Rider",
+          "asset": "skywing",
+          "damage": 120
+        },
+        {
+          "id": "ferrier",
+          "name": "Skyferry",
+          "asset": "ferrier",
+          "damage": 120
+        },
+        {
+          "id": "raptor",
+          "name": "Sky Knight",
+          "asset": "raptor",
+          "damage": 100
+        },
+        {
+          "id": "talon",
+          "name": "Bombardier",
+          "asset": "talon",
+          "damage": 100
+        }
+      ],
+      "secondary": [],
+      "taken": [
+        {
+          "id": "behemoth",
+          "name": "Colossus",
+          "asset": "behemoth",
+          "damage": 125
+        },
+        {
+          "id": "juggernaut",
+          "name": "Warbeast",
+          "asset": "juggernaut",
+          "damage": 105
+        },
+        {
+          "id": "talon",
+          "name": "Bombardier",
+          "asset": "talon",
+          "damage": 105
+        },
+        {
+          "id": "shocktrooper",
+          "name": "Halberdier",
+          "asset": "shocktrooper",
+          "damage": 85
+        },
+        {
+          "id": "ironclad",
+          "name": "Charger",
+          "asset": "ironclad",
+          "damage": 85
+        },
+        {
+          "id": "barrage",
+          "name": "Trebuchet",
+          "asset": "barrage",
+          "damage": 85
+        },
+        {
+          "id": "dreadnought",
+          "name": "Flagship",
+          "asset": "dreadnought",
+          "damage": 85
+        },
+        {
+          "id": "siege",
+          "name": "Catapult",
+          "asset": "siege",
+          "damage": 80
+        },
+        {
+          "id": "flak",
+          "name": "Hawkbane",
+          "asset": "flak",
+          "damage": 55
+        },
+        {
+          "id": "skywing",
+          "name": "Hawk Rider",
+          "asset": "skywing",
+          "damage": 55
+        },
+        {
+          "id": "recon",
+          "name": "Outrider",
+          "asset": "recon",
+          "damage": 28
+        },
+        {
+          "id": "scout",
+          "name": "Militia",
+          "asset": "scout",
+          "damage": 26
+        }
+      ],
+      "built_at": [
+        "workshop"
+      ],
+      "resupplied_at": [
+        "base",
+        "workshop",
+        "outpost",
+        "storehouse"
+      ],
+      "moves": [
+        {
+          "id": "grass",
+          "name": "Grass",
+          "cost": 2
+        },
+        {
+          "id": "tall_grass",
+          "name": "Tall Grass",
+          "cost": 2
+        },
+        {
+          "id": "thicket",
+          "name": "Thicket",
+          "cost": 3
+        },
+        {
+          "id": "brambles",
+          "name": "Brambles",
+          "cost": 99
+        },
+        {
+          "id": "log",
+          "name": "Trail",
+          "cost": 1
+        },
+        {
+          "id": "boulder",
+          "name": "Boulder",
+          "cost": 99
+        },
+        {
+          "id": "hollow",
+          "name": "Hollow",
+          "cost": 1
+        },
+        {
+          "id": "creek",
+          "name": "Creek",
+          "cost": 99
+        },
+        {
+          "id": "pond",
+          "name": "Pond",
+          "cost": 99
+        },
+        {
+          "id": "lily_pads",
+          "name": "Lily Pads",
+          "cost": 99
+        },
+        {
+          "id": "shore",
+          "name": "Shore",
+          "cost": 1
+        },
+        {
+          "id": "base",
+          "name": "Base",
+          "cost": 1
+        },
+        {
+          "id": "workshop",
+          "name": "Workshop",
+          "cost": 1
+        },
+        {
+          "id": "dock",
+          "name": "Dock",
+          "cost": 1
+        },
+        {
+          "id": "roost",
+          "name": "Roost",
+          "cost": 1
+        },
+        {
+          "id": "outpost",
+          "name": "Outpost",
+          "cost": 1
+        },
+        {
+          "id": "storehouse",
+          "name": "Storehouse",
+          "cost": 1
+        }
+      ],
+      "carried_by": [
+        "barge"
+      ],
+      "commanders": [
+        {
+          "id": "dusty",
+          "name": "Dusty",
+          "notes": [
+            "+10% attack (Super CO Power)",
+            "+1 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "talon_co",
+          "name": "Talon",
+          "notes": [
+            "−10% attack",
+            "−1 range"
+          ]
+        },
+        {
+          "id": "ridge",
+          "name": "Ridge",
+          "notes": [
+            "+1 range (CO Power)",
+            "+2 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "grimjaw",
+          "name": "Grimjaw",
+          "notes": [
+            "+20% attack",
+            "+1 range",
+            "+20% attack (CO Power)",
+            "+1 range (CO Power)",
+            "+20% attack (Super CO Power)",
+            "+2 range (Super CO Power)"
+          ]
+        },
+        {
+          "id": "bjorn",
+          "name": "Bjorn",
+          "notes": [
+            "−10% attack"
+          ]
+        },
+        {
+          "id": "rumble",
+          "name": "Rumble",
+          "notes": [
+            "+10% attack",
+            "+10% attack (CO Power)",
+            "+1 movement (CO Power)",
+            "+30% attack (Super CO Power)",
+            "+2 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "kira",
+          "name": "Kira",
+          "notes": [
+            "+30% attack",
+            "+30% defense",
+            "+20% attack (CO Power)",
+            "+20% attack (Super CO Power)",
+            "+20% defense (Super CO Power)"
+          ]
+        },
+        {
+          "id": "tanuki",
+          "name": "Tanuki",
+          "notes": [
+            "+1 vision",
+            "+1 vision (CO Power)",
+            "+1 vision (Super CO Power)"
+          ]
+        },
+        {
+          "id": "sensei",
+          "name": "Sensei",
+          "notes": [
+            "−10% attack"
+          ]
+        },
+        {
+          "id": "goro",
+          "name": "Goro",
+          "notes": [
+            "+30% attack",
+            "−20% defense",
+            "+20% attack (CO Power)",
+            "+50% attack (Super CO Power)"
+          ]
+        },
+        {
+          "id": "wriggle",
+          "name": "Wriggle",
+          "notes": [
+            "+1 movement (CO Power)",
+            "+2 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "carapace",
+          "name": "Carapace",
+          "notes": [
+            "+10% attack"
+          ]
+        },
+        {
+          "id": "hivemind",
+          "name": "Hivemind",
+          "notes": [
+            "+20% attack",
+            "+20% defense"
+          ]
+        },
+        {
+          "id": "cinder",
+          "name": "Cinder",
+          "notes": [
+            "+1 movement (CO Power)",
+            "+2 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "vesper",
+          "name": "Vesper",
+          "notes": [
+            "+10% attack",
+            "+10% defense"
+          ]
+        }
+      ]
     },
     {
       "id": "carrier",
       "name": "Caravan",
       "asset": "carrier",
       "description": "Covered wagon that ferries foot soldiers",
-      "cost": 5000
+      "aw": "APC",
+      "class": "Transport",
+      "class_name": "Ground transport",
+      "move_type": "transport",
+      "domain": "land",
+      "cost": 5000,
+      "movement": 6,
+      "vision": 2,
+      "range": [
+        0,
+        0
+      ],
+      "range_text": "—",
+      "direct": false,
+      "indirect": false,
+      "attacks": false,
+      "ammo": 0,
+      "stamina": 70,
+      "daily_stamina": 0,
+      "can_capture": false,
+      "carries": [
+        "Foot",
+        "Heavy foot"
+      ],
+      "carries_classes": [
+        "Foot",
+        "Mech"
+      ],
+      "capacity": 1,
+      "primary": [],
+      "secondary": [],
+      "taken": [
+        {
+          "id": "behemoth",
+          "name": "Colossus",
+          "asset": "behemoth",
+          "damage": 125
+        },
+        {
+          "id": "juggernaut",
+          "name": "Warbeast",
+          "asset": "juggernaut",
+          "damage": 105
+        },
+        {
+          "id": "talon",
+          "name": "Bombardier",
+          "asset": "talon",
+          "damage": 105
+        },
+        {
+          "id": "barrage",
+          "name": "Trebuchet",
+          "asset": "barrage",
+          "damage": 80
+        },
+        {
+          "id": "dreadnought",
+          "name": "Flagship",
+          "asset": "dreadnought",
+          "damage": 80
+        },
+        {
+          "id": "shocktrooper",
+          "name": "Halberdier",
+          "asset": "shocktrooper",
+          "damage": 75
+        },
+        {
+          "id": "ironclad",
+          "name": "Charger",
+          "asset": "ironclad",
+          "damage": 75
+        },
+        {
+          "id": "siege",
+          "name": "Catapult",
+          "asset": "siege",
+          "damage": 70
+        },
+        {
+          "id": "skywing",
+          "name": "Hawk Rider",
+          "asset": "skywing",
+          "damage": 60
+        },
+        {
+          "id": "flak",
+          "name": "Hawkbane",
+          "asset": "flak",
+          "damage": 50
+        },
+        {
+          "id": "recon",
+          "name": "Outrider",
+          "asset": "recon",
+          "damage": 45
+        },
+        {
+          "id": "scout",
+          "name": "Militia",
+          "asset": "scout",
+          "damage": 14
+        }
+      ],
+      "built_at": [
+        "workshop"
+      ],
+      "resupplied_at": [
+        "base",
+        "workshop",
+        "outpost",
+        "storehouse"
+      ],
+      "moves": [
+        {
+          "id": "grass",
+          "name": "Grass",
+          "cost": 1
+        },
+        {
+          "id": "tall_grass",
+          "name": "Tall Grass",
+          "cost": 1
+        },
+        {
+          "id": "thicket",
+          "name": "Thicket",
+          "cost": 2
+        },
+        {
+          "id": "brambles",
+          "name": "Brambles",
+          "cost": 99
+        },
+        {
+          "id": "log",
+          "name": "Trail",
+          "cost": 1
+        },
+        {
+          "id": "boulder",
+          "name": "Boulder",
+          "cost": 99
+        },
+        {
+          "id": "hollow",
+          "name": "Hollow",
+          "cost": 1
+        },
+        {
+          "id": "creek",
+          "name": "Creek",
+          "cost": 99
+        },
+        {
+          "id": "pond",
+          "name": "Pond",
+          "cost": 99
+        },
+        {
+          "id": "lily_pads",
+          "name": "Lily Pads",
+          "cost": 99
+        },
+        {
+          "id": "shore",
+          "name": "Shore",
+          "cost": 1
+        },
+        {
+          "id": "base",
+          "name": "Base",
+          "cost": 1
+        },
+        {
+          "id": "workshop",
+          "name": "Workshop",
+          "cost": 1
+        },
+        {
+          "id": "dock",
+          "name": "Dock",
+          "cost": 1
+        },
+        {
+          "id": "roost",
+          "name": "Roost",
+          "cost": 1
+        },
+        {
+          "id": "outpost",
+          "name": "Outpost",
+          "cost": 1
+        },
+        {
+          "id": "storehouse",
+          "name": "Storehouse",
+          "cost": 1
+        }
+      ],
+      "carried_by": [
+        "barge"
+      ],
+      "commanders": [
+        {
+          "id": "dusty",
+          "name": "Dusty",
+          "notes": [
+            "+10% attack (Super CO Power)",
+            "+1 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "bandit",
+          "name": "Bandit",
+          "notes": [
+            "+1 movement"
+          ]
+        },
+        {
+          "id": "ridge",
+          "name": "Ridge",
+          "notes": [
+            "+2 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "bjorn",
+          "name": "Bjorn",
+          "notes": [
+            "−10% attack"
+          ]
+        },
+        {
+          "id": "rumble",
+          "name": "Rumble",
+          "notes": [
+            "+10% attack",
+            "+10% attack (CO Power)",
+            "+1 movement (CO Power)",
+            "+30% attack (Super CO Power)",
+            "+2 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "kira",
+          "name": "Kira",
+          "notes": [
+            "+30% attack",
+            "+30% defense",
+            "+20% attack (CO Power)",
+            "+20% attack (Super CO Power)",
+            "+20% defense (Super CO Power)"
+          ]
+        },
+        {
+          "id": "tanuki",
+          "name": "Tanuki",
+          "notes": [
+            "+1 vision",
+            "+1 vision (CO Power)",
+            "+1 vision (Super CO Power)"
+          ]
+        },
+        {
+          "id": "sensei",
+          "name": "Sensei",
+          "notes": [
+            "−10% attack",
+            "+1 movement"
+          ]
+        },
+        {
+          "id": "goro",
+          "name": "Goro",
+          "notes": [
+            "+30% attack",
+            "−20% defense",
+            "+20% attack (CO Power)",
+            "+50% attack (Super CO Power)"
+          ]
+        },
+        {
+          "id": "wriggle",
+          "name": "Wriggle",
+          "notes": [
+            "+1 movement (CO Power)",
+            "+2 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "carapace",
+          "name": "Carapace",
+          "notes": [
+            "+10% attack"
+          ]
+        },
+        {
+          "id": "hivemind",
+          "name": "Hivemind",
+          "notes": [
+            "+20% attack",
+            "+20% defense"
+          ]
+        },
+        {
+          "id": "cinder",
+          "name": "Cinder",
+          "notes": [
+            "+1 movement (CO Power)",
+            "+2 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "vesper",
+          "name": "Vesper",
+          "notes": [
+            "+10% attack",
+            "+10% defense"
+          ]
+        }
+      ]
     },
     {
       "id": "supplier",
       "name": "Supply Cart",
       "asset": "supplier",
       "description": "Hauls provisions to restore stamina and arrows",
-      "cost": 5000
+      "aw": "APC (with resupply)",
+      "class": "Transport",
+      "class_name": "Ground transport",
+      "move_type": "transport",
+      "domain": "land",
+      "cost": 5000,
+      "movement": 6,
+      "vision": 2,
+      "range": [
+        0,
+        0
+      ],
+      "range_text": "—",
+      "direct": false,
+      "indirect": false,
+      "attacks": false,
+      "ammo": 0,
+      "stamina": 70,
+      "daily_stamina": 0,
+      "can_capture": false,
+      "carries": [],
+      "carries_classes": [],
+      "capacity": 0,
+      "primary": [],
+      "secondary": [],
+      "taken": [
+        {
+          "id": "behemoth",
+          "name": "Colossus",
+          "asset": "behemoth",
+          "damage": 125
+        },
+        {
+          "id": "juggernaut",
+          "name": "Warbeast",
+          "asset": "juggernaut",
+          "damage": 105
+        },
+        {
+          "id": "talon",
+          "name": "Bombardier",
+          "asset": "talon",
+          "damage": 105
+        },
+        {
+          "id": "barrage",
+          "name": "Trebuchet",
+          "asset": "barrage",
+          "damage": 80
+        },
+        {
+          "id": "dreadnought",
+          "name": "Flagship",
+          "asset": "dreadnought",
+          "damage": 80
+        },
+        {
+          "id": "shocktrooper",
+          "name": "Halberdier",
+          "asset": "shocktrooper",
+          "damage": 75
+        },
+        {
+          "id": "ironclad",
+          "name": "Charger",
+          "asset": "ironclad",
+          "damage": 75
+        },
+        {
+          "id": "siege",
+          "name": "Catapult",
+          "asset": "siege",
+          "damage": 70
+        },
+        {
+          "id": "skywing",
+          "name": "Hawk Rider",
+          "asset": "skywing",
+          "damage": 60
+        },
+        {
+          "id": "flak",
+          "name": "Hawkbane",
+          "asset": "flak",
+          "damage": 50
+        },
+        {
+          "id": "recon",
+          "name": "Outrider",
+          "asset": "recon",
+          "damage": 45
+        },
+        {
+          "id": "scout",
+          "name": "Militia",
+          "asset": "scout",
+          "damage": 14
+        }
+      ],
+      "built_at": [
+        "workshop"
+      ],
+      "resupplied_at": [
+        "base",
+        "workshop",
+        "outpost",
+        "storehouse"
+      ],
+      "moves": [
+        {
+          "id": "grass",
+          "name": "Grass",
+          "cost": 1
+        },
+        {
+          "id": "tall_grass",
+          "name": "Tall Grass",
+          "cost": 1
+        },
+        {
+          "id": "thicket",
+          "name": "Thicket",
+          "cost": 2
+        },
+        {
+          "id": "brambles",
+          "name": "Brambles",
+          "cost": 99
+        },
+        {
+          "id": "log",
+          "name": "Trail",
+          "cost": 1
+        },
+        {
+          "id": "boulder",
+          "name": "Boulder",
+          "cost": 99
+        },
+        {
+          "id": "hollow",
+          "name": "Hollow",
+          "cost": 1
+        },
+        {
+          "id": "creek",
+          "name": "Creek",
+          "cost": 99
+        },
+        {
+          "id": "pond",
+          "name": "Pond",
+          "cost": 99
+        },
+        {
+          "id": "lily_pads",
+          "name": "Lily Pads",
+          "cost": 99
+        },
+        {
+          "id": "shore",
+          "name": "Shore",
+          "cost": 1
+        },
+        {
+          "id": "base",
+          "name": "Base",
+          "cost": 1
+        },
+        {
+          "id": "workshop",
+          "name": "Workshop",
+          "cost": 1
+        },
+        {
+          "id": "dock",
+          "name": "Dock",
+          "cost": 1
+        },
+        {
+          "id": "roost",
+          "name": "Roost",
+          "cost": 1
+        },
+        {
+          "id": "outpost",
+          "name": "Outpost",
+          "cost": 1
+        },
+        {
+          "id": "storehouse",
+          "name": "Storehouse",
+          "cost": 1
+        }
+      ],
+      "carried_by": [
+        "barge"
+      ],
+      "commanders": [
+        {
+          "id": "dusty",
+          "name": "Dusty",
+          "notes": [
+            "+10% attack (Super CO Power)",
+            "+1 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "ridge",
+          "name": "Ridge",
+          "notes": [
+            "+2 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "bjorn",
+          "name": "Bjorn",
+          "notes": [
+            "−10% attack"
+          ]
+        },
+        {
+          "id": "rumble",
+          "name": "Rumble",
+          "notes": [
+            "+10% attack",
+            "+10% attack (CO Power)",
+            "+1 movement (CO Power)",
+            "+30% attack (Super CO Power)",
+            "+2 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "kira",
+          "name": "Kira",
+          "notes": [
+            "+30% attack",
+            "+30% defense",
+            "+20% attack (CO Power)",
+            "+20% attack (Super CO Power)",
+            "+20% defense (Super CO Power)"
+          ]
+        },
+        {
+          "id": "tanuki",
+          "name": "Tanuki",
+          "notes": [
+            "+1 vision",
+            "+1 vision (CO Power)",
+            "+1 vision (Super CO Power)"
+          ]
+        },
+        {
+          "id": "sensei",
+          "name": "Sensei",
+          "notes": [
+            "−10% attack"
+          ]
+        },
+        {
+          "id": "goro",
+          "name": "Goro",
+          "notes": [
+            "+30% attack",
+            "−20% defense",
+            "+20% attack (CO Power)",
+            "+50% attack (Super CO Power)"
+          ]
+        },
+        {
+          "id": "wriggle",
+          "name": "Wriggle",
+          "notes": [
+            "+1 movement (CO Power)",
+            "+2 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "carapace",
+          "name": "Carapace",
+          "notes": [
+            "+10% attack"
+          ]
+        },
+        {
+          "id": "hivemind",
+          "name": "Hivemind",
+          "notes": [
+            "+20% attack",
+            "+20% defense"
+          ]
+        },
+        {
+          "id": "cinder",
+          "name": "Cinder",
+          "notes": [
+            "+1 movement (CO Power)",
+            "+2 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "vesper",
+          "name": "Vesper",
+          "notes": [
+            "+10% attack",
+            "+10% defense"
+          ]
+        }
+      ]
     },
     {
       "id": "ferrier",
       "name": "Skyferry",
       "asset": "ferrier",
       "description": "Great bird that carries foot soldiers through the air",
-      "cost": 5000
+      "aw": "T Copter",
+      "class": "AirTransport",
+      "class_name": "Air transport",
+      "move_type": "air_transport",
+      "domain": "air",
+      "cost": 5000,
+      "movement": 6,
+      "vision": 4,
+      "range": [
+        0,
+        0
+      ],
+      "range_text": "—",
+      "direct": false,
+      "indirect": false,
+      "attacks": false,
+      "ammo": 0,
+      "stamina": 99,
+      "daily_stamina": 2,
+      "can_capture": false,
+      "carries": [
+        "Foot",
+        "Heavy foot"
+      ],
+      "carries_classes": [
+        "Foot",
+        "Mech"
+      ],
+      "capacity": 1,
+      "primary": [],
+      "secondary": [],
+      "taken": [
+        {
+          "id": "flak",
+          "name": "Hawkbane",
+          "asset": "flak",
+          "damage": 120
+        },
+        {
+          "id": "stinger",
+          "name": "Skylance",
+          "asset": "stinger",
+          "damage": 120
+        },
+        {
+          "id": "frigate",
+          "name": "Galley",
+          "asset": "frigate",
+          "damage": 115
+        },
+        {
+          "id": "raptor",
+          "name": "Sky Knight",
+          "asset": "raptor",
+          "damage": 100
+        },
+        {
+          "id": "skywing",
+          "name": "Hawk Rider",
+          "asset": "skywing",
+          "damage": 95
+        },
+        {
+          "id": "behemoth",
+          "name": "Colossus",
+          "asset": "behemoth",
+          "damage": 55
+        },
+        {
+          "id": "juggernaut",
+          "name": "Warbeast",
+          "asset": "juggernaut",
+          "damage": 45
+        },
+        {
+          "id": "ironclad",
+          "name": "Charger",
+          "asset": "ironclad",
+          "damage": 40
+        },
+        {
+          "id": "shocktrooper",
+          "name": "Halberdier",
+          "asset": "shocktrooper",
+          "damage": 35
+        }
+      ],
+      "built_at": [
+        "roost"
+      ],
+      "resupplied_at": [
+        "roost"
+      ],
+      "moves": [
+        {
+          "id": "grass",
+          "name": "Grass",
+          "cost": 1
+        },
+        {
+          "id": "tall_grass",
+          "name": "Tall Grass",
+          "cost": 1
+        },
+        {
+          "id": "thicket",
+          "name": "Thicket",
+          "cost": 1
+        },
+        {
+          "id": "brambles",
+          "name": "Brambles",
+          "cost": 1
+        },
+        {
+          "id": "log",
+          "name": "Trail",
+          "cost": 1
+        },
+        {
+          "id": "boulder",
+          "name": "Boulder",
+          "cost": 1
+        },
+        {
+          "id": "hollow",
+          "name": "Hollow",
+          "cost": 1
+        },
+        {
+          "id": "creek",
+          "name": "Creek",
+          "cost": 1
+        },
+        {
+          "id": "pond",
+          "name": "Pond",
+          "cost": 1
+        },
+        {
+          "id": "lily_pads",
+          "name": "Lily Pads",
+          "cost": 1
+        },
+        {
+          "id": "shore",
+          "name": "Shore",
+          "cost": 1
+        },
+        {
+          "id": "base",
+          "name": "Base",
+          "cost": 1
+        },
+        {
+          "id": "workshop",
+          "name": "Workshop",
+          "cost": 1
+        },
+        {
+          "id": "dock",
+          "name": "Dock",
+          "cost": 1
+        },
+        {
+          "id": "roost",
+          "name": "Roost",
+          "cost": 1
+        },
+        {
+          "id": "outpost",
+          "name": "Outpost",
+          "cost": 1
+        },
+        {
+          "id": "storehouse",
+          "name": "Storehouse",
+          "cost": 1
+        }
+      ],
+      "carried_by": [],
+      "commanders": [
+        {
+          "id": "dusty",
+          "name": "Dusty",
+          "notes": [
+            "+10% attack (Super CO Power)",
+            "+1 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "bandit",
+          "name": "Bandit",
+          "notes": [
+            "+1 movement"
+          ]
+        },
+        {
+          "id": "bjorn",
+          "name": "Bjorn",
+          "notes": [
+            "−10% attack"
+          ]
+        },
+        {
+          "id": "prowler",
+          "name": "Prowler",
+          "notes": [
+            "+15% attack",
+            "+10% defense",
+            "+5% attack (CO Power)",
+            "+10% defense (CO Power)",
+            "+5% attack (Super CO Power)",
+            "+10% defense (Super CO Power)"
+          ]
+        },
+        {
+          "id": "tusker",
+          "name": "Tusker",
+          "notes": [
+            "−30% attack"
+          ]
+        },
+        {
+          "id": "rumble",
+          "name": "Rumble",
+          "notes": [
+            "−10% attack"
+          ]
+        },
+        {
+          "id": "kira",
+          "name": "Kira",
+          "notes": [
+            "+30% attack",
+            "+30% defense",
+            "+20% attack (CO Power)",
+            "+20% attack (Super CO Power)",
+            "+20% defense (Super CO Power)"
+          ]
+        },
+        {
+          "id": "tanuki",
+          "name": "Tanuki",
+          "notes": [
+            "+1 vision",
+            "+1 vision (CO Power)",
+            "+1 vision (Super CO Power)"
+          ]
+        },
+        {
+          "id": "sensei",
+          "name": "Sensei",
+          "notes": [
+            "+50% attack",
+            "+1 movement"
+          ]
+        },
+        {
+          "id": "goro",
+          "name": "Goro",
+          "notes": [
+            "+30% attack",
+            "−20% defense",
+            "+20% attack (CO Power)",
+            "+50% attack (Super CO Power)"
+          ]
+        },
+        {
+          "id": "wriggle",
+          "name": "Wriggle",
+          "notes": [
+            "+1 movement (CO Power)",
+            "+2 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "carapace",
+          "name": "Carapace",
+          "notes": [
+            "+10% attack"
+          ]
+        },
+        {
+          "id": "hivemind",
+          "name": "Hivemind",
+          "notes": [
+            "+20% attack",
+            "+20% defense"
+          ]
+        },
+        {
+          "id": "cinder",
+          "name": "Cinder",
+          "notes": [
+            "+1 movement (CO Power)",
+            "+2 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "vesper",
+          "name": "Vesper",
+          "notes": [
+            "+10% attack",
+            "+10% defense"
+          ]
+        }
+      ]
     },
     {
       "id": "skywing",
       "name": "Hawk Rider",
       "asset": "skywing",
       "description": "Mounted raptor that strikes ground troops from above",
-      "cost": 9000
+      "aw": "B Copter",
+      "class": "Air",
+      "class_name": "Air",
+      "move_type": "air",
+      "domain": "air",
+      "cost": 9000,
+      "movement": 6,
+      "vision": 4,
+      "range": [
+        1,
+        1
+      ],
+      "range_text": "1",
+      "direct": true,
+      "indirect": false,
+      "attacks": true,
+      "ammo": 6,
+      "stamina": 99,
+      "daily_stamina": 2,
+      "can_capture": false,
+      "carries": [],
+      "carries_classes": [],
+      "capacity": 0,
+      "primary": [
+        {
+          "id": "siege",
+          "name": "Catapult",
+          "asset": "siege",
+          "damage": 65
+        },
+        {
+          "id": "barrage",
+          "name": "Trebuchet",
+          "asset": "barrage",
+          "damage": 65
+        },
+        {
+          "id": "carrier",
+          "name": "Caravan",
+          "asset": "carrier",
+          "damage": 60
+        },
+        {
+          "id": "supplier",
+          "name": "Supply Cart",
+          "asset": "supplier",
+          "damage": 60
+        },
+        {
+          "id": "recon",
+          "name": "Outrider",
+          "asset": "recon",
+          "damage": 55
+        },
+        {
+          "id": "ironclad",
+          "name": "Charger",
+          "asset": "ironclad",
+          "damage": 55
+        },
+        {
+          "id": "stinger",
+          "name": "Skylance",
+          "asset": "stinger",
+          "damage": 55
+        },
+        {
+          "id": "juggernaut",
+          "name": "Warbeast",
+          "asset": "juggernaut",
+          "damage": 25
+        },
+        {
+          "id": "flak",
+          "name": "Hawkbane",
+          "asset": "flak",
+          "damage": 25
+        },
+        {
+          "id": "behemoth",
+          "name": "Colossus",
+          "asset": "behemoth",
+          "damage": 20
+        }
+      ],
+      "secondary": [
+        {
+          "id": "ferrier",
+          "name": "Skyferry",
+          "asset": "ferrier",
+          "damage": 95
+        },
+        {
+          "id": "scout",
+          "name": "Militia",
+          "asset": "scout",
+          "damage": 75
+        },
+        {
+          "id": "shocktrooper",
+          "name": "Halberdier",
+          "asset": "shocktrooper",
+          "damage": 75
+        },
+        {
+          "id": "skywing",
+          "name": "Hawk Rider",
+          "asset": "skywing",
+          "damage": 65
+        }
+      ],
+      "taken": [
+        {
+          "id": "flak",
+          "name": "Hawkbane",
+          "asset": "flak",
+          "damage": 120
+        },
+        {
+          "id": "stinger",
+          "name": "Skylance",
+          "asset": "stinger",
+          "damage": 120
+        },
+        {
+          "id": "frigate",
+          "name": "Galley",
+          "asset": "frigate",
+          "damage": 115
+        },
+        {
+          "id": "raptor",
+          "name": "Sky Knight",
+          "asset": "raptor",
+          "damage": 100
+        },
+        {
+          "id": "skywing",
+          "name": "Hawk Rider",
+          "asset": "skywing",
+          "damage": 65
+        },
+        {
+          "id": "behemoth",
+          "name": "Colossus",
+          "asset": "behemoth",
+          "damage": 22
+        },
+        {
+          "id": "juggernaut",
+          "name": "Warbeast",
+          "asset": "juggernaut",
+          "damage": 12
+        },
+        {
+          "id": "ironclad",
+          "name": "Charger",
+          "asset": "ironclad",
+          "damage": 10
+        },
+        {
+          "id": "shocktrooper",
+          "name": "Halberdier",
+          "asset": "shocktrooper",
+          "damage": 9
+        }
+      ],
+      "built_at": [
+        "roost"
+      ],
+      "resupplied_at": [
+        "roost"
+      ],
+      "moves": [
+        {
+          "id": "grass",
+          "name": "Grass",
+          "cost": 1
+        },
+        {
+          "id": "tall_grass",
+          "name": "Tall Grass",
+          "cost": 1
+        },
+        {
+          "id": "thicket",
+          "name": "Thicket",
+          "cost": 1
+        },
+        {
+          "id": "brambles",
+          "name": "Brambles",
+          "cost": 1
+        },
+        {
+          "id": "log",
+          "name": "Trail",
+          "cost": 1
+        },
+        {
+          "id": "boulder",
+          "name": "Boulder",
+          "cost": 1
+        },
+        {
+          "id": "hollow",
+          "name": "Hollow",
+          "cost": 1
+        },
+        {
+          "id": "creek",
+          "name": "Creek",
+          "cost": 1
+        },
+        {
+          "id": "pond",
+          "name": "Pond",
+          "cost": 1
+        },
+        {
+          "id": "lily_pads",
+          "name": "Lily Pads",
+          "cost": 1
+        },
+        {
+          "id": "shore",
+          "name": "Shore",
+          "cost": 1
+        },
+        {
+          "id": "base",
+          "name": "Base",
+          "cost": 1
+        },
+        {
+          "id": "workshop",
+          "name": "Workshop",
+          "cost": 1
+        },
+        {
+          "id": "dock",
+          "name": "Dock",
+          "cost": 1
+        },
+        {
+          "id": "roost",
+          "name": "Roost",
+          "cost": 1
+        },
+        {
+          "id": "outpost",
+          "name": "Outpost",
+          "cost": 1
+        },
+        {
+          "id": "storehouse",
+          "name": "Storehouse",
+          "cost": 1
+        }
+      ],
+      "carried_by": [],
+      "commanders": [
+        {
+          "id": "dusty",
+          "name": "Dusty",
+          "notes": [
+            "+10% attack (Super CO Power)",
+            "+1 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "talon_co",
+          "name": "Talon",
+          "notes": [
+            "+20% attack",
+            "+10% attack (CO Power)",
+            "+1 movement (CO Power)",
+            "+30% attack (Super CO Power)",
+            "+2 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "bandit",
+          "name": "Bandit",
+          "notes": [
+            "−10% attack"
+          ]
+        },
+        {
+          "id": "grimjaw",
+          "name": "Grimjaw",
+          "notes": [
+            "−20% attack"
+          ]
+        },
+        {
+          "id": "bjorn",
+          "name": "Bjorn",
+          "notes": [
+            "−10% attack"
+          ]
+        },
+        {
+          "id": "prowler",
+          "name": "Prowler",
+          "notes": [
+            "+15% attack",
+            "+10% defense",
+            "+5% attack (CO Power)",
+            "+10% defense (CO Power)",
+            "+5% attack (Super CO Power)",
+            "+10% defense (Super CO Power)"
+          ]
+        },
+        {
+          "id": "tusker",
+          "name": "Tusker",
+          "notes": [
+            "−30% attack"
+          ]
+        },
+        {
+          "id": "rumble",
+          "name": "Rumble",
+          "notes": [
+            "−10% attack"
+          ]
+        },
+        {
+          "id": "kira",
+          "name": "Kira",
+          "notes": [
+            "+30% attack",
+            "+30% defense",
+            "+20% attack (CO Power)",
+            "+20% attack (Super CO Power)",
+            "+20% defense (Super CO Power)"
+          ]
+        },
+        {
+          "id": "tanuki",
+          "name": "Tanuki",
+          "notes": [
+            "+1 vision",
+            "+1 vision (CO Power)",
+            "+1 vision (Super CO Power)"
+          ]
+        },
+        {
+          "id": "sensei",
+          "name": "Sensei",
+          "notes": [
+            "+50% attack"
+          ]
+        },
+        {
+          "id": "goro",
+          "name": "Goro",
+          "notes": [
+            "+30% attack",
+            "−20% defense",
+            "+20% attack (CO Power)",
+            "+50% attack (Super CO Power)"
+          ]
+        },
+        {
+          "id": "wriggle",
+          "name": "Wriggle",
+          "notes": [
+            "+1 movement (CO Power)",
+            "+2 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "carapace",
+          "name": "Carapace",
+          "notes": [
+            "+10% attack"
+          ]
+        },
+        {
+          "id": "hivemind",
+          "name": "Hivemind",
+          "notes": [
+            "+20% attack",
+            "+20% defense"
+          ]
+        },
+        {
+          "id": "cinder",
+          "name": "Cinder",
+          "notes": [
+            "+1 movement (CO Power)",
+            "+2 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "vesper",
+          "name": "Vesper",
+          "notes": [
+            "+10% attack",
+            "+10% defense"
+          ]
+        }
+      ]
     },
     {
       "id": "raptor",
       "name": "Sky Knight",
       "asset": "raptor",
       "description": "Elite flyer that rules the skies",
-      "cost": 20000
+      "aw": "Fighter",
+      "class": "Air",
+      "class_name": "Air",
+      "move_type": "air",
+      "domain": "air",
+      "cost": 20000,
+      "movement": 9,
+      "vision": 5,
+      "range": [
+        1,
+        1
+      ],
+      "range_text": "1",
+      "direct": true,
+      "indirect": false,
+      "attacks": true,
+      "ammo": 9,
+      "stamina": 99,
+      "daily_stamina": 5,
+      "can_capture": false,
+      "carries": [],
+      "carries_classes": [],
+      "capacity": 0,
+      "primary": [
+        {
+          "id": "skywing",
+          "name": "Hawk Rider",
+          "asset": "skywing",
+          "damage": 100
+        },
+        {
+          "id": "talon",
+          "name": "Bombardier",
+          "asset": "talon",
+          "damage": 100
+        },
+        {
+          "id": "ferrier",
+          "name": "Skyferry",
+          "asset": "ferrier",
+          "damage": 100
+        },
+        {
+          "id": "raptor",
+          "name": "Sky Knight",
+          "asset": "raptor",
+          "damage": 55
+        }
+      ],
+      "secondary": [],
+      "taken": [
+        {
+          "id": "stinger",
+          "name": "Skylance",
+          "asset": "stinger",
+          "damage": 100
+        },
+        {
+          "id": "flak",
+          "name": "Hawkbane",
+          "asset": "flak",
+          "damage": 65
+        },
+        {
+          "id": "raptor",
+          "name": "Sky Knight",
+          "asset": "raptor",
+          "damage": 55
+        },
+        {
+          "id": "frigate",
+          "name": "Galley",
+          "asset": "frigate",
+          "damage": 55
+        }
+      ],
+      "built_at": [
+        "roost"
+      ],
+      "resupplied_at": [
+        "roost"
+      ],
+      "moves": [
+        {
+          "id": "grass",
+          "name": "Grass",
+          "cost": 1
+        },
+        {
+          "id": "tall_grass",
+          "name": "Tall Grass",
+          "cost": 1
+        },
+        {
+          "id": "thicket",
+          "name": "Thicket",
+          "cost": 1
+        },
+        {
+          "id": "brambles",
+          "name": "Brambles",
+          "cost": 1
+        },
+        {
+          "id": "log",
+          "name": "Trail",
+          "cost": 1
+        },
+        {
+          "id": "boulder",
+          "name": "Boulder",
+          "cost": 1
+        },
+        {
+          "id": "hollow",
+          "name": "Hollow",
+          "cost": 1
+        },
+        {
+          "id": "creek",
+          "name": "Creek",
+          "cost": 1
+        },
+        {
+          "id": "pond",
+          "name": "Pond",
+          "cost": 1
+        },
+        {
+          "id": "lily_pads",
+          "name": "Lily Pads",
+          "cost": 1
+        },
+        {
+          "id": "shore",
+          "name": "Shore",
+          "cost": 1
+        },
+        {
+          "id": "base",
+          "name": "Base",
+          "cost": 1
+        },
+        {
+          "id": "workshop",
+          "name": "Workshop",
+          "cost": 1
+        },
+        {
+          "id": "dock",
+          "name": "Dock",
+          "cost": 1
+        },
+        {
+          "id": "roost",
+          "name": "Roost",
+          "cost": 1
+        },
+        {
+          "id": "outpost",
+          "name": "Outpost",
+          "cost": 1
+        },
+        {
+          "id": "storehouse",
+          "name": "Storehouse",
+          "cost": 1
+        }
+      ],
+      "carried_by": [],
+      "commanders": [
+        {
+          "id": "dusty",
+          "name": "Dusty",
+          "notes": [
+            "+10% attack (Super CO Power)",
+            "+1 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "talon_co",
+          "name": "Talon",
+          "notes": [
+            "+20% attack",
+            "+10% attack (CO Power)",
+            "+1 movement (CO Power)",
+            "+30% attack (Super CO Power)",
+            "+2 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "bandit",
+          "name": "Bandit",
+          "notes": [
+            "−10% attack"
+          ]
+        },
+        {
+          "id": "grimjaw",
+          "name": "Grimjaw",
+          "notes": [
+            "−20% attack"
+          ]
+        },
+        {
+          "id": "bjorn",
+          "name": "Bjorn",
+          "notes": [
+            "−10% attack"
+          ]
+        },
+        {
+          "id": "prowler",
+          "name": "Prowler",
+          "notes": [
+            "+15% attack",
+            "+10% defense",
+            "+5% attack (CO Power)",
+            "+10% defense (CO Power)",
+            "+5% attack (Super CO Power)",
+            "+10% defense (Super CO Power)"
+          ]
+        },
+        {
+          "id": "tusker",
+          "name": "Tusker",
+          "notes": [
+            "−30% attack"
+          ]
+        },
+        {
+          "id": "rumble",
+          "name": "Rumble",
+          "notes": [
+            "−10% attack"
+          ]
+        },
+        {
+          "id": "kira",
+          "name": "Kira",
+          "notes": [
+            "+30% attack",
+            "+30% defense",
+            "+20% attack (CO Power)",
+            "+20% attack (Super CO Power)",
+            "+20% defense (Super CO Power)"
+          ]
+        },
+        {
+          "id": "tanuki",
+          "name": "Tanuki",
+          "notes": [
+            "+1 vision",
+            "+1 vision (CO Power)",
+            "+1 vision (Super CO Power)"
+          ]
+        },
+        {
+          "id": "goro",
+          "name": "Goro",
+          "notes": [
+            "+30% attack",
+            "−20% defense",
+            "+20% attack (CO Power)",
+            "+50% attack (Super CO Power)"
+          ]
+        },
+        {
+          "id": "wriggle",
+          "name": "Wriggle",
+          "notes": [
+            "+1 movement (CO Power)",
+            "+2 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "carapace",
+          "name": "Carapace",
+          "notes": [
+            "+10% attack"
+          ]
+        },
+        {
+          "id": "hivemind",
+          "name": "Hivemind",
+          "notes": [
+            "+20% attack",
+            "+20% defense"
+          ]
+        },
+        {
+          "id": "cinder",
+          "name": "Cinder",
+          "notes": [
+            "+1 movement (CO Power)",
+            "+2 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "vesper",
+          "name": "Vesper",
+          "notes": [
+            "+10% attack",
+            "+10% defense"
+          ]
+        }
+      ]
     },
     {
       "id": "talon",
       "name": "Bombardier",
       "asset": "talon",
       "description": "Drops fire pots on anything below",
-      "cost": 22000
+      "aw": "Bomber",
+      "class": "Air",
+      "class_name": "Air",
+      "move_type": "air",
+      "domain": "air",
+      "cost": 22000,
+      "movement": 7,
+      "vision": 3,
+      "range": [
+        1,
+        1
+      ],
+      "range_text": "1",
+      "direct": true,
+      "indirect": false,
+      "attacks": true,
+      "ammo": 9,
+      "stamina": 99,
+      "daily_stamina": 5,
+      "can_capture": false,
+      "carries": [],
+      "carries_classes": [],
+      "capacity": 0,
+      "primary": [
+        {
+          "id": "scout",
+          "name": "Militia",
+          "asset": "scout",
+          "damage": 110
+        },
+        {
+          "id": "shocktrooper",
+          "name": "Halberdier",
+          "asset": "shocktrooper",
+          "damage": 110
+        },
+        {
+          "id": "recon",
+          "name": "Outrider",
+          "asset": "recon",
+          "damage": 105
+        },
+        {
+          "id": "ironclad",
+          "name": "Charger",
+          "asset": "ironclad",
+          "damage": 105
+        },
+        {
+          "id": "siege",
+          "name": "Catapult",
+          "asset": "siege",
+          "damage": 105
+        },
+        {
+          "id": "barrage",
+          "name": "Trebuchet",
+          "asset": "barrage",
+          "damage": 105
+        },
+        {
+          "id": "stinger",
+          "name": "Skylance",
+          "asset": "stinger",
+          "damage": 105
+        },
+        {
+          "id": "carrier",
+          "name": "Caravan",
+          "asset": "carrier",
+          "damage": 105
+        },
+        {
+          "id": "supplier",
+          "name": "Supply Cart",
+          "asset": "supplier",
+          "damage": 105
+        },
+        {
+          "id": "juggernaut",
+          "name": "Warbeast",
+          "asset": "juggernaut",
+          "damage": 95
+        },
+        {
+          "id": "flak",
+          "name": "Hawkbane",
+          "asset": "flak",
+          "damage": 95
+        },
+        {
+          "id": "lurker",
+          "name": "Diver",
+          "asset": "lurker",
+          "damage": 95
+        },
+        {
+          "id": "barge",
+          "name": "Raft",
+          "asset": "barge",
+          "damage": 95
+        },
+        {
+          "id": "behemoth",
+          "name": "Colossus",
+          "asset": "behemoth",
+          "damage": 90
+        },
+        {
+          "id": "frigate",
+          "name": "Galley",
+          "asset": "frigate",
+          "damage": 85
+        },
+        {
+          "id": "dreadnought",
+          "name": "Flagship",
+          "asset": "dreadnought",
+          "damage": 75
+        }
+      ],
+      "secondary": [],
+      "taken": [
+        {
+          "id": "stinger",
+          "name": "Skylance",
+          "asset": "stinger",
+          "damage": 100
+        },
+        {
+          "id": "raptor",
+          "name": "Sky Knight",
+          "asset": "raptor",
+          "damage": 100
+        },
+        {
+          "id": "flak",
+          "name": "Hawkbane",
+          "asset": "flak",
+          "damage": 75
+        },
+        {
+          "id": "frigate",
+          "name": "Galley",
+          "asset": "frigate",
+          "damage": 65
+        }
+      ],
+      "built_at": [
+        "roost"
+      ],
+      "resupplied_at": [
+        "roost"
+      ],
+      "moves": [
+        {
+          "id": "grass",
+          "name": "Grass",
+          "cost": 1
+        },
+        {
+          "id": "tall_grass",
+          "name": "Tall Grass",
+          "cost": 1
+        },
+        {
+          "id": "thicket",
+          "name": "Thicket",
+          "cost": 1
+        },
+        {
+          "id": "brambles",
+          "name": "Brambles",
+          "cost": 1
+        },
+        {
+          "id": "log",
+          "name": "Trail",
+          "cost": 1
+        },
+        {
+          "id": "boulder",
+          "name": "Boulder",
+          "cost": 1
+        },
+        {
+          "id": "hollow",
+          "name": "Hollow",
+          "cost": 1
+        },
+        {
+          "id": "creek",
+          "name": "Creek",
+          "cost": 1
+        },
+        {
+          "id": "pond",
+          "name": "Pond",
+          "cost": 1
+        },
+        {
+          "id": "lily_pads",
+          "name": "Lily Pads",
+          "cost": 1
+        },
+        {
+          "id": "shore",
+          "name": "Shore",
+          "cost": 1
+        },
+        {
+          "id": "base",
+          "name": "Base",
+          "cost": 1
+        },
+        {
+          "id": "workshop",
+          "name": "Workshop",
+          "cost": 1
+        },
+        {
+          "id": "dock",
+          "name": "Dock",
+          "cost": 1
+        },
+        {
+          "id": "roost",
+          "name": "Roost",
+          "cost": 1
+        },
+        {
+          "id": "outpost",
+          "name": "Outpost",
+          "cost": 1
+        },
+        {
+          "id": "storehouse",
+          "name": "Storehouse",
+          "cost": 1
+        }
+      ],
+      "carried_by": [],
+      "commanders": [
+        {
+          "id": "dusty",
+          "name": "Dusty",
+          "notes": [
+            "+10% attack (Super CO Power)",
+            "+1 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "talon_co",
+          "name": "Talon",
+          "notes": [
+            "+20% attack",
+            "+10% attack (CO Power)",
+            "+1 movement (CO Power)",
+            "+30% attack (Super CO Power)",
+            "+2 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "bandit",
+          "name": "Bandit",
+          "notes": [
+            "−10% attack"
+          ]
+        },
+        {
+          "id": "grimjaw",
+          "name": "Grimjaw",
+          "notes": [
+            "−20% attack"
+          ]
+        },
+        {
+          "id": "bjorn",
+          "name": "Bjorn",
+          "notes": [
+            "−10% attack"
+          ]
+        },
+        {
+          "id": "prowler",
+          "name": "Prowler",
+          "notes": [
+            "+15% attack",
+            "+10% defense",
+            "+5% attack (CO Power)",
+            "+10% defense (CO Power)",
+            "+5% attack (Super CO Power)",
+            "+10% defense (Super CO Power)"
+          ]
+        },
+        {
+          "id": "tusker",
+          "name": "Tusker",
+          "notes": [
+            "−30% attack"
+          ]
+        },
+        {
+          "id": "rumble",
+          "name": "Rumble",
+          "notes": [
+            "−10% attack"
+          ]
+        },
+        {
+          "id": "kira",
+          "name": "Kira",
+          "notes": [
+            "+30% attack",
+            "+30% defense",
+            "+20% attack (CO Power)",
+            "+20% attack (Super CO Power)",
+            "+20% defense (Super CO Power)"
+          ]
+        },
+        {
+          "id": "tanuki",
+          "name": "Tanuki",
+          "notes": [
+            "+1 vision",
+            "+1 vision (CO Power)",
+            "+1 vision (Super CO Power)"
+          ]
+        },
+        {
+          "id": "goro",
+          "name": "Goro",
+          "notes": [
+            "+30% attack",
+            "−20% defense",
+            "+20% attack (CO Power)",
+            "+50% attack (Super CO Power)"
+          ]
+        },
+        {
+          "id": "wriggle",
+          "name": "Wriggle",
+          "notes": [
+            "+1 movement (CO Power)",
+            "+2 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "carapace",
+          "name": "Carapace",
+          "notes": [
+            "+10% attack"
+          ]
+        },
+        {
+          "id": "hivemind",
+          "name": "Hivemind",
+          "notes": [
+            "+20% attack",
+            "+20% defense"
+          ]
+        },
+        {
+          "id": "cinder",
+          "name": "Cinder",
+          "notes": [
+            "+1 movement (CO Power)",
+            "+2 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "vesper",
+          "name": "Vesper",
+          "notes": [
+            "+10% attack",
+            "+10% defense"
+          ]
+        }
+      ]
     },
     {
       "id": "barge",
       "name": "Raft",
       "asset": "barge",
       "description": "Sturdy raft that carries troops across water",
-      "cost": 12000
+      "aw": "Lander",
+      "class": "NavalTransport",
+      "class_name": "Naval transport",
+      "move_type": "naval_transport",
+      "domain": "sea",
+      "cost": 12000,
+      "movement": 6,
+      "vision": 2,
+      "range": [
+        0,
+        0
+      ],
+      "range_text": "—",
+      "direct": false,
+      "indirect": false,
+      "attacks": false,
+      "ammo": 0,
+      "stamina": 99,
+      "daily_stamina": 1,
+      "can_capture": false,
+      "carries": [
+        "Foot",
+        "Heavy foot",
+        "Wheels",
+        "Treads",
+        "Ground transport"
+      ],
+      "carries_classes": [
+        "Foot",
+        "Mech",
+        "Wheels",
+        "Treads",
+        "Transport"
+      ],
+      "capacity": 2,
+      "primary": [],
+      "secondary": [],
+      "taken": [
+        {
+          "id": "talon",
+          "name": "Bombardier",
+          "asset": "talon",
+          "damage": 95
+        },
+        {
+          "id": "lurker",
+          "name": "Diver",
+          "asset": "lurker",
+          "damage": 95
+        },
+        {
+          "id": "dreadnought",
+          "name": "Flagship",
+          "asset": "dreadnought",
+          "damage": 95
+        }
+      ],
+      "built_at": [
+        "dock"
+      ],
+      "resupplied_at": [
+        "dock"
+      ],
+      "moves": [
+        {
+          "id": "grass",
+          "name": "Grass",
+          "cost": 99
+        },
+        {
+          "id": "tall_grass",
+          "name": "Tall Grass",
+          "cost": 99
+        },
+        {
+          "id": "thicket",
+          "name": "Thicket",
+          "cost": 99
+        },
+        {
+          "id": "brambles",
+          "name": "Brambles",
+          "cost": 99
+        },
+        {
+          "id": "log",
+          "name": "Trail",
+          "cost": 99
+        },
+        {
+          "id": "boulder",
+          "name": "Boulder",
+          "cost": 99
+        },
+        {
+          "id": "hollow",
+          "name": "Hollow",
+          "cost": 99
+        },
+        {
+          "id": "creek",
+          "name": "Creek",
+          "cost": 99
+        },
+        {
+          "id": "pond",
+          "name": "Pond",
+          "cost": 1
+        },
+        {
+          "id": "lily_pads",
+          "name": "Lily Pads",
+          "cost": 2
+        },
+        {
+          "id": "shore",
+          "name": "Shore",
+          "cost": 1
+        },
+        {
+          "id": "base",
+          "name": "Base",
+          "cost": 99
+        },
+        {
+          "id": "workshop",
+          "name": "Workshop",
+          "cost": 99
+        },
+        {
+          "id": "dock",
+          "name": "Dock",
+          "cost": 1
+        },
+        {
+          "id": "roost",
+          "name": "Roost",
+          "cost": 99
+        },
+        {
+          "id": "outpost",
+          "name": "Outpost",
+          "cost": 99
+        },
+        {
+          "id": "storehouse",
+          "name": "Storehouse",
+          "cost": 99
+        }
+      ],
+      "carried_by": [],
+      "commanders": [
+        {
+          "id": "dusty",
+          "name": "Dusty",
+          "notes": [
+            "+10% attack (Super CO Power)",
+            "+1 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "bandit",
+          "name": "Bandit",
+          "notes": [
+            "+1 movement"
+          ]
+        },
+        {
+          "id": "bjorn",
+          "name": "Bjorn",
+          "notes": [
+            "−10% attack"
+          ]
+        },
+        {
+          "id": "prowler",
+          "name": "Prowler",
+          "notes": [
+            "−30% attack"
+          ]
+        },
+        {
+          "id": "tusker",
+          "name": "Tusker",
+          "notes": [
+            "+25% defense",
+            "+1 movement"
+          ]
+        },
+        {
+          "id": "rumble",
+          "name": "Rumble",
+          "notes": [
+            "−10% attack"
+          ]
+        },
+        {
+          "id": "kira",
+          "name": "Kira",
+          "notes": [
+            "+30% attack",
+            "+30% defense",
+            "+20% attack (CO Power)",
+            "+20% attack (Super CO Power)",
+            "+20% defense (Super CO Power)"
+          ]
+        },
+        {
+          "id": "tanuki",
+          "name": "Tanuki",
+          "notes": [
+            "+1 vision",
+            "+1 vision (CO Power)",
+            "+1 vision (Super CO Power)"
+          ]
+        },
+        {
+          "id": "sensei",
+          "name": "Sensei",
+          "notes": [
+            "−10% attack",
+            "+1 movement"
+          ]
+        },
+        {
+          "id": "goro",
+          "name": "Goro",
+          "notes": [
+            "+30% attack",
+            "−20% defense",
+            "+20% attack (CO Power)",
+            "+50% attack (Super CO Power)"
+          ]
+        },
+        {
+          "id": "wriggle",
+          "name": "Wriggle",
+          "notes": [
+            "+1 movement (CO Power)",
+            "+2 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "carapace",
+          "name": "Carapace",
+          "notes": [
+            "+10% attack"
+          ]
+        },
+        {
+          "id": "hivemind",
+          "name": "Hivemind",
+          "notes": [
+            "+20% attack",
+            "+20% defense"
+          ]
+        },
+        {
+          "id": "cinder",
+          "name": "Cinder",
+          "notes": [
+            "+1 movement (CO Power)",
+            "+2 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "vesper",
+          "name": "Vesper",
+          "notes": [
+            "+10% attack",
+            "+10% defense"
+          ]
+        }
+      ]
     },
     {
       "id": "frigate",
       "name": "Galley",
       "asset": "frigate",
       "description": "Oared warship that hunts divers and flyers",
-      "cost": 18000
+      "aw": "Cruiser",
+      "class": "Naval",
+      "class_name": "Naval",
+      "move_type": "naval",
+      "domain": "sea",
+      "cost": 18000,
+      "movement": 6,
+      "vision": 5,
+      "range": [
+        1,
+        1
+      ],
+      "range_text": "1",
+      "direct": true,
+      "indirect": false,
+      "attacks": true,
+      "ammo": 9,
+      "stamina": 99,
+      "daily_stamina": 1,
+      "can_capture": false,
+      "carries": [],
+      "carries_classes": [],
+      "capacity": 0,
+      "primary": [
+        {
+          "id": "lurker",
+          "name": "Diver",
+          "asset": "lurker",
+          "damage": 90
+        }
+      ],
+      "secondary": [
+        {
+          "id": "skywing",
+          "name": "Hawk Rider",
+          "asset": "skywing",
+          "damage": 115
+        },
+        {
+          "id": "ferrier",
+          "name": "Skyferry",
+          "asset": "ferrier",
+          "damage": 115
+        },
+        {
+          "id": "talon",
+          "name": "Bombardier",
+          "asset": "talon",
+          "damage": 65
+        },
+        {
+          "id": "raptor",
+          "name": "Sky Knight",
+          "asset": "raptor",
+          "damage": 55
+        }
+      ],
+      "taken": [
+        {
+          "id": "dreadnought",
+          "name": "Flagship",
+          "asset": "dreadnought",
+          "damage": 95
+        },
+        {
+          "id": "talon",
+          "name": "Bombardier",
+          "asset": "talon",
+          "damage": 85
+        },
+        {
+          "id": "lurker",
+          "name": "Diver",
+          "asset": "lurker",
+          "damage": 55
+        }
+      ],
+      "built_at": [
+        "dock"
+      ],
+      "resupplied_at": [
+        "dock"
+      ],
+      "moves": [
+        {
+          "id": "grass",
+          "name": "Grass",
+          "cost": 99
+        },
+        {
+          "id": "tall_grass",
+          "name": "Tall Grass",
+          "cost": 99
+        },
+        {
+          "id": "thicket",
+          "name": "Thicket",
+          "cost": 99
+        },
+        {
+          "id": "brambles",
+          "name": "Brambles",
+          "cost": 99
+        },
+        {
+          "id": "log",
+          "name": "Trail",
+          "cost": 99
+        },
+        {
+          "id": "boulder",
+          "name": "Boulder",
+          "cost": 99
+        },
+        {
+          "id": "hollow",
+          "name": "Hollow",
+          "cost": 99
+        },
+        {
+          "id": "creek",
+          "name": "Creek",
+          "cost": 99
+        },
+        {
+          "id": "pond",
+          "name": "Pond",
+          "cost": 1
+        },
+        {
+          "id": "lily_pads",
+          "name": "Lily Pads",
+          "cost": 2
+        },
+        {
+          "id": "shore",
+          "name": "Shore",
+          "cost": 99
+        },
+        {
+          "id": "base",
+          "name": "Base",
+          "cost": 99
+        },
+        {
+          "id": "workshop",
+          "name": "Workshop",
+          "cost": 99
+        },
+        {
+          "id": "dock",
+          "name": "Dock",
+          "cost": 1
+        },
+        {
+          "id": "roost",
+          "name": "Roost",
+          "cost": 99
+        },
+        {
+          "id": "outpost",
+          "name": "Outpost",
+          "cost": 99
+        },
+        {
+          "id": "storehouse",
+          "name": "Storehouse",
+          "cost": 99
+        }
+      ],
+      "carried_by": [],
+      "commanders": [
+        {
+          "id": "dusty",
+          "name": "Dusty",
+          "notes": [
+            "+10% attack (Super CO Power)",
+            "+1 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "talon_co",
+          "name": "Talon",
+          "notes": [
+            "+20% attack",
+            "+10% attack (CO Power)",
+            "+1 movement (CO Power)",
+            "+30% attack (Super CO Power)",
+            "+2 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "bandit",
+          "name": "Bandit",
+          "notes": [
+            "−10% attack"
+          ]
+        },
+        {
+          "id": "grimjaw",
+          "name": "Grimjaw",
+          "notes": [
+            "−20% attack"
+          ]
+        },
+        {
+          "id": "bjorn",
+          "name": "Bjorn",
+          "notes": [
+            "−10% attack"
+          ]
+        },
+        {
+          "id": "prowler",
+          "name": "Prowler",
+          "notes": [
+            "−30% attack"
+          ]
+        },
+        {
+          "id": "tusker",
+          "name": "Tusker",
+          "notes": [
+            "+25% defense",
+            "+1 movement"
+          ]
+        },
+        {
+          "id": "rumble",
+          "name": "Rumble",
+          "notes": [
+            "−10% attack"
+          ]
+        },
+        {
+          "id": "kira",
+          "name": "Kira",
+          "notes": [
+            "+30% attack",
+            "+30% defense",
+            "+20% attack (CO Power)",
+            "+20% attack (Super CO Power)",
+            "+20% defense (Super CO Power)"
+          ]
+        },
+        {
+          "id": "tanuki",
+          "name": "Tanuki",
+          "notes": [
+            "+1 vision",
+            "+1 vision (CO Power)",
+            "+1 vision (Super CO Power)"
+          ]
+        },
+        {
+          "id": "sensei",
+          "name": "Sensei",
+          "notes": [
+            "−10% attack"
+          ]
+        },
+        {
+          "id": "goro",
+          "name": "Goro",
+          "notes": [
+            "+30% attack",
+            "−20% defense",
+            "+20% attack (CO Power)",
+            "+50% attack (Super CO Power)"
+          ]
+        },
+        {
+          "id": "wriggle",
+          "name": "Wriggle",
+          "notes": [
+            "+1 movement (CO Power)",
+            "+2 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "carapace",
+          "name": "Carapace",
+          "notes": [
+            "+10% attack"
+          ]
+        },
+        {
+          "id": "hivemind",
+          "name": "Hivemind",
+          "notes": [
+            "+20% attack",
+            "+20% defense"
+          ]
+        },
+        {
+          "id": "cinder",
+          "name": "Cinder",
+          "notes": [
+            "+1 movement (CO Power)",
+            "+2 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "vesper",
+          "name": "Vesper",
+          "notes": [
+            "+10% attack",
+            "+10% defense"
+          ]
+        }
+      ]
     },
     {
       "id": "lurker",
       "name": "Diver",
       "asset": "lurker",
       "description": "Underwater ambusher that strikes unseen",
-      "cost": 20000
+      "aw": "Sub",
+      "class": "Naval",
+      "class_name": "Naval",
+      "move_type": "naval",
+      "domain": "sea",
+      "cost": 20000,
+      "movement": 5,
+      "vision": 3,
+      "range": [
+        1,
+        1
+      ],
+      "range_text": "1",
+      "direct": true,
+      "indirect": false,
+      "attacks": true,
+      "ammo": 6,
+      "stamina": 70,
+      "daily_stamina": 1,
+      "can_capture": false,
+      "carries": [],
+      "carries_classes": [],
+      "capacity": 0,
+      "primary": [
+        {
+          "id": "barge",
+          "name": "Raft",
+          "asset": "barge",
+          "damage": 95
+        },
+        {
+          "id": "frigate",
+          "name": "Galley",
+          "asset": "frigate",
+          "damage": 55
+        },
+        {
+          "id": "lurker",
+          "name": "Diver",
+          "asset": "lurker",
+          "damage": 55
+        },
+        {
+          "id": "dreadnought",
+          "name": "Flagship",
+          "asset": "dreadnought",
+          "damage": 55
+        }
+      ],
+      "secondary": [],
+      "taken": [
+        {
+          "id": "talon",
+          "name": "Bombardier",
+          "asset": "talon",
+          "damage": 95
+        },
+        {
+          "id": "dreadnought",
+          "name": "Flagship",
+          "asset": "dreadnought",
+          "damage": 95
+        },
+        {
+          "id": "frigate",
+          "name": "Galley",
+          "asset": "frigate",
+          "damage": 90
+        },
+        {
+          "id": "lurker",
+          "name": "Diver",
+          "asset": "lurker",
+          "damage": 55
+        }
+      ],
+      "built_at": [
+        "dock"
+      ],
+      "resupplied_at": [
+        "dock"
+      ],
+      "moves": [
+        {
+          "id": "grass",
+          "name": "Grass",
+          "cost": 99
+        },
+        {
+          "id": "tall_grass",
+          "name": "Tall Grass",
+          "cost": 99
+        },
+        {
+          "id": "thicket",
+          "name": "Thicket",
+          "cost": 99
+        },
+        {
+          "id": "brambles",
+          "name": "Brambles",
+          "cost": 99
+        },
+        {
+          "id": "log",
+          "name": "Trail",
+          "cost": 99
+        },
+        {
+          "id": "boulder",
+          "name": "Boulder",
+          "cost": 99
+        },
+        {
+          "id": "hollow",
+          "name": "Hollow",
+          "cost": 99
+        },
+        {
+          "id": "creek",
+          "name": "Creek",
+          "cost": 99
+        },
+        {
+          "id": "pond",
+          "name": "Pond",
+          "cost": 1
+        },
+        {
+          "id": "lily_pads",
+          "name": "Lily Pads",
+          "cost": 2
+        },
+        {
+          "id": "shore",
+          "name": "Shore",
+          "cost": 99
+        },
+        {
+          "id": "base",
+          "name": "Base",
+          "cost": 99
+        },
+        {
+          "id": "workshop",
+          "name": "Workshop",
+          "cost": 99
+        },
+        {
+          "id": "dock",
+          "name": "Dock",
+          "cost": 1
+        },
+        {
+          "id": "roost",
+          "name": "Roost",
+          "cost": 99
+        },
+        {
+          "id": "outpost",
+          "name": "Outpost",
+          "cost": 99
+        },
+        {
+          "id": "storehouse",
+          "name": "Storehouse",
+          "cost": 99
+        }
+      ],
+      "carried_by": [],
+      "commanders": [
+        {
+          "id": "dusty",
+          "name": "Dusty",
+          "notes": [
+            "+10% attack (Super CO Power)",
+            "+1 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "talon_co",
+          "name": "Talon",
+          "notes": [
+            "+20% attack",
+            "+10% attack (CO Power)",
+            "+1 movement (CO Power)",
+            "+30% attack (Super CO Power)",
+            "+2 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "bandit",
+          "name": "Bandit",
+          "notes": [
+            "−10% attack"
+          ]
+        },
+        {
+          "id": "grimjaw",
+          "name": "Grimjaw",
+          "notes": [
+            "−20% attack"
+          ]
+        },
+        {
+          "id": "bjorn",
+          "name": "Bjorn",
+          "notes": [
+            "−10% attack"
+          ]
+        },
+        {
+          "id": "prowler",
+          "name": "Prowler",
+          "notes": [
+            "−30% attack"
+          ]
+        },
+        {
+          "id": "tusker",
+          "name": "Tusker",
+          "notes": [
+            "+25% defense",
+            "+1 movement"
+          ]
+        },
+        {
+          "id": "rumble",
+          "name": "Rumble",
+          "notes": [
+            "−10% attack"
+          ]
+        },
+        {
+          "id": "kira",
+          "name": "Kira",
+          "notes": [
+            "+30% attack",
+            "+30% defense",
+            "+20% attack (CO Power)",
+            "+20% attack (Super CO Power)",
+            "+20% defense (Super CO Power)"
+          ]
+        },
+        {
+          "id": "tanuki",
+          "name": "Tanuki",
+          "notes": [
+            "+1 vision",
+            "+1 vision (CO Power)",
+            "+1 vision (Super CO Power)"
+          ]
+        },
+        {
+          "id": "sensei",
+          "name": "Sensei",
+          "notes": [
+            "−10% attack"
+          ]
+        },
+        {
+          "id": "goro",
+          "name": "Goro",
+          "notes": [
+            "+30% attack",
+            "−20% defense",
+            "+20% attack (CO Power)",
+            "+50% attack (Super CO Power)"
+          ]
+        },
+        {
+          "id": "wriggle",
+          "name": "Wriggle",
+          "notes": [
+            "+1 movement (CO Power)",
+            "+2 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "carapace",
+          "name": "Carapace",
+          "notes": [
+            "+10% attack"
+          ]
+        },
+        {
+          "id": "hivemind",
+          "name": "Hivemind",
+          "notes": [
+            "+20% attack",
+            "+20% defense"
+          ]
+        },
+        {
+          "id": "cinder",
+          "name": "Cinder",
+          "notes": [
+            "+1 movement (CO Power)",
+            "+2 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "vesper",
+          "name": "Vesper",
+          "notes": [
+            "+10% attack",
+            "+10% defense"
+          ]
+        }
+      ]
     },
     {
       "id": "dreadnought",
       "name": "Flagship",
       "asset": "dreadnought",
       "description": "Mighty warship that bombards from afar",
-      "cost": 28000
+      "aw": "Battleship",
+      "class": "Naval",
+      "class_name": "Naval",
+      "move_type": "naval",
+      "domain": "sea",
+      "cost": 28000,
+      "movement": 5,
+      "vision": 4,
+      "range": [
+        2,
+        6
+      ],
+      "range_text": "2–6",
+      "direct": false,
+      "indirect": true,
+      "attacks": true,
+      "ammo": 9,
+      "stamina": 99,
+      "daily_stamina": 1,
+      "can_capture": false,
+      "carries": [],
+      "carries_classes": [],
+      "capacity": 0,
+      "primary": [
+        {
+          "id": "scout",
+          "name": "Militia",
+          "asset": "scout",
+          "damage": 95
+        },
+        {
+          "id": "frigate",
+          "name": "Galley",
+          "asset": "frigate",
+          "damage": 95
+        },
+        {
+          "id": "lurker",
+          "name": "Diver",
+          "asset": "lurker",
+          "damage": 95
+        },
+        {
+          "id": "barge",
+          "name": "Raft",
+          "asset": "barge",
+          "damage": 95
+        },
+        {
+          "id": "shocktrooper",
+          "name": "Halberdier",
+          "asset": "shocktrooper",
+          "damage": 90
+        },
+        {
+          "id": "recon",
+          "name": "Outrider",
+          "asset": "recon",
+          "damage": 90
+        },
+        {
+          "id": "flak",
+          "name": "Hawkbane",
+          "asset": "flak",
+          "damage": 85
+        },
+        {
+          "id": "barrage",
+          "name": "Trebuchet",
+          "asset": "barrage",
+          "damage": 85
+        },
+        {
+          "id": "stinger",
+          "name": "Skylance",
+          "asset": "stinger",
+          "damage": 85
+        },
+        {
+          "id": "ironclad",
+          "name": "Charger",
+          "asset": "ironclad",
+          "damage": 80
+        },
+        {
+          "id": "siege",
+          "name": "Catapult",
+          "asset": "siege",
+          "damage": 80
+        },
+        {
+          "id": "carrier",
+          "name": "Caravan",
+          "asset": "carrier",
+          "damage": 80
+        },
+        {
+          "id": "supplier",
+          "name": "Supply Cart",
+          "asset": "supplier",
+          "damage": 80
+        },
+        {
+          "id": "juggernaut",
+          "name": "Warbeast",
+          "asset": "juggernaut",
+          "damage": 55
+        },
+        {
+          "id": "behemoth",
+          "name": "Colossus",
+          "asset": "behemoth",
+          "damage": 50
+        },
+        {
+          "id": "dreadnought",
+          "name": "Flagship",
+          "asset": "dreadnought",
+          "damage": 50
+        }
+      ],
+      "secondary": [],
+      "taken": [
+        {
+          "id": "talon",
+          "name": "Bombardier",
+          "asset": "talon",
+          "damage": 75
+        },
+        {
+          "id": "lurker",
+          "name": "Diver",
+          "asset": "lurker",
+          "damage": 55
+        },
+        {
+          "id": "dreadnought",
+          "name": "Flagship",
+          "asset": "dreadnought",
+          "damage": 50
+        }
+      ],
+      "built_at": [
+        "dock"
+      ],
+      "resupplied_at": [
+        "dock"
+      ],
+      "moves": [
+        {
+          "id": "grass",
+          "name": "Grass",
+          "cost": 99
+        },
+        {
+          "id": "tall_grass",
+          "name": "Tall Grass",
+          "cost": 99
+        },
+        {
+          "id": "thicket",
+          "name": "Thicket",
+          "cost": 99
+        },
+        {
+          "id": "brambles",
+          "name": "Brambles",
+          "cost": 99
+        },
+        {
+          "id": "log",
+          "name": "Trail",
+          "cost": 99
+        },
+        {
+          "id": "boulder",
+          "name": "Boulder",
+          "cost": 99
+        },
+        {
+          "id": "hollow",
+          "name": "Hollow",
+          "cost": 99
+        },
+        {
+          "id": "creek",
+          "name": "Creek",
+          "cost": 99
+        },
+        {
+          "id": "pond",
+          "name": "Pond",
+          "cost": 1
+        },
+        {
+          "id": "lily_pads",
+          "name": "Lily Pads",
+          "cost": 2
+        },
+        {
+          "id": "shore",
+          "name": "Shore",
+          "cost": 99
+        },
+        {
+          "id": "base",
+          "name": "Base",
+          "cost": 99
+        },
+        {
+          "id": "workshop",
+          "name": "Workshop",
+          "cost": 99
+        },
+        {
+          "id": "dock",
+          "name": "Dock",
+          "cost": 1
+        },
+        {
+          "id": "roost",
+          "name": "Roost",
+          "cost": 99
+        },
+        {
+          "id": "outpost",
+          "name": "Outpost",
+          "cost": 99
+        },
+        {
+          "id": "storehouse",
+          "name": "Storehouse",
+          "cost": 99
+        }
+      ],
+      "carried_by": [],
+      "commanders": [
+        {
+          "id": "dusty",
+          "name": "Dusty",
+          "notes": [
+            "+10% attack (Super CO Power)",
+            "+1 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "talon_co",
+          "name": "Talon",
+          "notes": [
+            "−10% attack",
+            "−1 range"
+          ]
+        },
+        {
+          "id": "grimjaw",
+          "name": "Grimjaw",
+          "notes": [
+            "+20% attack",
+            "+1 range",
+            "+20% attack (CO Power)",
+            "+1 range (CO Power)",
+            "+20% attack (Super CO Power)",
+            "+2 range (Super CO Power)"
+          ]
+        },
+        {
+          "id": "bjorn",
+          "name": "Bjorn",
+          "notes": [
+            "−10% attack"
+          ]
+        },
+        {
+          "id": "prowler",
+          "name": "Prowler",
+          "notes": [
+            "−30% attack"
+          ]
+        },
+        {
+          "id": "tusker",
+          "name": "Tusker",
+          "notes": [
+            "+25% defense",
+            "+1 movement"
+          ]
+        },
+        {
+          "id": "rumble",
+          "name": "Rumble",
+          "notes": [
+            "−10% attack"
+          ]
+        },
+        {
+          "id": "kira",
+          "name": "Kira",
+          "notes": [
+            "+30% attack",
+            "+30% defense",
+            "+20% attack (CO Power)",
+            "+20% attack (Super CO Power)",
+            "+20% defense (Super CO Power)"
+          ]
+        },
+        {
+          "id": "tanuki",
+          "name": "Tanuki",
+          "notes": [
+            "+1 vision",
+            "+1 vision (CO Power)",
+            "+1 vision (Super CO Power)"
+          ]
+        },
+        {
+          "id": "sensei",
+          "name": "Sensei",
+          "notes": [
+            "−10% attack"
+          ]
+        },
+        {
+          "id": "goro",
+          "name": "Goro",
+          "notes": [
+            "+30% attack",
+            "−20% defense",
+            "+20% attack (CO Power)",
+            "+50% attack (Super CO Power)"
+          ]
+        },
+        {
+          "id": "wriggle",
+          "name": "Wriggle",
+          "notes": [
+            "+1 movement (CO Power)",
+            "+2 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "carapace",
+          "name": "Carapace",
+          "notes": [
+            "+10% attack"
+          ]
+        },
+        {
+          "id": "hivemind",
+          "name": "Hivemind",
+          "notes": [
+            "+20% attack",
+            "+20% defense"
+          ]
+        },
+        {
+          "id": "cinder",
+          "name": "Cinder",
+          "notes": [
+            "+1 movement (CO Power)",
+            "+2 movement (Super CO Power)"
+          ]
+        },
+        {
+          "id": "vesper",
+          "name": "Vesper",
+          "notes": [
+            "+10% attack",
+            "+10% defense"
+          ]
+        }
+      ]
     }
   ]
 }

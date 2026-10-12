@@ -1,0 +1,59 @@
+{% extends "wiki.html" %}
+{% import "wiki-macros.html" as w %}
+{%- block crumbs %}{{ w::crumbs(section="Maps", url="/maps/", page=page.title) }}{% endblock %}
+{%- block heading %}{{ page.title }}{% endblock %}
+{%- block lead %}{% if page.description %}<p class="lead">{{ page.description }}</p>{% endif %}{% endblock %}
+
+{% block wiki %}
+{%- set mp = load_data(path="data/maps.json") | get(key="maps") | filter(attribute="id", value=page.extra.id) | first %}
+{%- set terrain = load_data(path="data/terrain.json") | get(key="terrain") %}
+<article class="card article">
+    <figure class="map-figure">
+        <img src="/img/maps/{{ mp.id }}.webp" alt="The {{ mp.name }} map, tile by tile" width="{{ mp.width * 32 }}" height="{{ mp.height * 32 }}">
+    </figure>
+    <aside class="infobox">
+        <p class="infobox-title">{{ mp.name }}</p>
+        <table>
+            <tr><th>Size</th><td>{{ mp.width }} × {{ mp.height }} tiles</td></tr>
+            <tr><th>Armies</th><td>{{ mp.armies | length }}</td></tr>
+            <tr><th>Origin</th><td>{% if mp.war_room %}Advance Wars War Room{% else %}Made for Paw &amp; Claw{% endif %}</td></tr>
+            <tr><th>Starting units</th><td>{% if mp.units > 0 %}{{ mp.units }}{% else %}None: build from day 1{% endif %}</td></tr>
+            {%- for a in mp.armies %}
+            <tr><th><span class="swatch" style="--faction: {{ a.color }}"></span>{{ a.name }}</th><td>{{ mp.starting_income | nth(n=loop.index0) | num_format }} funds a day at the start</td></tr>
+            {%- endfor %}
+        </table>
+    </aside>
+
+    <h2 id="properties">Properties</h2>
+    <p>Who owns what when the battle starts. Neutral properties are up for grabs.</p>
+    <div class="table-scroll">
+    <table class="wtable">
+        <thead><tr><th>Property</th>{% for a in mp.armies %}<th class="num"><span class="swatch" style="--faction: {{ a.color }}"></span>{{ a.name }}</th>{% endfor %}<th class="num">Neutral</th><th class="num">Total</th></tr></thead>
+        <tbody>
+            {%- for p in mp.properties %}
+            <tr><td>{{ w::terrain_link(id=p.id, name=p.name) }}</td>{% for n in p.owned %}<td class="num">{{ n }}</td>{% endfor %}<td class="num">{{ p.neutral }}</td><td class="num">{{ p.total }}</td></tr>
+            {%- endfor %}
+        </tbody>
+    </table>
+    </div>
+
+    <h2 id="terrain">Terrain</h2>
+    {%- set total = mp.width * mp.height %}
+    <ul class="bars terrain-bars">
+        {%- for t in mp.terrain %}
+        <li>{{ w::terrain_link(id=t.id, name=t.name) }}<span class="bar" style="--v: {{ t.count * 100 / total }}"><b>{{ t.count }} tile{% if t.count != 1 %}s{% endif %}</b></span></li>
+        {%- endfor %}
+    </ul>
+
+    <h2 id="play">Play it</h2>
+    <p>Open <a href="/play/">Play</a>, choose <b>Skirmish</b>, then pick {{ mp.name }} as the battlefield.</p>
+</article>
+{% endblock %}
+
+{% block pager %}
+<nav class="pager" aria-label="More maps">
+    {%- if page.lower %}<a href="{{ page.lower.permalink }}">‹ {{ page.lower.title }}</a>{% else %}<span></span>{% endif %}
+    <a href="/maps/">All maps</a>
+    {%- if page.higher %}<a href="{{ page.higher.permalink }}">{{ page.higher.title }} ›</a>{% else %}<span></span>{% endif %}
+</nav>
+{% endblock %}

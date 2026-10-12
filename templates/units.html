@@ -1,0 +1,39 @@
+{% extends "wiki.html" %}
+{% import "wiki-macros.html" as w %}
+{%- block crumbs %}{{ w::crumbs(section="Units") }}{% endblock %}
+{%- block heading %}{{ section.title }}{% endblock %}
+{%- block lead %}<p class="lead">{{ section.description }}</p>{% endblock %}
+
+{% block wiki %}
+{%- set units = load_data(path="data/units.json") | get(key="units") %}
+{%- set terrain = load_data(path="data/terrain.json") | get(key="terrain") %}
+<article class="card article">
+    {{ section.content | safe }}
+    {%- for domain in ["land", "air", "sea"] %}
+    <h2 id="{{ domain }}">{% if domain == "land" %}Ground units{% elif domain == "air" %}Fliers{% else %}Boats{% endif %}</h2>
+    <div class="table-scroll">
+    <table class="wtable unit-table">
+        <thead>
+            <tr><th>Unit</th><th>Advance Wars</th><th>Class</th><th class="num">Cost</th><th class="num">Move</th><th class="num">Vision</th><th class="num">Range</th><th class="num">Ammo</th><th class="num">Stamina</th></tr>
+        </thead>
+        <tbody>
+            {%- for u in units | filter(attribute="domain", value=domain) %}
+            <tr>
+                <td>{{ w::unit_link(id=u.id, name=u.name, asset=u.asset) }}</td>
+                <td>{{ u.aw }}</td>
+                <td>{{ u.class_name }}</td>
+                <td class="num">{{ u.cost | num_format }}</td>
+                <td class="num">{{ u.movement }}</td>
+                <td class="num">{{ u.vision }}</td>
+                <td class="num">{{ u.range_text }}</td>
+                <td class="num">{% if u.ammo > 0 %}{{ u.ammo }}{% else %}—{% endif %}</td>
+                <td class="num">{{ u.stamina }}{% if u.daily_stamina > 0 %} <small>−{{ u.daily_stamina }}/day</small>{% endif %}</td>
+            </tr>
+            {%- endfor %}
+        </tbody>
+    </table>
+    </div>
+    {%- endfor %}
+    <p class="note">See the <a href="/damage/">damage chart</a> for every matchup at once, and <a href="/terrain/">terrain</a> for movement costs.</p>
+</article>
+{% endblock %}

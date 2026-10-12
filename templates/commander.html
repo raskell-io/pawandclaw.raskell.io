@@ -1,0 +1,72 @@
+{% extends "wiki.html" %}
+{% import "wiki-macros.html" as w %}
+{%- block crumbs %}{{ w::crumbs(section="Commanders", url="/commanders/", page=page.title) }}{% endblock %}
+{%- block heading %}{{ page.title }}{% endblock %}
+{%- block title_art %}<img class="portrait portrait-lg" src="/sprites/portraits/{{ page.extra.id }}.png" alt="" width="96" height="96">{% endblock %}
+{%- block lead %}
+{%- set co = load_data(path="data/commanders.json") | get(key="commanders") | filter(attribute="id", value=page.extra.id) | first %}
+<p class="lead">{{ co.personality }} commander of the {{ co.faction_name }}.</p>
+{%- endblock %}
+
+{% block wiki %}
+{%- set commanders = load_data(path="data/commanders.json") | get(key="commanders") %}
+{%- set co = commanders | filter(attribute="id", value=page.extra.id) | first %}
+<article class="card article" style="--faction: {{ co.color }}">
+    <aside class="infobox">
+        <p class="infobox-title">{{ co.name }}</p>
+        <div class="infobox-art infobox-figure">
+            {%- if co.figure %}
+            <img class="figure" src="/sprites/figures/{{ co.id }}.png" alt="{{ co.name }}, full figure" width="160" height="288">
+            {%- else %}
+            <img class="portrait portrait-xl" src="/sprites/portraits/{{ co.id }}.png" alt="{{ co.name }}" width="128" height="128">
+            {%- endif %}
+        </div>
+        <table>
+            <tr><th>Army</th><td><a href="/armies/#{{ co.faction }}">{{ co.faction_name }}</a></td></tr>
+            <tr><th>Personality</th><td>{{ co.personality }}</td></tr>
+            <tr><th>Plays like</th><td>{{ co.based_on }} <small>(Advance Wars)</small></td></tr>
+            {%- for p in co.powers %}
+            <tr><th>{{ p.kind }}</th><td>{{ p.name }}<br>{{ w::stars(count=p.stars) }}</td></tr>
+            {%- endfor %}
+        </table>
+    </aside>
+
+    <h2 id="overview">Overview</h2>
+    <p>{{ co.description }}</p>
+    <p>{{ co.name }} copies {{ co.based_on }} from <em>Advance Wars 2</em> and <em>Dual Strike</em>: the same
+    everyday strengths and weaknesses, and the same two powers.</p>
+
+    <h2 id="abilities">Always on</h2>
+    {%- if co.abilities %}
+    <ul class="effects">{% for line in co.abilities %}<li>{{ line }}</li>{% endfor %}</ul>
+    {%- else %}
+    <p>Nothing: every unit fights at its standard strength.</p>
+    {%- endif %}
+
+    {%- for p in co.powers %}
+    <h2 id="{% if p.kind == 'CO Power' %}power{% else %}super{% endif %}">{{ p.kind }}: {{ p.name }}</h2>
+    <p class="power-head">{{ w::stars(count=p.stars) }} <span>{{ p.stars }} stars</span></p>
+    <p>{{ p.description }}</p>
+    <ul class="effects">
+        {%- for line in p.lines %}<li>{{ line }}</li>{% endfor %}
+        <li class="muted-item">+10% attack and +10% defense for all units (every power)</li>
+    </ul>
+    {%- endfor %}
+    <p class="note">The power meter fills as units take and deal damage; see <a href="/rules/#commanders-and-powers">commanders and powers</a> in the rules.</p>
+
+    <h2 id="army">Fellow commanders</h2>
+    <ul class="co-row">
+        {%- for other in commanders | filter(attribute="faction", value=co.faction) %}
+        {%- if other.id != co.id %}<li>{{ w::co_link(id=other.id, name=other.name) }}</li>{% endif %}
+        {%- endfor %}
+    </ul>
+</article>
+{% endblock %}
+
+{% block pager %}
+<nav class="pager" aria-label="More commanders">
+    {%- if page.lower %}<a href="{{ page.lower.permalink }}">‹ {{ page.lower.title }}</a>{% else %}<span></span>{% endif %}
+    <a href="/commanders/">All commanders</a>
+    {%- if page.higher %}<a href="{{ page.higher.permalink }}">{{ page.higher.title }} ›</a>{% else %}<span></span>{% endif %}
+</nav>
+{% endblock %}

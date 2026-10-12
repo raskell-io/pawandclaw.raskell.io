@@ -4,9 +4,35 @@
       "id": "dusty",
       "name": "Dusty",
       "faction": "western",
+      "faction_name": "Western Frontier",
+      "color": "#eb541f",
       "personality": "Methodical",
       "description": "A raccoon tinkerer who can patch up anything with twine and pluck. No strengths, no weaknesses.",
+      "based_on": "Andy",
       "figure": true,
+      "abilities": [],
+      "powers": [
+        {
+          "kind": "CO Power",
+          "name": "Patch Job",
+          "description": "All units recover 2 HP.",
+          "stars": 3,
+          "lines": [
+            "All your units recover 2 HP"
+          ]
+        },
+        {
+          "kind": "Super CO Power",
+          "name": "Full Overhaul",
+          "description": "All units recover 5 HP, gain +10% attack and +1 movement.",
+          "stars": 6,
+          "lines": [
+            "+10% attack for all units",
+            "+1 movement for all units",
+            "All your units recover 5 HP"
+          ]
+        }
+      ],
       "power": {
         "name": "Patch Job",
         "description": "All units recover 2 HP.",
@@ -22,9 +48,39 @@
       "id": "talon_co",
       "name": "Talon",
       "faction": "western",
+      "faction_name": "Western Frontier",
+      "color": "#eb541f",
       "personality": "Aggressive",
       "description": "A hawk who swoops straight in. Direct combat units are strong; indirect ones weak and short-ranged.",
+      "based_on": "Max",
       "figure": true,
+      "abilities": [
+        "+20% attack for direct-combat units other than foot soldiers",
+        "−10% attack for indirect (ranged) units",
+        "−1 range for indirect (ranged) units"
+      ],
+      "powers": [
+        {
+          "kind": "CO Power",
+          "name": "Dive",
+          "description": "Direct combat units gain +10% attack and +1 movement.",
+          "stars": 3,
+          "lines": [
+            "+10% attack for direct-combat units other than foot soldiers",
+            "+1 movement for direct-combat units other than foot soldiers"
+          ]
+        },
+        {
+          "kind": "Super CO Power",
+          "name": "Talon Strike",
+          "description": "Direct combat units gain +30% attack and +2 movement.",
+          "stars": 6,
+          "lines": [
+            "+30% attack for direct-combat units other than foot soldiers",
+            "+2 movement for direct-combat units other than foot soldiers"
+          ]
+        }
+      ],
       "power": {
         "name": "Dive",
         "description": "Direct combat units gain +10% attack and +1 movement.",
@@ -40,9 +96,41 @@
       "id": "bandit",
       "name": "Bandit",
       "faction": "western",
+      "faction_name": "Western Frontier",
+      "color": "#eb541f",
       "personality": "Reckless",
       "description": "A raccoon scout who lives off the land. Foot soldiers fight and capture well, transports move further; other direct units are weaker.",
+      "based_on": "Sami",
       "figure": true,
+      "abilities": [
+        "+20% attack for foot soldiers",
+        "−10% attack for direct-combat units other than foot soldiers",
+        "+1 movement for transports",
+        "+50% capture speed"
+      ],
+      "powers": [
+        {
+          "kind": "CO Power",
+          "name": "Quick March",
+          "description": "Foot soldiers gain +1 movement and +10% attack.",
+          "stars": 3,
+          "lines": [
+            "+10% attack for foot soldiers",
+            "+1 movement for foot soldiers"
+          ]
+        },
+        {
+          "kind": "Super CO Power",
+          "name": "Midnight Raid",
+          "description": "Foot soldiers gain +2 movement, +30% attack, and capture in a single turn.",
+          "stars": 8,
+          "lines": [
+            "+30% attack for foot soldiers",
+            "+2 movement for foot soldiers",
+            "Captures in a single turn"
+          ]
+        }
+      ],
       "power": {
         "name": "Quick March",
         "description": "Foot soldiers gain +1 movement and +10% attack.",
@@ -58,9 +146,35 @@
       "id": "clover",
       "name": "Clover",
       "faction": "western",
+      "faction_name": "Western Frontier",
+      "color": "#eb541f",
       "personality": "Aggressive",
       "description": "An opossum captain blessed with uncanny luck. Her attacks can deal surprising damage.",
+      "based_on": "Nell",
       "figure": true,
+      "abilities": [
+        "Good luck: up to +10% extra damage (on top of the usual 0–9)"
+      ],
+      "powers": [
+        {
+          "kind": "CO Power",
+          "name": "Four-Leaf",
+          "description": "Luck rises sharply: attacks can deal far more damage.",
+          "stars": 3,
+          "lines": [
+            "Good luck: up to +40% extra damage (on top of the usual 0–9)"
+          ]
+        },
+        {
+          "kind": "Super CO Power",
+          "name": "Fortune's Favour",
+          "description": "Luck soars: attacks can deal massive damage.",
+          "stars": 6,
+          "lines": [
+            "Good luck: up to +90% extra damage (on top of the usual 0–9)"
+          ]
+        }
+      ],
       "power": {
         "name": "Four-Leaf",
         "description": "Luck rises sharply: attacks can deal far more damage.",
@@ -76,9 +190,36 @@
       "id": "shell",
       "name": "Shell",
       "faction": "western",
+      "faction_name": "Western Frontier",
+      "color": "#eb541f",
       "personality": "Methodical",
       "description": "An old armadillo trader who knows every supplier in the woods. Units cost 10% less.",
+      "based_on": "Hachi",
       "figure": true,
+      "abilities": [
+        "Units cost −10%"
+      ],
+      "powers": [
+        {
+          "kind": "CO Power",
+          "name": "Haggle",
+          "description": "Units cost half price.",
+          "stars": 3,
+          "lines": [
+            "Units cost −40%"
+          ]
+        },
+        {
+          "kind": "Super CO Power",
+          "name": "Trading Post",
+          "description": "Units cost half price and can be mustered at storehouses.",
+          "stars": 5,
+          "lines": [
+            "Units cost −40%",
+            "Storehouses build ground units like workshops"
+          ]
+        }
+      ],
       "power": {
         "name": "Haggle",
         "description": "Units cost half price.",
@@ -94,9 +235,37 @@
       "id": "ridge",
       "name": "Ridge",
       "faction": "western",
+      "faction_name": "Western Frontier",
+      "color": "#eb541f",
       "personality": "Aggressive",
       "description": "A young coyote who loves open country. Units fight better on grass.",
+      "based_on": "Jake",
       "figure": true,
+      "abilities": [
+        "+10% attack for units on grass (plains)"
+      ],
+      "powers": [
+        {
+          "kind": "CO Power",
+          "name": "Stampede",
+          "description": "Units on grass gain +10% attack; ground siege engines gain +1 range.",
+          "stars": 3,
+          "lines": [
+            "+1 range for Catapults, Trebuchets and Skylances",
+            "+10% attack for units on grass (plains)"
+          ]
+        },
+        {
+          "kind": "Super CO Power",
+          "name": "Open Range",
+          "description": "Units on grass gain +30% attack; vehicles gain +2 movement.",
+          "stars": 6,
+          "lines": [
+            "+2 movement for ground vehicles",
+            "+30% attack for units on grass (plains)"
+          ]
+        }
+      ],
       "power": {
         "name": "Stampede",
         "description": "Units on grass gain +10% attack; ground siege engines gain +1 range.",
@@ -112,9 +281,35 @@
       "id": "hollis",
       "name": "Hollis",
       "faction": "western",
+      "faction_name": "Western Frontier",
+      "color": "#eb541f",
       "personality": "Cautious",
       "description": "A hawk medic who keeps her troops in the fight. Units repair 1 extra HP on properties.",
+      "based_on": "Rachel",
       "figure": true,
+      "abilities": [
+        "+1 HP repaired on properties"
+      ],
+      "powers": [
+        {
+          "kind": "CO Power",
+          "name": "Second Wind",
+          "description": "Luck rises: attacks can deal more damage.",
+          "stars": 3,
+          "lines": [
+            "Good luck: up to +30% extra damage (on top of the usual 0–9)"
+          ]
+        },
+        {
+          "kind": "Super CO Power",
+          "name": "Hailstorm",
+          "description": "Three volleys of stones strike the enemy's densest groups for 2 HP each.",
+          "stars": 6,
+          "lines": [
+            "3 strikes on the densest enemy group: 2 HP to every enemy within 1 tiles"
+          ]
+        }
+      ],
       "power": {
         "name": "Second Wind",
         "description": "Luck rises: attacks can deal more damage.",
@@ -130,9 +325,36 @@
       "id": "frost",
       "name": "Frost",
       "faction": "northern",
+      "faction_name": "Northern Realm",
+      "color": "#4c80e6",
       "personality": "Methodical",
       "description": "A hedgehog veteran of a hundred winters. Snow doesn't slow her troops.",
+      "based_on": "Olaf",
       "figure": true,
+      "abilities": [
+        "Not slowed or blinded by snow"
+      ],
+      "powers": [
+        {
+          "kind": "CO Power",
+          "name": "Hoarfrost",
+          "description": "Snow falls until her next turn.",
+          "stars": 3,
+          "lines": [
+            "The weather turns to snow until your next turn"
+          ]
+        },
+        {
+          "kind": "Super CO Power",
+          "name": "Deep Winter",
+          "description": "Snow falls and all enemy units lose 2 HP.",
+          "stars": 7,
+          "lines": [
+            "The weather turns to snow until your next turn",
+            "Every enemy unit loses 2 HP"
+          ]
+        }
+      ],
       "power": {
         "name": "Hoarfrost",
         "description": "Snow falls until her next turn.",
@@ -148,9 +370,39 @@
       "id": "grimjaw",
       "name": "Grimjaw",
       "faction": "northern",
+      "faction_name": "Northern Realm",
+      "color": "#4c80e6",
       "personality": "Cautious",
       "description": "A badger marksman. Indirect units hit harder and reach further; direct combat units are weaker.",
+      "based_on": "Grit",
       "figure": true,
+      "abilities": [
+        "+20% attack for indirect (ranged) units",
+        "−20% attack for direct-combat units other than foot soldiers",
+        "+1 range for indirect (ranged) units"
+      ],
+      "powers": [
+        {
+          "kind": "CO Power",
+          "name": "Long Shot",
+          "description": "Indirect units gain +1 range and +20% attack.",
+          "stars": 3,
+          "lines": [
+            "+20% attack for indirect (ranged) units",
+            "+1 range for indirect (ranged) units"
+          ]
+        },
+        {
+          "kind": "Super CO Power",
+          "name": "Deadeye",
+          "description": "Indirect units gain +2 range and +20% attack.",
+          "stars": 6,
+          "lines": [
+            "+20% attack for indirect (ranged) units",
+            "+2 range for indirect (ranged) units"
+          ]
+        }
+      ],
       "power": {
         "name": "Long Shot",
         "description": "Indirect units gain +1 range and +20% attack.",
@@ -166,9 +418,36 @@
       "id": "bjorn",
       "name": "Bjorn",
       "faction": "northern",
+      "faction_name": "Northern Realm",
+      "color": "#4c80e6",
       "personality": "Methodical",
       "description": "A young fox heir with deep pockets. Units cost 20% less but have 10% less firepower.",
+      "based_on": "Colin",
       "figure": true,
+      "abilities": [
+        "−10% attack for all units",
+        "Units cost −20%"
+      ],
+      "powers": [
+        {
+          "kind": "CO Power",
+          "name": "Family Fortune",
+          "description": "Funds grow by half.",
+          "stars": 2,
+          "lines": [
+            "Your funds are multiplied by 1.5"
+          ]
+        },
+        {
+          "kind": "Super CO Power",
+          "name": "Bought Loyalty",
+          "description": "Attack rises with funds: +3.3% per 1000 held.",
+          "stars": 6,
+          "lines": [
+            "3.33% more attack for every 1,000 funds you hold"
+          ]
+        }
+      ],
       "power": {
         "name": "Family Fortune",
         "description": "Funds grow by half.",
@@ -184,9 +463,35 @@
       "id": "sable",
       "name": "Sable",
       "faction": "northern",
+      "faction_name": "Northern Realm",
+      "color": "#4c80e6",
       "personality": "Cautious",
       "description": "A stoat heiress with a knack for business. Each property earns 100 extra funds.",
+      "based_on": "Sasha",
       "figure": true,
+      "abilities": [
+        "+100 funds per property each day"
+      ],
+      "powers": [
+        {
+          "kind": "CO Power",
+          "name": "Run on the Bank",
+          "description": "The enemy's power meter drains by 10% for every 5000 funds she holds.",
+          "stars": 2,
+          "lines": [
+            "Drains 10% of the enemy's power meter for every 5,000 funds you hold"
+          ]
+        },
+        {
+          "kind": "Super CO Power",
+          "name": "Spoils of War",
+          "description": "Gains funds worth half the damage her units deal.",
+          "stars": 6,
+          "lines": [
+            "Earns 50% of the value of damage dealt as funds"
+          ]
+        }
+      ],
       "power": {
         "name": "Run on the Bank",
         "description": "The enemy's power meter drains by 10% for every 5000 funds she holds.",
@@ -202,9 +507,41 @@
       "id": "prowler",
       "name": "Prowler",
       "faction": "southern",
+      "faction_name": "Southern Pride",
+      "color": "#4cb24c",
       "personality": "Aggressive",
       "description": "A cheetah who commands the skies. Fliers are strong and use less stamina; boats are weak.",
+      "based_on": "Eagle",
       "figure": false,
+      "abilities": [
+        "+15% attack for fliers",
+        "−30% attack for boats",
+        "+10% defense for fliers",
+        "Fliers burn 2 less stamina a day"
+      ],
+      "powers": [
+        {
+          "kind": "CO Power",
+          "name": "Updraft",
+          "description": "Fliers gain +5% attack and +10% defense.",
+          "stars": 3,
+          "lines": [
+            "+5% attack for fliers",
+            "+10% defense for fliers"
+          ]
+        },
+        {
+          "kind": "Super CO Power",
+          "name": "Lightning Pounce",
+          "description": "Every unit but foot soldiers can move and act again.",
+          "stars": 9,
+          "lines": [
+            "+5% attack for fliers",
+            "+10% defense for fliers",
+            "All units but foot soldiers can move and act again"
+          ]
+        }
+      ],
       "power": {
         "name": "Updraft",
         "description": "Fliers gain +5% attack and +10% defense.",
@@ -220,9 +557,41 @@
       "id": "tusker",
       "name": "Tusker",
       "faction": "southern",
+      "faction_name": "Southern Pride",
+      "color": "#4cb24c",
       "personality": "Methodical",
       "description": "An elephant admiral. Boats move further and defend better, rain doesn't bother him; fliers are weak.",
+      "based_on": "Drake",
       "figure": false,
+      "abilities": [
+        "−30% attack for fliers",
+        "+25% defense for boats",
+        "+1 movement for boats",
+        "Not slowed or blinded by rain"
+      ],
+      "powers": [
+        {
+          "kind": "CO Power",
+          "name": "Trumpet Wave",
+          "description": "All enemy units lose 1 HP and half their stamina.",
+          "stars": 4,
+          "lines": [
+            "Every enemy unit loses 1 HP",
+            "Enemy units lose half their stamina"
+          ]
+        },
+        {
+          "kind": "Super CO Power",
+          "name": "Monsoon",
+          "description": "All enemy units lose 2 HP and half their stamina, and rain falls.",
+          "stars": 7,
+          "lines": [
+            "Every enemy unit loses 2 HP",
+            "Enemy units lose half their stamina",
+            "The weather turns to rain until your next turn"
+          ]
+        }
+      ],
       "power": {
         "name": "Trumpet Wave",
         "description": "All enemy units lose 1 HP and half their stamina.",
@@ -238,9 +607,42 @@
       "id": "rumble",
       "name": "Rumble",
       "faction": "southern",
+      "faction_name": "Southern Pride",
+      "color": "#4cb24c",
       "personality": "Aggressive",
       "description": "A rhino who trusts in armour. Vehicles hit harder; everything else is weaker.",
+      "based_on": "Jess",
       "figure": false,
+      "abilities": [
+        "+10% attack for ground vehicles",
+        "−10% attack for foot soldiers",
+        "−10% attack for fliers",
+        "−10% attack for boats"
+      ],
+      "powers": [
+        {
+          "kind": "CO Power",
+          "name": "Charge Up",
+          "description": "Vehicles gain +10% attack and +1 movement; all units are resupplied.",
+          "stars": 3,
+          "lines": [
+            "+10% attack for ground vehicles",
+            "+1 movement for ground vehicles",
+            "Every unit is resupplied"
+          ]
+        },
+        {
+          "kind": "Super CO Power",
+          "name": "Full Gallop",
+          "description": "Vehicles gain +30% attack and +2 movement; all units are resupplied.",
+          "stars": 6,
+          "lines": [
+            "+30% attack for ground vehicles",
+            "+2 movement for ground vehicles",
+            "Every unit is resupplied"
+          ]
+        }
+      ],
       "power": {
         "name": "Charge Up",
         "description": "Vehicles gain +10% attack and +1 movement; all units are resupplied.",
@@ -256,9 +658,35 @@
       "id": "lionheart",
       "name": "Lionheart",
       "faction": "southern",
+      "faction_name": "Southern Pride",
+      "color": "#4cb24c",
       "personality": "Cautious",
       "description": "A noble lion knight. Units shrug off indirect fire.",
+      "based_on": "Javier",
       "figure": false,
+      "abilities": [
+        "+20% defense against indirect fire"
+      ],
+      "powers": [
+        {
+          "kind": "CO Power",
+          "name": "Shield Wall",
+          "description": "Even more defense against indirect fire.",
+          "stars": 3,
+          "lines": [
+            "+20% defense against indirect fire"
+          ]
+        },
+        {
+          "kind": "Super CO Power",
+          "name": "Pride's Bulwark",
+          "description": "Indirect fire barely scratches his units.",
+          "stars": 6,
+          "lines": [
+            "+40% defense against indirect fire"
+          ]
+        }
+      ],
       "power": {
         "name": "Shield Wall",
         "description": "Even more defense against indirect fire.",
@@ -274,9 +702,39 @@
       "id": "kira",
       "name": "Kira",
       "faction": "eastern",
+      "faction_name": "Eastern Empire",
+      "color": "#f2cc26",
       "personality": "Aggressive",
       "description": "A red panda empress whose elite troops are strong in attack and defense, but cost 20% more.",
+      "based_on": "Kanbei",
       "figure": false,
+      "abilities": [
+        "+30% attack for all units",
+        "+30% defense for all units",
+        "Units cost +20%"
+      ],
+      "powers": [
+        {
+          "kind": "CO Power",
+          "name": "Rallying Cry",
+          "description": "Units gain +20% attack.",
+          "stars": 4,
+          "lines": [
+            "+20% attack for all units"
+          ]
+        },
+        {
+          "kind": "Super CO Power",
+          "name": "Imperial Guard",
+          "description": "Units gain +20% attack and defense, and counter-attacks deal 50% more.",
+          "stars": 7,
+          "lines": [
+            "+20% attack for all units",
+            "+20% defense for all units",
+            "+50% counterattack damage"
+          ]
+        }
+      ],
       "power": {
         "name": "Rallying Cry",
         "description": "Units gain +20% attack.",
@@ -292,9 +750,40 @@
       "id": "tanuki",
       "name": "Tanuki",
       "faction": "eastern",
+      "faction_name": "Eastern Empire",
+      "color": "#f2cc26",
       "personality": "Methodical",
       "description": "A trickster who hides his army's strength. Enemies can't see his units' HP; +1 vision, but poorer luck.",
+      "based_on": "Sonja",
       "figure": false,
+      "abilities": [
+        "+1 vision for all units",
+        "Bad luck: up to 9% less damage",
+        "The enemy can't see your units' HP"
+      ],
+      "powers": [
+        {
+          "kind": "CO Power",
+          "name": "Second Sight",
+          "description": "Units gain +1 vision and see into thickets and lily pads.",
+          "stars": 3,
+          "lines": [
+            "+1 vision for all units",
+            "Sees units hidden in thickets and lily pads"
+          ]
+        },
+        {
+          "kind": "Super CO Power",
+          "name": "Turnabout",
+          "description": "Defenders strike back first; +1 vision and sight into cover.",
+          "stars": 5,
+          "lines": [
+            "+1 vision for all units",
+            "Sees units hidden in thickets and lily pads",
+            "When attacked, your units strike back first"
+          ]
+        }
+      ],
       "power": {
         "name": "Second Sight",
         "description": "Units gain +1 vision and see into thickets and lily pads.",
@@ -310,9 +799,39 @@
       "id": "sensei",
       "name": "Sensei",
       "faction": "eastern",
+      "faction_name": "Eastern Empire",
+      "color": "#f2cc26",
       "personality": "Aggressive",
       "description": "An old crane master of the air. Copters and foot soldiers are strong, transports move further; vehicles and boats are weak.",
+      "based_on": "Sensei",
       "figure": false,
+      "abilities": [
+        "+50% attack for Hawk Riders and Skyferrys",
+        "+40% attack for foot soldiers",
+        "−10% attack for ground vehicles",
+        "−10% attack for boats",
+        "+1 movement for transports"
+      ],
+      "powers": [
+        {
+          "kind": "CO Power",
+          "name": "Call the Flock",
+          "description": "Militia with 9 HP appear on every empty storehouse.",
+          "stars": 2,
+          "lines": [
+            "A Militia with 9 HP appears on every empty storehouse you own"
+          ]
+        },
+        {
+          "kind": "Super CO Power",
+          "name": "Sky Drop",
+          "description": "Halberdiers with 9 HP appear on every empty storehouse.",
+          "stars": 6,
+          "lines": [
+            "A Halberdier with 9 HP appears on every empty storehouse you own"
+          ]
+        }
+      ],
       "power": {
         "name": "Call the Flock",
         "description": "Militia with 9 HP appear on every empty storehouse.",
@@ -328,9 +847,36 @@
       "id": "goro",
       "name": "Goro",
       "faction": "eastern",
+      "faction_name": "Eastern Empire",
+      "color": "#f2cc26",
       "personality": "Reckless",
       "description": "A macaque brawler. Massive firepower, flimsy defense.",
+      "based_on": "Grimm",
       "figure": false,
+      "abilities": [
+        "+30% attack for all units",
+        "−20% defense for all units"
+      ],
+      "powers": [
+        {
+          "kind": "CO Power",
+          "name": "Knuckle Up",
+          "description": "Units gain +20% attack.",
+          "stars": 3,
+          "lines": [
+            "+20% attack for all units"
+          ]
+        },
+        {
+          "kind": "Super CO Power",
+          "name": "Haymaker",
+          "description": "Units gain +50% attack.",
+          "stars": 6,
+          "lines": [
+            "+50% attack for all units"
+          ]
+        }
+      ],
       "power": {
         "name": "Knuckle Up",
         "description": "Units gain +20% attack.",
@@ -346,9 +892,38 @@
       "id": "dredge",
       "name": "Dredge",
       "faction": "nether",
+      "faction_name": "Nether Dominion",
+      "color": "#4c385c",
       "personality": "Reckless",
       "description": "A hulking skunk who fights wild. Damage swings with luck, good and bad.",
+      "based_on": "Flak",
       "figure": false,
+      "abilities": [
+        "Good luck: up to +6% extra damage (on top of the usual 0–9)",
+        "Bad luck: up to 10% less damage"
+      ],
+      "powers": [
+        {
+          "kind": "CO Power",
+          "name": "Brute Swing",
+          "description": "Luck swings wider: more damage, and more misses.",
+          "stars": 3,
+          "lines": [
+            "Good luck: up to +10% extra damage (on top of the usual 0–9)",
+            "Bad luck: up to 10% less damage"
+          ]
+        },
+        {
+          "kind": "Super CO Power",
+          "name": "Rampage",
+          "description": "Luck swings wildly: huge hits, or near misses.",
+          "stars": 6,
+          "lines": [
+            "Good luck: up to +30% extra damage (on top of the usual 0–9)",
+            "Bad luck: up to 20% less damage"
+          ]
+        }
+      ],
       "power": {
         "name": "Brute Swing",
         "description": "Luck swings wider: more damage, and more misses.",
@@ -364,9 +939,36 @@
       "id": "burrower",
       "name": "Burrower",
       "faction": "nether",
+      "faction_name": "Nether Dominion",
+      "color": "#4c385c",
       "personality": "Cautious",
       "description": "A mole tactician who uses every fold of the ground. Units gain attack for each terrain star they stand on.",
+      "based_on": "Lash",
       "figure": false,
+      "abilities": [
+        "+10% attack per terrain star under the attacker"
+      ],
+      "powers": [
+        {
+          "kind": "CO Power",
+          "name": "Undermine",
+          "description": "All terrain costs 1 to move through.",
+          "stars": 4,
+          "lines": [
+            "Every passable terrain costs 1 movement"
+          ]
+        },
+        {
+          "kind": "Super CO Power",
+          "name": "Warren Network",
+          "description": "All terrain costs 1 to move through, and terrain defense doubles.",
+          "stars": 7,
+          "lines": [
+            "Terrain defense stars doubled",
+            "Every passable terrain costs 1 movement"
+          ]
+        }
+      ],
       "power": {
         "name": "Undermine",
         "description": "All terrain costs 1 to move through.",
@@ -382,9 +984,33 @@
       "id": "wriggle",
       "name": "Wriggle",
       "faction": "nether",
+      "faction_name": "Nether Dominion",
+      "color": "#4c385c",
       "personality": "Aggressive",
       "description": "A shrew who slips through any gap. A stronger power meter makes up for no other gifts.",
+      "based_on": "Adder",
       "figure": false,
+      "abilities": [],
+      "powers": [
+        {
+          "kind": "CO Power",
+          "name": "Slither",
+          "description": "All units gain +1 movement.",
+          "stars": 2,
+          "lines": [
+            "+1 movement for all units"
+          ]
+        },
+        {
+          "kind": "Super CO Power",
+          "name": "Tunnel Rush",
+          "description": "All units gain +2 movement.",
+          "stars": 5,
+          "lines": [
+            "+2 movement for all units"
+          ]
+        }
+      ],
       "power": {
         "name": "Slither",
         "description": "All units gain +1 movement.",
@@ -400,9 +1026,37 @@
       "id": "carapace",
       "name": "Carapace",
       "faction": "nether",
+      "faction_name": "Nether Dominion",
+      "color": "#4c385c",
       "personality": "Methodical",
       "description": "A pangolin general who wears his foes down. Units have 10% more firepower.",
+      "based_on": "Hawke",
       "figure": false,
+      "abilities": [
+        "+10% attack for all units"
+      ],
+      "powers": [
+        {
+          "kind": "CO Power",
+          "name": "Blight",
+          "description": "All enemy units lose 1 HP; all his units recover 1 HP.",
+          "stars": 5,
+          "lines": [
+            "Every enemy unit loses 1 HP",
+            "All your units recover 1 HP"
+          ]
+        },
+        {
+          "kind": "Super CO Power",
+          "name": "Black Blight",
+          "description": "All enemy units lose 2 HP; all his units recover 2 HP.",
+          "stars": 9,
+          "lines": [
+            "Every enemy unit loses 2 HP",
+            "All your units recover 2 HP"
+          ]
+        }
+      ],
       "power": {
         "name": "Blight",
         "description": "All enemy units lose 1 HP; all his units recover 1 HP.",
@@ -418,9 +1072,37 @@
       "id": "hivemind",
       "name": "Hivemind",
       "faction": "nether",
+      "faction_name": "Nether Dominion",
+      "color": "#4c385c",
       "personality": "Methodical",
       "description": "The anteater matriarch who rules the deep. Strong in attack and defense, and her army crosses any ground at cost 1.",
+      "based_on": "Sturm",
       "figure": false,
+      "abilities": [
+        "+20% attack for all units",
+        "+20% defense for all units",
+        "Every passable terrain costs 1 movement"
+      ],
+      "powers": [
+        {
+          "kind": "CO Power",
+          "name": "Cave-In",
+          "description": "The ground collapses on the enemy's densest group: 4 HP damage around it.",
+          "stars": 6,
+          "lines": [
+            "A strike on the densest enemy group: 4 HP to every enemy within 2 tiles"
+          ]
+        },
+        {
+          "kind": "Super CO Power",
+          "name": "Sinkhole",
+          "description": "A huge collapse: 8 HP damage around the enemy's densest group.",
+          "stars": 10,
+          "lines": [
+            "A strike on the densest enemy group: 8 HP to every enemy within 2 tiles"
+          ]
+        }
+      ],
       "power": {
         "name": "Cave-In",
         "description": "The ground collapses on the enemy's densest group: 4 HP damage around it.",
@@ -436,9 +1118,38 @@
       "id": "clank",
       "name": "Clank",
       "faction": "nether",
+      "faction_name": "Nether Dominion",
+      "color": "#4c385c",
       "personality": "Reckless",
       "description": "An aardvark sapper in riveted iron armour. Erratic: damage swings with luck.",
+      "based_on": "Jugger",
       "figure": false,
+      "abilities": [
+        "Good luck: up to +20% extra damage (on top of the usual 0–9)",
+        "Bad luck: up to 15% less damage"
+      ],
+      "powers": [
+        {
+          "kind": "CO Power",
+          "name": "Overwind",
+          "description": "Luck swings wider still.",
+          "stars": 3,
+          "lines": [
+            "Good luck: up to +25% extra damage (on top of the usual 0–9)",
+            "Bad luck: up to 10% less damage"
+          ]
+        },
+        {
+          "kind": "Super CO Power",
+          "name": "Spring Snap",
+          "description": "Luck swings to extremes.",
+          "stars": 7,
+          "lines": [
+            "Good luck: up to +65% extra damage (on top of the usual 0–9)",
+            "Bad luck: up to 30% less damage"
+          ]
+        }
+      ],
       "power": {
         "name": "Overwind",
         "description": "Luck swings wider still.",
@@ -454,9 +1165,37 @@
       "id": "cinder",
       "name": "Cinder",
       "faction": "nether",
+      "faction_name": "Nether Dominion",
+      "color": "#4c385c",
       "personality": "Aggressive",
       "description": "A mole marshal who drives troops down every trail. Units fight better on trails.",
+      "based_on": "Koal",
       "figure": false,
+      "abilities": [
+        "+10% attack for units on trails (roads)"
+      ],
+      "powers": [
+        {
+          "kind": "CO Power",
+          "name": "Forced March",
+          "description": "Units gain +1 movement; units on trails +10% attack.",
+          "stars": 3,
+          "lines": [
+            "+1 movement for all units",
+            "+10% attack for units on trails (roads)"
+          ]
+        },
+        {
+          "kind": "Super CO Power",
+          "name": "Scorched Trail",
+          "description": "Units gain +2 movement; units on trails +20% attack.",
+          "stars": 5,
+          "lines": [
+            "+2 movement for all units",
+            "+20% attack for units on trails (roads)"
+          ]
+        }
+      ],
       "power": {
         "name": "Forced March",
         "description": "Units gain +1 movement; units on trails +10% attack.",
@@ -472,9 +1211,37 @@
       "id": "velvet",
       "name": "Velvet",
       "faction": "nether",
+      "faction_name": "Nether Dominion",
+      "color": "#4c385c",
       "personality": "Aggressive",
       "description": "A naked mole rat socialite who rules the burrow-towns. Units on properties fight much harder.",
+      "based_on": "Kindle",
       "figure": false,
+      "abilities": [
+        "+40% attack for units on properties"
+      ],
+      "powers": [
+        {
+          "kind": "CO Power",
+          "name": "Rot",
+          "description": "Enemy units on properties lose 3 HP; units on properties gain +40% attack.",
+          "stars": 3,
+          "lines": [
+            "+40% attack for units on properties",
+            "Enemy units on properties lose 3 HP"
+          ]
+        },
+        {
+          "kind": "Super CO Power",
+          "name": "High Society",
+          "description": "Units on properties gain +90% attack, and all units +3% per property she owns.",
+          "stars": 6,
+          "lines": [
+            "+90% attack for units on properties",
+            "3% more attack for every property you own"
+          ]
+        }
+      ],
       "power": {
         "name": "Rot",
         "description": "Enemy units on properties lose 3 HP; units on properties gain +40% attack.",
@@ -490,9 +1257,27 @@
       "id": "vesper",
       "name": "Vesper",
       "faction": "nether",
+      "faction_name": "Nether Dominion",
+      "color": "#4c385c",
       "personality": "Cautious",
       "description": "An ancient bat who sleeps beneath the roots. Units are stronger in attack and defense. No CO Power.",
+      "based_on": "Von Bolt",
       "figure": false,
+      "abilities": [
+        "+10% attack for all units",
+        "+10% defense for all units"
+      ],
+      "powers": [
+        {
+          "kind": "Super CO Power",
+          "name": "Root Shock",
+          "description": "3 HP damage around the enemy's densest group, and those units can't act next turn.",
+          "stars": 10,
+          "lines": [
+            "A strike on the densest enemy group: 3 HP to every enemy within 2 tiles, and they can't move next turn"
+          ]
+        }
+      ],
       "power": null,
       "super_power": {
         "name": "Root Shock",

@@ -1,0 +1,24 @@
+{% extends "wiki.html" %}
+{% import "wiki-macros.html" as w %}
+{%- block crumbs %}{{ w::crumbs(section="Maps") }}{% endblock %}
+{%- block heading %}{{ section.title }}{% endblock %}
+{%- block lead %}<p class="lead">{{ section.description }}</p>{% endblock %}
+
+{% block wiki %}
+{%- set maps = load_data(path="data/maps.json") | get(key="maps") %}
+<article class="card article">
+    {{ section.content | safe }}
+    {%- for group in ["War Room classics", "Woodland maps"] %}
+    <h2 id="{{ group | slugify }}">{{ group }}</h2>
+    <div class="map-grid">
+        {%- for mp in maps | filter(attribute="war_room", value=loop.first) %}
+        <a class="map-card" href="/maps/{{ mp.id }}/">
+            <img src="/img/maps/{{ mp.id }}.webp" alt="" width="{{ mp.width * 32 }}" height="{{ mp.height * 32 }}" loading="lazy">
+            <span class="map-name">{{ mp.name }}</span>
+            <span class="map-meta">{{ mp.width }}×{{ mp.height }} · {{ mp.property_count }} properties</span>
+        </a>
+        {%- endfor %}
+    </div>
+    {%- endfor %}
+</article>
+{% endblock %}

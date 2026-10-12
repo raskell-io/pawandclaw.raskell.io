@@ -1,0 +1,39 @@
+{% extends "wiki.html" %}
+{% import "wiki-macros.html" as w %}
+{%- block crumbs %}{{ w::crumbs(section="Damage chart") }}{% endblock %}
+{%- block heading %}{{ page.title }}{% endblock %}
+{%- block lead %}<p class="lead">{{ page.description }}</p>{% endblock %}
+
+{% block wiki %}
+{%- set damage = load_data(path="data/damage.json") | get(key="damage") %}
+<article class="card article">
+    {{ page.content | safe }}
+    <div class="table-scroll damage-scroll">
+    <table class="damage">
+        <thead>
+            <tr>
+                <th class="corner"><span>attacker ↓ · defender →</span></th>
+                {%- for d in damage.units %}
+                <th scope="col"><a href="/units/{{ d.id | replace(from="_", to="-") }}/" title="{{ d.name }}"><span class="mini-sprite" style="background-image: url('/sprites/units/northern/{{ d.asset }}.png')"></span><span class="vlabel">{{ d.name }}</span></a></th>
+                {%- endfor %}
+            </tr>
+        </thead>
+        <tbody>
+            {%- for row in damage.rows %}
+            <tr>
+                <th scope="row">{{ w::unit_link(id=row.id, name=row.name, asset=row.asset) }}</th>
+                {%- for cell in row.cells %}
+                {%- set d = damage.units | nth(n=loop.index0) %}
+                {%- if cell %}
+                <td style="--v: {{ cell.best }}" title="{{ row.name }} vs {{ d.name }}:{% if cell.p %} primary {{ cell.p }}%{% endif %}{% if cell.s %} secondary {{ cell.s }}%{% endif %}">{{ cell.best }}</td>
+                {%- else %}
+                <td class="none"></td>
+                {%- endif %}
+                {%- endfor %}
+            </tr>
+            {%- endfor %}
+        </tbody>
+    </table>
+    </div>
+</article>
+{% endblock %}

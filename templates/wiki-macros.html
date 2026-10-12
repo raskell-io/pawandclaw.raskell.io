@@ -1,0 +1,85 @@
+{#- Pieces shared by the wiki pages: links with art, stars, breadcrumbs, the sidebar -#}
+
+{% macro unit_link(id, name, asset, faction="western") %}
+<a class="wlink" href="/units/{{ id | replace(from="_", to="-") }}/"><span class="mini-sprite" style="background-image: url('/sprites/units/{{ faction }}/{{ asset }}.png')"></span>{{ name }}</a>
+{% endmacro unit_link %}
+
+{% macro terrain_link(id, name) %}
+<a class="wlink" href="/terrain/#{{ id }}"><img class="mini-icon" src="/sprites/terrain/{{ id }}.png" alt="" width="20" height="20">{{ name }}</a>
+{% endmacro terrain_link %}
+
+{% macro co_link(id, name) %}
+<a class="wlink" href="/commanders/{{ id | replace(from="_", to="-") }}/"><img class="mini-portrait" src="/sprites/portraits/{{ id }}.png" alt="" width="24" height="24" loading="lazy">{{ name }}</a>
+{% endmacro co_link %}
+
+{% macro stars(count) %}
+<span class="stars" aria-label="{{ count }} stars">{% for i in range(end=count) %}<i></i>{% endfor %}</span>
+{% endmacro stars %}
+
+{% macro defense_stars(count) %}
+<span class="dstars" aria-label="{{ count }} defense stars">{% for i in range(end=4) %}<i{% if i < count %} class="on"{% endif %}></i>{% endfor %}</span>
+{% endmacro defense_stars %}
+
+{# Breadcrumbs: Wiki › section › page (leave page empty on a section's own page) #}
+{% macro crumbs(section="", url="", page="") %}
+<nav class="crumbs" aria-label="Breadcrumbs">
+    <a href="/wiki/">Wiki</a>
+    {%- if section %}<span aria-hidden="true">›</span>{% if page %}<a href="{{ url }}">{{ section }}</a>{% else %}<span aria-current="page">{{ section }}</span>{% endif %}{% endif %}
+    {%- if page %}<span aria-hidden="true">›</span><span aria-current="page">{{ page }}</span>{% endif %}
+</nav>
+{% endmacro crumbs %}
+
+{% macro sidebar(path) %}
+{%- set units = load_data(path="data/units.json") | get(key="units") %}
+{%- set commanders = load_data(path="data/commanders.json") | get(key="commanders") %}
+{%- set factions = load_data(path="data/factions.json") | get(key="factions") %}
+{%- set maps = load_data(path="data/maps.json") | get(key="maps") %}
+<nav class="wiki-nav" aria-label="Wiki">
+    <details open>
+        <summary>Wiki contents</summary>
+        <ul>
+            <li><a href="/wiki/"{% if path == "/wiki/" %} aria-current="page"{% endif %}>Wiki home</a></li>
+            <li class="group">Playing</li>
+            <li><a href="/how-to-play/"{% if path == "/how-to-play/" %} aria-current="page"{% endif %}>How to play</a></li>
+            <li><a href="/rules/"{% if path == "/rules/" %} aria-current="page"{% endif %}>Rules of war</a></li>
+            <li><a href="/download/"{% if path == "/download/" %} aria-current="page"{% endif %}>Download</a></li>
+            <li class="group">Encyclopedia</li>
+            <li><a href="/armies/"{% if path == "/armies/" %} aria-current="page"{% endif %}>Armies</a></li>
+            <li><a href="/commanders/"{% if path == "/commanders/" %} aria-current="page"{% endif %}>Commanders <small>{{ commanders | length }}</small></a>
+                {%- if path is starting_with("/commanders/") %}
+                <ul>
+                    {%- for f in factions %}
+                    <li class="sub-group" style="--faction: {{ f.color }}">{{ f.name }}</li>
+                    {%- for co in commanders | filter(attribute="faction", value=f.id) %}
+                    {%- set slug = co.id | replace(from="_", to="-") %}
+                    <li><a href="/commanders/{{ slug }}/"{% if path == "/commanders/" ~ slug ~ "/" %} aria-current="page"{% endif %}>{{ co.name }}</a></li>
+                    {%- endfor %}
+                    {%- endfor %}
+                </ul>
+                {%- endif %}
+            </li>
+            <li><a href="/units/"{% if path == "/units/" %} aria-current="page"{% endif %}>Units <small>{{ units | length }}</small></a>
+                {%- if path is starting_with("/units/") %}
+                <ul>
+                    {%- for u in units %}
+                    {%- set slug = u.id | replace(from="_", to="-") %}
+                    <li><a href="/units/{{ slug }}/"{% if path == "/units/" ~ slug ~ "/" %} aria-current="page"{% endif %}>{{ u.name }}</a></li>
+                    {%- endfor %}
+                </ul>
+                {%- endif %}
+            </li>
+            <li><a href="/terrain/"{% if path == "/terrain/" %} aria-current="page"{% endif %}>Terrain</a></li>
+            <li><a href="/damage/"{% if path == "/damage/" %} aria-current="page"{% endif %}>Damage chart</a></li>
+            <li><a href="/maps/"{% if path == "/maps/" %} aria-current="page"{% endif %}>Maps <small>{{ maps | length }}</small></a>
+                {%- if path is starting_with("/maps/") %}
+                <ul>
+                    {%- for mp in maps %}
+                    <li><a href="/maps/{{ mp.id }}/"{% if path == "/maps/" ~ mp.id ~ "/" %} aria-current="page"{% endif %}>{{ mp.name }}</a></li>
+                    {%- endfor %}
+                </ul>
+                {%- endif %}
+            </li>
+        </ul>
+    </details>
+</nav>
+{% endmacro sidebar %}
