@@ -1,6 +1,6 @@
 +++
 title = "Paw & Claw"
-description = "A turn-based strategy game inspired by Advance Wars, fought by woodland armies. Raccoons, badgers, lions, red pandas and moles fight over every thicket and creek. Play it free in your browser."
+description = "A turn-based strategy game inspired by Advance Wars, fought by woodland armies of raccoons, badgers, lions, red pandas and moles. Play it free in your browser."
 +++
 
 ## Command the woodland

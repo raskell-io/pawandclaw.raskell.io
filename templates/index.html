@@ -1,6 +1,43 @@
 {% extends "base.html" %}
 {% import "macros.html" as m %}
 {% block body_class %}home{% endblock %}
+{% block jsonld %}
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": ["VideoGame", "SoftwareApplication"],
+                "@id": "https://pawandclaw.raskell.io/#game",
+                "name": "Paw & Claw",
+                "description": "A turn-based strategy game in the spirit of Advance Wars, fought by woodland armies. Raccoons, badgers, lions, red pandas, and moles fight over every thicket and creek. Built in Rust with Bevy. Play it free in the browser, or as a desktop build.",
+                "url": "https://pawandclaw.raskell.io/",
+                "image": "https://pawandclaw.raskell.io/img/og-image.png",
+                "genre": "Turn-based strategy",
+                "applicationCategory": "GameApplication",
+                "operatingSystem": "Web browser, Windows, macOS, Linux",
+                "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+                "isAccessibleForFree": true,
+                "license": "https://opensource.org/licenses/MIT",
+                "codeRepository": "https://github.com/raskell-io/paw-and-claw",
+                "sameAs": ["https://github.com/raskell-io/paw-and-claw", "https://codeberg.org/raskell-io/paw-and-claw", "https://raskell.io/apps/"],
+                "inLanguage": "en",
+                "author": { "@type": "Person", "@id": "https://raskell.io/#person", "name": "Raffael Schneider", "url": "https://raskell.io/" },
+                "creator": { "@type": "Person", "@id": "https://raskell.io/#person", "name": "Raffael Schneider", "url": "https://raskell.io/" }
+            },
+            {
+                "@type": "WebSite",
+                "@id": "https://pawandclaw.raskell.io/#website",
+                "name": "Paw & Claw",
+                "url": "https://pawandclaw.raskell.io/",
+                "inLanguage": "en",
+                "about": { "@id": "https://pawandclaw.raskell.io/#game" },
+                "publisher": { "@id": "https://raskell.io/#person" }
+            }
+        ]
+    }
+    </script>
+{%- endblock jsonld %}
 {% block content %}
 {%- set factions = load_data(path="data/factions.json") | get(key="factions") %}
 {%- set commanders = load_data(path="data/commanders.json") | get(key="commanders") %}

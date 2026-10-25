@@ -21,6 +21,9 @@
     <meta property="og:image" content="{{ get_url(path='img/og-image.png') }}">
     <meta name="twitter:card" content="summary_large_image">
     {%- endblock meta %}
+    <meta name="author" content="Raffael Schneider">
+    <link rel="alternate" type="text/markdown" title="llms.txt" href="{{ get_url(path='llms.txt') }}">
+    {%- block jsonld %}{% endblock jsonld %}
     <meta name="theme-color" content="#1f2b21">
     <link rel="icon" href="{{ get_url(path='favicon.ico') }}" sizes="32x32">
     <link rel="icon" href="{{ get_url(path='favicon.png') }}" type="image/png" sizes="32x32">
@@ -54,7 +57,7 @@
                 <a class="footer-seal" href="https://raskell.io" title="raskell.io"><img src="/img/raskell-stamp.png" alt="The raskell.io seal" width="64" height="64" loading="lazy"></a>
                 <div>
                     <p class="footer-mark">Paw &amp; Claw</p>
-                    <p class="muted">A turn-based strategy game produced by <a href="https://raskell.io">raskell.io</a>. Free and open source under the MIT license.</p>
+                    <p class="muted">A turn-based strategy game produced by <a href="https://raskell.io/" rel="author">raskell.io</a>. Free and open source under the MIT license.</p>
                     <p class="muted small">Inspired by <em>Advance Wars</em>, a Nintendo series. Paw &amp; Claw is an independent game, not affiliated with or endorsed by Nintendo.</p>
                 </div>
             </div>

@@ -1,0 +1,26 @@
+# Paw & Claw
+
+> A turn-based strategy game in the spirit of Advance Wars, fought by woodland armies, free to play in the browser.
+
+Paw & Claw is a turn-based strategy game in which raccoons, badgers, lions, red pandas and moles fight over every thicket and creek. It follows the rules of Advance Wars 2 and Dual Strike: capture outposts for funds, build units at workshops, docks and roosts, and take the enemy headquarters or rout the enemy army to win. There are five armies, twenty units, commanders with a CO Power and a Super CO Power, fog of war, weather and a map editor. It is built in Rust with the Bevy engine. The full game runs in the browser as WebAssembly (it needs WebGL 2) at https://pawandclaw.raskell.io/play/ , with no install and no account, and it also runs natively on Windows, macOS and Linux when built from source. It is free and open source under the MIT license. Paw & Claw is an independent game, not affiliated with or endorsed by Nintendo.
+
+## Links
+
+- [Paw & Claw](https://pawandclaw.raskell.io/): the website
+- [Play in the browser](https://pawandclaw.raskell.io/play/): the full game, compiled to WebAssembly
+- [Source code](https://github.com/raskell-io/paw-and-claw): the game's repository on GitHub (mirror: https://codeberg.org/raskell-io/paw-and-claw)
+- [raskell.io apps](https://raskell.io/apps/): Paw & Claw among the other apps by the author
+- [Author](https://raskell.io/about/): Raffael Schneider
+
+## Optional
+
+- [Wiki](https://pawandclaw.raskell.io/wiki/): rules, armies, commanders, units, terrain and maps, built from the game's own data
+- [How to play](https://pawandclaw.raskell.io/how-to-play/): controls and a first battle
+- [Rules](https://pawandclaw.raskell.io/rules/): turns, the damage formula, capturing, supply, fog, weather and powers
+- [Commanders](https://pawandclaw.raskell.io/commanders/)
+- [Units](https://pawandclaw.raskell.io/units/)
+- [Damage chart](https://pawandclaw.raskell.io/damage/)
+- [Terrain](https://pawandclaw.raskell.io/terrain/)
+- [Maps](https://pawandclaw.raskell.io/maps/)
+- [Download and build from source](https://pawandclaw.raskell.io/download/)
+- [Website source](https://github.com/raskell-io/pawandclaw.raskell.io)
